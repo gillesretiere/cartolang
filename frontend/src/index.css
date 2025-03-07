@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://use.typekit.net/tjn2ftb.css');
+/* mui fonts */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+/*
+The box-sizing CSS property sets how the total width and height of an element is calculated.
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+here padding is included in box-sizing but not margin which is extra-sizing
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root{
+  font-family: articulat-cf, sans-serif;
+}
+
+html {
+  font-family: articulat-cf, sans-serif;
+}
+
+body {
+  --color-background: #fafafa;
+  --color-foreground: #1f2023;
+  /*
+  --primary-font : neue-haas-grotesk-display,sans-serif;
+  --secondary-font : neue-haas-grotesk-text, sans-serif;
+  */
+  --primary-font : articulat-cf, sans-serif;
+  --secondary-font : artifex-cf, serif;
+
+  --serif-primary-font : artifex-cf, serif;
+  --serif-secondary-font : ff-nexus-mix, sans-serif;
+}
+
+.disabled-link {
+  pointer-events: none;
+}
