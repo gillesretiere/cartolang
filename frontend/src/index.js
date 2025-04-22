@@ -29,7 +29,7 @@ Penser à ajuster cette constante avant de faire un build
 - true => hammer-marteau.com (VPS2)
 - false => saynetes.fr (VPS3)
 */
-const pathHMRT = true;
+const pathHMRT = false;
 
 function ComponentGetID() {
   const { id } = useParams();
@@ -43,7 +43,7 @@ root.render(
         <BrowserRouter>
           <CssBaseline />
           <Routes>
-            { pathHMRT ? <Route path="/" element={<Home />} /> : <Route path="/" element={<SaynetesPage />} />}
+            { pathHMRT ? <Route path="/" element={<Home />} /> : <Route path="/" element={<CartolangPage />} />}
             <Route path="/saynetes_page" element={<SaynetesPage />} />
             <Route path="/language_page" element={<LanguagePage />} />
             <Route path="theme_page/:id" element={<ThemePage />} />
