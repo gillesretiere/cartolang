@@ -3,7 +3,7 @@ import SmallButton from '../components/UI/SmallButton';
 import { Link, } from "react-router-dom";
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { man_blue_bg, hmrt_icon, } from '../assets/img/index.js';
+import { man_blue_bg, hmrt_icon, banner_cinematique_saynetes, } from '../assets/img/index.js';
 
 
 const PorfolioMainSection = ({ dynamicStylesTitle, dynamicStylesSubTitle }) => {
@@ -72,7 +72,7 @@ const PorfolioMainSection = ({ dynamicStylesTitle, dynamicStylesSubTitle }) => {
             </Link>
           </Box>
           <Box sx={{ gridArea: 'image', }}>
-            <img src={man_blue_bg} width="100%" className='h-full max-h-90 xl:max-h-[640px] object-cover' />
+            <img src={banner_cinematique_saynetes} width="100%" className='h-full max-h-90 xl:max-h-[640px] object-cover' />
           </Box>
         </Box>
       </section>
