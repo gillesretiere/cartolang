@@ -21,7 +21,7 @@ const SearchCountryPage = () => {
 
     const getCountryIndexByUid = (uid) => {
         let idx = 0;
-        if (! countries) { return null };
+        if (!countries) { return null };
         for (var i = 0; i < countries.length; i++) {
             if (countries[i].country_iso2 === uid) {
                 idx = i;
@@ -60,15 +60,22 @@ const SearchCountryPage = () => {
         <>
             <Layout>
                 {selectedCountry &&
-                    <>
-                        <CartoCountryMap
-                            deck={selectedCountry}
-                            callBackFunction={callBackFunctionMap}>
-                        </CartoCountryMap>
+                    <>  
+                        <div className='grid grid-cols-5 gap-1 text-black dark:bg-zinc-800 dark:text-white'>
 
-                        <CartoCountryDeck
-                            deck={selectedCountry}
-                            callBackFunction={callBackFunctionMap} />
+                            <div className='col-span-5'>
+                                <CartoCountryMap
+                                    deck={selectedCountry}
+                                    callBackFunction={callBackFunctionMap}>
+                                </CartoCountryMap>
+                            </div>
+
+                            <div className='col-span-5'>
+                                <CartoCountryDeck
+                                    deck={selectedCountry}
+                                    callBackFunction={callBackFunctionMap} />
+                            </div>
+                        </div>
                     </>
                 }
                 {/* else null => navigate somewhere... */}

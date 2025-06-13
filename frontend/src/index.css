@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 @import url('https://use.typekit.net/tjn2ftb.css');
 /* mui fonts */

@@ -2,6 +2,7 @@ import React, { useState, useEffect, } from "react";
 import Popper from "@mui/material/Popper";
 import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 
 
@@ -15,11 +16,11 @@ const ReadMore = ({ text, style, limit, children }) => {
     };
 
     useEffect(
-        ()=> {
+        () => {
             if (limit) {
-                setMaxChars (limit);
+                setMaxChars(limit);
             } else {
-                setMaxChars (100);
+                setMaxChars(100);
             }
 
         }, [limit]
@@ -34,7 +35,7 @@ const ReadMore = ({ text, style, limit, children }) => {
             } else {
                 setIsWorth(false)
             }
-        }, [text]
+        }, [text, maxChars, ]
     );
 
     return (
@@ -52,11 +53,10 @@ const ReadMore = ({ text, style, limit, children }) => {
                             {text.slice(0, maxChars)}...
 
                         </Typography>
-                        <span
-                            onClick={toggleReadMore}
-                            className={`font-articulat_cf text-sm text-primary-orange`}
-                        >
-                            lire plus
+                        <span>
+                            <Button onClick={toggleReadMore} className="mt-2 dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small" sx={{ display: 'flex', }}>
+                                lire plus
+                            </Button>
                         </span>
                     </>
                 ) : (
@@ -71,11 +71,10 @@ const ReadMore = ({ text, style, limit, children }) => {
                             {text}
 
                         </Typography>
-                        <span
-                            onClick={toggleReadMore}
-                            className={`font-articulat_cf text-sm text-primary-orange`}
-                        >
-                            &nbsp;lire moins
+                        <span>
+                            <Button onClick={toggleReadMore} className="mt-2 dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small" sx={{ display: 'flex', }}>
+                                lire moins
+                            </Button>
                         </span>
                     </>
                 )

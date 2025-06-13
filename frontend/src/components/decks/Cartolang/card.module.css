@@ -45,8 +45,6 @@ div[id^='smallmapdiv'] {
     z-index: 2;
     svg {
         color: var(--color_050);
-        circle {
-        }
     }
 }
 
@@ -59,7 +57,7 @@ video {
     left: 0;
   }
   
-.video_background {
+.hero_banner_background {
     position: relative;
     height: 100vh;
     text-align: center;

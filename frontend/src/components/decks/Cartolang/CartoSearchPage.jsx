@@ -14,7 +14,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import SmallButton from '../../UI/SmallButton';
 import Button from '@mui/material/Button';
-import { worldmap, hmrt_icon, home_video, } from '../../../assets/img/index.js';
+import { worldmap, banner_hero_languages, } from '../../../assets/img/index.js';
 import classes from "./card.module.css";
 
 
@@ -27,7 +27,7 @@ export const CartoSearchPage = ({ regions, countries, languages, }) => {
     const [options, setOptions] = useState([]);
     const [vkCtry, setVkCtry] = useState([]);
     const [vkLang, setVkLang] = useState([]);
-    const [toPage, setToPage] = useState ('search_country_page');
+    const [toPage, setToPage] = useState('search_country_page');
 
     const [searchValue, setSearchValue] = useState('');
     const [uid, setUid] = useState('');
@@ -104,10 +104,10 @@ export const CartoSearchPage = ({ regions, countries, languages, }) => {
         let idx = 0;
         if (searchMode == "country") {
             for (var i = 0; i < countries.length; i++) {
-                    if (countries[i].country_name_fr === value) {
+                if (countries[i].country_name_fr === value) {
                     idx = i;
                     setUid(countries[i].country_iso2);
-                    setToPage ('search_country_page');
+                    setToPage('search_country_page');
                 }
             }
         } else {
@@ -117,7 +117,7 @@ export const CartoSearchPage = ({ regions, countries, languages, }) => {
                     setUid(languages[i].language_uid);
                     ctx.current_deck.language_deck = []
                     ctx.current_deck.language_deck[0] = languages[i];
-                    setToPage ('carto_language_page');
+                    setToPage('carto_language_page');
                 }
             }
         }
@@ -136,48 +136,49 @@ export const CartoSearchPage = ({ regions, countries, languages, }) => {
 
     return (
         <>
-                <video src={home_video} autoPlay loop playsinline muted></video>
-
-            <main className={`${classes.video_background} mt-0`}>
+            <main>
                 <section id="search" className='min-h-screen max-container' sx={{ display: 'flex', alignItems: 'center', }}>
-                    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', }}>
-                        <Box sx={{ display: 'flex', flexDirection: 'column', }}>
-                            <Typography
-                                sx={{ display: 'flex', justifyContent: 'center', }}
-                                className={`font-articulat_cf leading-none tracking-tight font-black lg:text-4xl text-slate-700 mb-10`}>
-                                langdeck
-                            </Typography>
-                            <Box sx={{ display: 'flex', flexDirection: 'row', }} className="items-center">
-                                <Autocomplete
-                                    className='bg-white'
-                                    id="combo-box-demo"
-                                    options={options.map((option) => option.label)}
-                                    sx={{ width: 600 }}
-                                    renderInput={(params) => <TextField {...params} label="Votre recherche" />}
-                                    onChange={handleChange}
-                                />
-                                <Link to={`/${toPage}/${uid}`}>
-                                    <Button className="ml-4" variant="contained" size="large" sx={{ display: 'flex', }}>
-                                        Valider
-                                    </Button>
-                                </Link>
-                            </Box>
-                            <Box sx={{ display: 'flex', justifyContent: 'center', }} className="p-4">
-                                <FormControl>
-                                    <RadioGroup
-                                        row
-                                        aria-labelledby="demo-controlled-radio-buttons-group"
-                                        name="controlled-radio-buttons-group"
-                                        value={searchMode}
-                                        onChange={handleRadioChange}
-                                    >
-                                        <FormControlLabel value="country" control={<Radio />} label="Pays" />
-                                        <FormControlLabel value="language" control={<Radio />} label="Langue" />
-                                    </RadioGroup>
-                                </FormControl>
+                    <img src={banner_hero_languages} width="100%" className='h-full object-cover'></img>
+                    <div className='absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4'>
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', }}>
+                            <Box sx={{ display: 'flex', flexDirection: 'column', }}>
+                                <Typography
+                                    sx={{ display: 'flex', justifyContent: 'center', }}
+                                    className={`font-articulat_cf font-black leading-none tracking-tight text-xl md:text-3xl lg:text-5xl text-slate-800 mb-10`}>
+                                    Cartes &amp; Langues
+                                </Typography>
+                                <Box sx={{ display: 'flex', flexDirection: 'row', }} className="items-center">
+                                    <Autocomplete
+                                        className='bg-white w-[200px] md:w-[400px] xl:w-[600px]'
+                                        id="combo-box-demo"
+                                        options={options.map((option) => option.label)}
+                                        renderInput={(params) => <TextField {...params} label="Votre sélection" />}
+                                        onChange={handleChange}
+                                    />
+                                    <Link to={`/${toPage}/${uid}`}>
+                                        <Button className="ml-4" variant="contained" size="large" sx={{ display: 'flex', }}>
+                                            Rechercher
+                                        </Button>
+                                    </Link>
+                                </Box>
+                                <Box sx={{ display: 'flex', justifyContent: 'center', }} className="p-4">
+                                    <FormControl>
+                                        <RadioGroup
+                                            row
+                                            aria-labelledby="demo-controlled-radio-buttons-group"
+                                            name="controlled-radio-buttons-group"
+                                            value={searchMode}
+                                            onChange={handleRadioChange}
+                                        >
+                                            <FormControlLabel value="country" control={<Radio />} label="Pays" />
+                                            <FormControlLabel value="language" control={<Radio />} label="Langue" />
+                                        </RadioGroup>
+                                    </FormControl>
+                                </Box>
                             </Box>
                         </Box>
-                    </Box>
+                    </div>
+
                 </section>
             </main>
         </>

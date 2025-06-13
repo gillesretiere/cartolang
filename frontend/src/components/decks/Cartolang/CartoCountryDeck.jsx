@@ -7,6 +7,7 @@ import CountryMapCard from './CountryMapCard.jsx';
 import { Link, } from "react-router-dom";
 import { CartoCountryDeckMain } from './CartoCountryDeckMain.jsx';
 import CartoCountryDeckLanguages from './CartoCountryDeckLanguages.jsx';
+import CountryDataPage from './CountryDataPage.jsx';
 
 export const CartoCountryDeck = ({ deck, callBackFunction, }) => {
     let { id } = useParams();
@@ -33,7 +34,7 @@ export const CartoCountryDeck = ({ deck, callBackFunction, }) => {
 
     return (
         <>
-            <CartoCountryDeckMain deck={deck}></CartoCountryDeckMain>
+            <CountryDataPage deck={deck}></CountryDataPage>
             <CartoCountryDeckLanguages deck={deck}></CartoCountryDeckLanguages>
         </>
     )

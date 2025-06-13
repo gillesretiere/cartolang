@@ -122,7 +122,7 @@ export const CartoCountryDeckMain = ({ deck }) => {
               alignItems: 'top',
             }}>
               {country_summary &&
-                <ReadMore text={country_summary} style={{ fontSize: 'x-large', borderTop: '1px solid white' }} />
+                <ReadMore text={country_summary} style={{ fontSize: 'x-large', marginLeft: '-4px', paddingLeft: '8px', borderTop: '1px solid white', borderLeft: '4px solid rgb(244, 67, 54)' }} />
               }
             </Box>
           </Box>
