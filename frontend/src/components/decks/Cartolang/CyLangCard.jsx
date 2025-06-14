@@ -7,13 +7,13 @@ import { Box } from '@mui/material';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Popper from "@mui/material/Popper";
-import { CartoCountryLanguageCardWithMap } from './CartoCountryLanguageCardWithMap';
+import { CyLangMap } from './CyLangMap';
 import { CircularProgressChart } from './CircularProgressChart';
 
 import Chart from './Chart';
 import { formHelperTextClasses } from '@mui/material';
 
-const CartoCountryLanguageCard = ({ card, langDeck, }) => {
+const CyLangCard = ({ card, langDeck, }) => {
     let { language_name_fr, language_name_native, language_uid, popularity_as_float, } = card;
     let ctx = useContext(DeckContext);
     const [currentLanguage, setCurrentLanguage] = useState([]);
@@ -68,19 +68,19 @@ const CartoCountryLanguageCard = ({ card, langDeck, }) => {
                 >
                     {currentLanguage &&
                         <>
-                            <CartoCountryLanguageCardWithMap
+                            <CyLangMap
                                 language={language}
                                 langDeck={currentLanguage[0]}
                                 callbackModal={callbackModal}>
 
-                            </CartoCountryLanguageCardWithMap>
+                            </CyLangMap>
                         </>
                     }
 
                 </Popper>
             </div>
 
-            <Card sx={{ maxWidth: 345, margin: 'auto' }}>
+            <Card sx={{ margin: 'auto' }}>
                 {
                     /*
                 <CardMedia
@@ -92,23 +92,23 @@ const CartoCountryLanguageCard = ({ card, langDeck, }) => {
                 }
                 <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', }}>
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography gutterBottom component="div" className='font-semibold tracking-tight text-zinc-700 dark:text-white text-3xl'>
                             {language_name_fr}
                         </Typography>
-                        <Typography gutterBottom variant="h6" component="div" className='text-slate-500'>
+                        <Typography gutterBottom variant="h5" component="div" className='text-zinc-500'>
                             {language_name_native}
                         </Typography>
                     </CardContent>
                     <CardContent>
-                        <CircularProgressChart value={popularity_as_float*100} size="5rem"/>
+                        <CircularProgressChart value={popularity_as_float*100} size="6rem"/>
                     </CardContent>
                 </Box>
                 <CardActions>
-                    <Button id={language_uid} size="small" onClick={handleClick} sx={{ color: 'text.secondary' }}>Voir plus</Button>
+                    <Button id={language_uid} onClick={handleClick} className="mt-2 dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small" sx={{ display: 'flex', }}>Voir plus</Button>
                 </CardActions>
             </Card>
         </>
     )
 }
 
-export default CartoCountryLanguageCard
+export default CyLangCard

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext, } from 'react';
 import DeckContext from '../../../store/DeckContext';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import CartoCountryLanguageCard from './CartoCountryLanguageCard';
+import CyLangCard from './CyLangCard';
 
 const styles = theme => ({
     root: {
@@ -14,7 +14,7 @@ const styles = theme => ({
 });
 
 
-const CartoCountryLanguageDeck = withStyles(styles)(({ classes, justify, deck, langDeck, }) => (
+const CyLangDeck = withStyles(styles)(({ classes, justify, deck, langDeck, }) => (
 
     <div className={classes.root}>
         <Grid container spacing={4} justifyContent={justify}>
@@ -24,9 +24,9 @@ const CartoCountryLanguageDeck = withStyles(styles)(({ classes, justify, deck, l
                     return (
                         <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
                             <div className={classes.card}>
-                                <CartoCountryLanguageCard
+                                <CyLangCard
                                     className={classes.card} card={el} langDeck={langDeck} alignItems={justify}>
-                                </CartoCountryLanguageCard>
+                                </CyLangCard>
                             </div>
                         </Grid>
                     )
@@ -37,4 +37,4 @@ const CartoCountryLanguageDeck = withStyles(styles)(({ classes, justify, deck, l
     </div>
 ));
 
-export default CartoCountryLanguageDeck;
+export default CyLangDeck;

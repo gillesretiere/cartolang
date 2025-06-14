@@ -4,12 +4,12 @@ import SmallButton from '../../UI/SmallButton.jsx';
 import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { Link, } from "react-router-dom";
-import CartoCountryLanguageDeck from './CartoCountryLanguageDeck.jsx';
+import CyLangDeck from './CyLangDeck.jsx';
 import { langdeck_languages } from '../../../assets/data/index.js';
 import ReadMore from '../../UI/Media/ReadMore.jsx';
 
 
-const CartoCountryDeckLanguages = ({ deck }) => {
+const CyLang = ({ deck }) => {
 
     let ctx = useContext(DeckContext);
     const {
@@ -56,23 +56,9 @@ const CartoCountryDeckLanguages = ({ deck }) => {
                         },
                     }}
                 >
-                    <Box className={`mx-0 p-4 mb-5`} sx={{ gridArea: 'cy_capt1', }}>
-                        <Box sx={{ p: 1, m: 1, }}>
-                            <Typography variant="caption" className='text-slate-500'>
-                                Langues
-                            </Typography>
-                        </Box>
-                    </Box>
-                    <Box className={`mx-0 p-4 mb-5`} sx={{ gridArea: 'cy_languages', }}>
-                        <Box sx={{ p: 1, m: 1, }}>
-                            {country_wfb_languages_fr &&
-                                <ReadMore text={country_wfb_languages_fr} style={{ fontSize: 'x-large', borderTop: '1px solid white' }} />
-                            }
-                        </Box>
-                    </Box>
                     <Box className={`mx-1 px-4`} sx={{ gridArea: 'cy_lang', }}>
                         <Box sx={{ display: 'flex', width: "100%", gap: 2 }}>
-                            <CartoCountryLanguageDeck deck={country_languages} langDeck={languages} />
+                            <CyLangDeck deck={country_languages} langDeck={languages} />
                         </Box>
                     </Box>
                     <Box className={`mx-0 p-4`} sx={{ gridArea: 'cy_goto2', }}>
@@ -87,4 +73,4 @@ const CartoCountryDeckLanguages = ({ deck }) => {
     )
 }
 
-export default CartoCountryDeckLanguages
+export default CyLang

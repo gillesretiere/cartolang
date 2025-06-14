@@ -6,11 +6,11 @@ import Typography from '@mui/material/Typography';
 import CountryMapCard from './CountryMapCard.jsx';
 import { Link, } from "react-router-dom";
 import { CartoCountryDeckMain } from './CartoCountryDeckMain.jsx';
-import CartoCountryDeckLanguages from './CartoCountryDeckLanguages.jsx';
-import CountryDataPage from './CountryDataPage.jsx';
-import CountryDataLanguagePage from './CountryDataLanguagePage.jsx';
+import CyLang from './CyLang.jsx';
+import CyData from './CyData.jsx';
+import CyDataLang from './CyDataLang.jsx';
 
-export const CartoCountryDeck = ({ deck, callBackFunction, }) => {
+export const CyDeck = ({ deck, callBackFunction, }) => {
     let { id } = useParams();
     const {
         country_name_fr,
@@ -35,9 +35,9 @@ export const CartoCountryDeck = ({ deck, callBackFunction, }) => {
 
     return (
         <>
-            <CountryDataPage deck={deck}></CountryDataPage>
-            <CountryDataLanguagePage deck={deck}></CountryDataLanguagePage>
-            <CartoCountryDeckLanguages deck={deck}></CartoCountryDeckLanguages>
+            <CyData deck={deck}></CyData>
+            <CyDataLang deck={deck}></CyDataLang>
+            <CyLang deck={deck}></CyLang>
         </>
     )
 }

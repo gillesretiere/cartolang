@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, } from 'react';
-import DeckContext from '../../../store/DeckContext';
+import DeckContext from '../../../store/DeckContext.jsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -12,7 +12,7 @@ import CardContent from '@mui/material/CardContent';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
-import LanguageSmallMapCard from './LanguageSmallMapCard';
+import LanguageSmallMapCard from './LanguageSmallMapCard.jsx';
 import ReadMore from '../../UI/Media/ReadMore.jsx';
 
 
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export const CartoCountryLanguageCardWithMap = ({ language, langDeck, callbackModal, }) => {
+export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
     let ctx = useContext(DeckContext);
     const classes = useStyles();
     const [open, setOpen] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, } from 'react';
 import LayoutCartolang from '../../UI/LayoutCartolang.jsx';
-import { CartoCountryDeck } from './CartoCountryDeck.jsx';
+import { CyDeck } from './CyDeck.jsx';
 import CountryMapCard from './CountryMapCard.jsx';
 import CartoCountryMap from './CartoCountryMap.jsx';
 import { useParams } from "react-router-dom"
@@ -91,7 +91,7 @@ const CartoCountryPage = () => {
                 {countries && selectedCountry &&
                     <>
                         <CartoCountryMap deck={selectedCountry} callBackFunction={callBackFunctionMap}></CartoCountryMap>
-                        <CartoCountryDeck
+                        <CyDeck
                             deck={selectedCountry}
                             callBackFunction={callBackFunctionMap} />
                     </>

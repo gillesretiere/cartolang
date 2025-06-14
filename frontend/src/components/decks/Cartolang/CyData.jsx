@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import ReadMore from '../../UI/Media/ReadMore';
 import SmallButton from '../../UI/SmallButton';
 
-const CountryDataPage = ({ deck }) => {
+const CyData = ({ deck }) => {
 
     const {
         country_name_fr,
@@ -206,4 +206,4 @@ const CountryDataPage = ({ deck }) => {
     )
 }
 
-export default CountryDataPage
+export default CyData

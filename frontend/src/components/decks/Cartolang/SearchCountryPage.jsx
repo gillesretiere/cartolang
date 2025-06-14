@@ -4,7 +4,7 @@ import { Route, Link, Routes, useParams } from 'react-router-dom';
 import Layout from '../../UI/Layout';
 import DeckContext from '../../../store/DeckContext';
 import { langdeck_countries } from '../../../assets/data/index.js';
-import { CartoCountryDeck } from './CartoCountryDeck.jsx';
+import { CyDeck } from './CyDeck.jsx';
 import CartoCountryMap from './CartoCountryMap.jsx';
 
 
@@ -71,7 +71,7 @@ const SearchCountryPage = () => {
                             </div>
 
                             <div className='col-span-5'>
-                                <CartoCountryDeck
+                                <CyDeck
                                     deck={selectedCountry}
                                     callBackFunction={callBackFunctionMap} />
                             </div>

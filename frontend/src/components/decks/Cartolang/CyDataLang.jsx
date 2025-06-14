@@ -4,12 +4,11 @@ import SmallButton from '../../UI/SmallButton.jsx';
 import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { Link, } from "react-router-dom";
-import CartoCountryLanguageDeck from './CartoCountryLanguageDeck.jsx';
-import LanguageRatioCard from './LanguageRatioCard.jsx';
+import LanguageRatioDeck from './LanguageRatioDeck.jsx';
 import { langdeck_languages } from '../../../assets/data/index.js';
 import ReadMore from '../../UI/Media/ReadMore.jsx';
 
-const CountryDataLanguagePage = ({ deck }) => {
+const CyDataLang = ({ deck }) => {
   let ctx = useContext(DeckContext);
   const {
     country_name_fr,
@@ -35,7 +34,7 @@ const CountryDataLanguagePage = ({ deck }) => {
       <section id='language_cty_pct'>
         <div className='grid grid-cols-5 auto-rows-min gap-4 text-zinc-700 dark:text-white my-4'>
           <>
-            <div className="col-start-1 col-end-3 px-4">
+            <div className="col-start-1 col-end-6 px-4">
               <Typography className={`font-articulat_cf leading-none tracking-tight font-base text-sm lg:text-lg text-milano-500 `}>
                 Langues
               </Typography>
@@ -47,13 +46,6 @@ const CountryDataLanguagePage = ({ deck }) => {
                 }
               </Typography>
             </div>
-            <div className="col-start-3 col-end-6 px-4">
-            </div>
-          </>
-          <>
-          <div className="col-start-1 col-end-1 md:col-end-3 xl:col-end-6 px-4">
-            <LanguageRatioCard deck={country_languages} langDeck={languages}></LanguageRatioCard>
-          </div>
           </>
         </div>
       </section>
@@ -61,4 +53,4 @@ const CountryDataLanguagePage = ({ deck }) => {
   )
 }
 
-export default CountryDataLanguagePage
+export default CyDataLang

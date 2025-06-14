@@ -13,13 +13,14 @@ export const CircularProgressChart = (props) => {
                     variant="determinate"
                     value={100}
                     size={props.size}
-                    thickness={4}
+                    thickness={6}
                     sx={{
                         color: '#e0e0e0', // Light gray color for uncompleted (remaining) portion
                         position: 'absolute',
                     }}
                 />
                 <CircularProgress variant="determinate"
+                    thickness={6}
                     sx={(theme) => ({
                         color: theme.palette.orange,
                         ...theme.applyStyles('dark', {
@@ -42,6 +43,7 @@ export const CircularProgressChart = (props) => {
                     <Typography
                         variant="caption"
                         component="div"
+                        className='text-lg font-bold'
                     >
                         {`${Math.round(props.value)}%`}
                     </Typography>
