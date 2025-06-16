@@ -11,7 +11,7 @@ import { CircularProgressChart } from './CircularProgressChart';
 import { withStyles } from '@material-ui/core/styles';
 
 
-export const CartoLanguageCountryCard = ({ card, langdeck }) => {
+export const LgCyCard = ({ card, langdeck }) => {
     const { country_uid, country_name_native, country_name_fr, popularity_as_float, national_flag, } = card;
     const handleClick = (event) => {
         return;

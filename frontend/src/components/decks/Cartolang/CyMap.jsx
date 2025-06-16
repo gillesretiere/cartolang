@@ -1,11 +1,11 @@
 import React, { useState, } from 'react';
 
-import CountryMapCard from './CountryMapCard.jsx';
+import CyMapAm5 from './CyMapAm5.jsx';
 import { Box } from '@mui/material';
 
 
 
-const CartoCountryMap = ({ deck, callBackFunction, }) => {
+const CyMap = ({ deck, callBackFunction, }) => {
 
     const setUpdatedCountry = (updatedCountry) => {
         {/*
@@ -17,10 +17,10 @@ const CartoCountryMap = ({ deck, callBackFunction, }) => {
     return (
         <>
             <Box>
-                <CountryMapCard sx={{ height: '400px' }} country={deck} setUpdatedCountry={setUpdatedCountry}></CountryMapCard>
+                <CyMapAm5 sx={{ height: '400px' }} country={deck} setUpdatedCountry={setUpdatedCountry}></CyMapAm5>
             </Box>
         </>
     )
 }
 
-export default CartoCountryMap
+export default CyMap

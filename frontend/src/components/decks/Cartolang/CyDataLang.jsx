@@ -4,7 +4,6 @@ import SmallButton from '../../UI/SmallButton.jsx';
 import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { Link, } from "react-router-dom";
-import LanguageRatioDeck from './LanguageRatioDeck.jsx';
 import { langdeck_languages } from '../../../assets/data/index.js';
 import ReadMore from '../../UI/Media/ReadMore.jsx';
 

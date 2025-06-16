@@ -1,10 +1,9 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import SimpleBarChart from './SimpleBarChart';
 import Grid from '@material-ui/core/Grid';
 import ReadMore from '../../UI/Media/ReadMore';
-import { CartoLanguageCountryCard } from './CartoLanguageCountryCard';
+import { LgCyCard } from './LgCyCard';
 
 import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
@@ -16,7 +15,7 @@ const styles = theme => ({
   }
 });
 
-const CartoLanguageDeck = ({ langdeck }) => {
+const LgDeck = ({ langdeck }) => {
   return (
     <>
       {langdeck ? (
@@ -78,13 +77,6 @@ const CartoLanguageDeck = ({ langdeck }) => {
               }
             </Box>
           </Box>
-          <Box className={`mx-1 px-1 my-4 mb-20`} sx={{ gridArea: 'lg_barchrt', }}>
-            {/*
-              langdeck && langdeck.language_countries &&
-              <SimpleBarChart dataset={langdeck.language_countries} w={800} h={400} />
-            */}
-          </Box>
-
           <Box className={`mx-1 px-1 my-4 mt-20 pt-6`} sx={{ gridArea: 'lg_rndchrt', border: 1, borderLeft: 0, borderBottom: 0, borderRight: 0, borderColor: 'grey.400', }}>
             <Grid container spacing={4}>
               {langdeck.language_countries && langdeck.language_countries.sort((a, b) => (a.popularity_as_float > b.popularity_as_float ? -1 : 1))
@@ -92,7 +84,7 @@ const CartoLanguageDeck = ({ langdeck }) => {
                   (el, index) => {
                     return (
                       <Grid key={index} item xs={12} sm={6} md={4} lg={3} xl={2}>
-                        <CartoLanguageCountryCard card={el} langdeck={langdeck} />
+                        <LgCyCard card={el} langdeck={langdeck} />
                       </Grid>
                     )
                   }
@@ -110,4 +102,4 @@ const CartoLanguageDeck = ({ langdeck }) => {
   )
 }
 
-export default CartoLanguageDeck
+export default LgDeck

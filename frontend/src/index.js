@@ -8,11 +8,11 @@ import './index.css';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from './theme';
 
-import CartolangPage from './pages/CartolangPage';
+import CyLandingPage from './pages/CyLandingPage';
 import CountryLanguagesPage from './components/decks/Cartolang/CountryLanguagesPage';
-import CartoCountryPage from './components/decks/Cartolang/CartoCountryPage';
-import CartoLanguagePage from './components/decks/Cartolang/CartoLanguagePage';
-import SearchCountryPage from './components/decks/Cartolang/SearchCountryPage';
+import CtSearchPage from './components/decks/Cartolang/CtSearchPage';
+import LgSearchPage from './components/decks/Cartolang/LgSearchPage';
+import CySearchPage from './components/decks/Cartolang/CySearchPage';
 import App from './App';
 
 // import reportWebVitals from './reportWebVitals';
@@ -31,13 +31,12 @@ root.render(
         <BrowserRouter>
           <CssBaseline />
           <Routes>
-            <Route path="/" element={<CartolangPage />} />
-            <Route path="cartolang" element={<CartolangPage />} />
-            <Route path="country_page/:id" element={<CartoCountryPage />} />
-            <Route path="search_country_page/:id" element={<SearchCountryPage />} />
-            <Route path="carto_language_page/:id" element={<CartoLanguagePage uid={<ComponentGetID />} />} />
-            <Route path="country_languages_page/:id" element={<CountryLanguagesPage />} />
-            <Route component={CartolangPage} />
+            <Route path="/" element={<CyLandingPage />} />
+            <Route path="cartolang" element={<CyLandingPage />} />
+            <Route path="ct_search_page/:id" element={<CtSearchPage />} />
+            <Route path="cy_search_page/:id" element={<CySearchPage />} />
+            <Route path="lg_search_page/:id" element={<LgSearchPage uid={<ComponentGetID />} />} />
+            <Route component={CyLandingPage} />
             <Route path="*" element={
               <main style={{ padding: "1rem" }}>
                 <p>Mauvaise piste!</p>

@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useContext, } from 'react';
-import RegionDeck from '../components/decks/Cartolang/RegionDeck.jsx';
 import Layout from '../components/UI/Layout.jsx';
 import GoTopOfPage from './GoTopOfPage.jsx';
-import { CartoSearchPage } from '../components/decks/Cartolang/CartoSearchPage.jsx';
+import { CylgSearchPage } from '../components/decks/Cartolang/CylgSearchPage.jsx';
 import { langdeck_regions, langdeck_countries, langdeck_languages, } from '../assets/data/index.js';
 import { UserContext } from '../store/user_context.jsx';
 
 
-const CartolangPage = () => {
+const CyLandingPage = () => {
 
   const [regions, setRegions] = useState([]);
   const [countries, setCountries] = useState([]);
@@ -28,12 +27,11 @@ const CartolangPage = () => {
       <Layout>
         <GoTopOfPage />
         {countries && languages &&
-          <CartoSearchPage regions={regions} countries={countries} languages={languages} />
+          <CylgSearchPage regions={regions} countries={countries} languages={languages} />
         }
-        {/* <RegionDeck deck={regions} /> */}
       </Layout>
     </>
   )
 }
 
-export default CartolangPage
+export default CyLandingPage

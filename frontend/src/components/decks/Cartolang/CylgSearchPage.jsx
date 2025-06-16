@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect, } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
-import DeckContext from '../../../store/DeckContext';
+import DeckContext from '../../../store/DeckContext.jsx';
 
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -11,36 +11,25 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
-import SmallButton from '../../UI/SmallButton';
-import Button from '@mui/material/Button';
-import { worldmap, banner_hero_languages, } from '../../../assets/img/index.js';
-import classes from "./card.module.css";
+import { Button } from '@mui/material';
+import {banner_hero_languages} from '../../../assets/img/index.js';
 
 
 
 
-export const CartoSearchPage = ({ regions, countries, languages, }) => {
+export const CylgSearchPage = ({ regions, countries, languages, }) => {
 
     const navigate = useNavigate();
     const [searchMode, setSearchMode] = React.useState('country');
     const [options, setOptions] = useState([]);
     const [vkCtry, setVkCtry] = useState([]);
     const [vkLang, setVkLang] = useState([]);
-    const [toPage, setToPage] = useState('search_country_page');
+    const [toPage, setToPage] = useState('cy_search_page');
 
     const [searchValue, setSearchValue] = useState('');
     const [uid, setUid] = useState('');
 
     const ctx = useContext(DeckContext);
-
-    const background = {
-        backgroundImage: `url(${worldmap})`,
-        height: "100%",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-    };
 
     // Liste des options (soit Pays soit Langues)
     useEffect(() => {
@@ -91,7 +80,7 @@ export const CartoSearchPage = ({ regions, countries, languages, }) => {
                 item["id"] = index;
                 item["label"] = el.region_name_fr;
                 item["enabled"] = true;
-                item["url"] = `/country_page/${el.region_uid}?r=${el.region_uid}`;
+                item["url"] = `/ct_search_page/${el.region_uid}?r=${el.region_uid}`;
                 arr.push(item);
             }
         )
@@ -107,7 +96,7 @@ export const CartoSearchPage = ({ regions, countries, languages, }) => {
                 if (countries[i].country_name_fr === value) {
                     idx = i;
                     setUid(countries[i].country_iso2);
-                    setToPage('search_country_page');
+                    setToPage('cy_search_page');
                 }
             }
         } else {
@@ -117,7 +106,7 @@ export const CartoSearchPage = ({ regions, countries, languages, }) => {
                     setUid(languages[i].language_uid);
                     ctx.current_deck.language_deck = []
                     ctx.current_deck.language_deck[0] = languages[i];
-                    setToPage('carto_language_page');
+                    setToPage('lg_search_page');
                 }
             }
         }

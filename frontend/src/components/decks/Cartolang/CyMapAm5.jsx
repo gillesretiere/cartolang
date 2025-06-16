@@ -6,7 +6,7 @@ import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import classes from './card.module.css';
 
 
-class CountryMapCard extends Component {
+class CyMapAm5 extends Component {
 
   constructor(props) {
     super(props);
@@ -275,4 +275,4 @@ class CountryMapCard extends Component {
 
   }
 }
-export default CountryMapCard
+export default CyMapAm5

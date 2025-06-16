@@ -45,7 +45,7 @@ function geoJson(countries) {
 }
 
 
-class LanguageMapCard extends Component {
+class LgMapAm5 extends Component {
 
   constructor(props) {
     super(props);
@@ -350,4 +350,4 @@ class LanguageMapCard extends Component {
 
   }
 }
-export default LanguageMapCard
+export default LgMapAm5

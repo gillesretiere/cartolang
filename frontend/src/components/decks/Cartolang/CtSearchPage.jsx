@@ -1,16 +1,15 @@
 import React, { useContext, useState, useEffect, } from 'react';
 import LayoutCartolang from '../../UI/LayoutCartolang.jsx';
 import { CyDeck } from './CyDeck.jsx';
-import CountryMapCard from './CountryMapCard.jsx';
-import CartoCountryMap from './CartoCountryMap.jsx';
+import CyMap from './CyMap.jsx';
 import { useParams } from "react-router-dom"
 import { useSearchParams } from 'react-router-dom';
 import { langdeck_countries } from '../../../assets/data/index.js';
 import { TravelExploreIcon, } from '../../../assets/img/index.js';
-import DeckContext from '../../../store/DeckContext';
+import DeckContext from '../../../store/DeckContext.jsx';
 
 
-const CartoCountryPage = () => {
+const CtSearchPage = () => {
     const params = useParams();
 
     const ctx = useContext(DeckContext);
@@ -74,7 +73,7 @@ const CartoCountryPage = () => {
                     item["id"] = index;
                     item["label"] = el.country_name_fr;
                     item["enabled"] = true;
-                    item["url"] = `/country_page/${el.country_uid}?r=${el.country_uid}`;
+                    item["url"] = `/ct_search_page/${el.country_uid}?r=${el.country_uid}`;
                     item["country_national_flag"] = el.country_national_flag;
                     arr.push(item);
                 }
@@ -90,7 +89,7 @@ const CartoCountryPage = () => {
                 {/* si un pays est sélectionné, on affiche le deck de ce pays */}
                 {countries && selectedCountry &&
                     <>
-                        <CartoCountryMap deck={selectedCountry} callBackFunction={callBackFunctionMap}></CartoCountryMap>
+                        <CyMap deck={selectedCountry} callBackFunction={callBackFunctionMap}></CyMap>
                         <CyDeck
                             deck={selectedCountry}
                             callBackFunction={callBackFunctionMap} />
@@ -102,4 +101,4 @@ const CartoCountryPage = () => {
     )
 }
 
-export default CartoCountryPage
+export default CtSearchPage

@@ -1,16 +1,16 @@
 import React, { useContext, useState, useEffect, } from 'react';
 
 import { Route, Link, Routes, useParams } from 'react-router-dom';
-import Layout from '../../UI/Layout';
-import DeckContext from '../../../store/DeckContext';
+import Layout from '../../UI/Layout.jsx';
+import DeckContext from '../../../store/DeckContext.jsx';
 import { langdeck_countries } from '../../../assets/data/index.js';
 import { CyDeck } from './CyDeck.jsx';
-import CartoCountryMap from './CartoCountryMap.jsx';
+import CyMap from './CyMap.jsx';
 
 
 
 
-const SearchCountryPage = () => {
+const CySearchPage = () => {
 
     const ctx = useContext(DeckContext);
 
@@ -64,10 +64,10 @@ const SearchCountryPage = () => {
                         <div className='grid grid-cols-5 gap-1 text-black dark:bg-zinc-800 dark:text-white'>
 
                             <div className='col-span-5'>
-                                <CartoCountryMap
+                                <CyMap
                                     deck={selectedCountry}
                                     callBackFunction={callBackFunctionMap}>
-                                </CartoCountryMap>
+                                </CyMap>
                             </div>
 
                             <div className='col-span-5'>
@@ -85,4 +85,4 @@ const SearchCountryPage = () => {
     )
 }
 
-export default SearchCountryPage
+export default CySearchPage
