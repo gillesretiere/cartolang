@@ -14,8 +14,8 @@ import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
 import LgSmallMapAm5 from './LgSmallMapAm5.jsx';
 import ReadMore from '../../UI/Media/ReadMore.jsx';
-
-
+import LanguageRegionMapAm5 from './LanguageRegionMapAm5.jsx';
+import JSON5 from 'json5';
 
 const useStyles = makeStyles(theme => ({
     rightIcon: {
@@ -27,26 +27,36 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
     let ctx = useContext(DeckContext);
     const classes = useStyles();
     const [open, setOpen] = useState(false);
+    const [vkRegion, setVkRegion] = useState([]);
+    const [dictPointSeries, setDictPointSeries] = useState (null);
 
     const closeButtonClickHandler = () => {
         callbackModal();
     }
     useEffect(
         () => {
-            console.log(langDeck);
-        }, [langDeck]
+            console.log(language);
+            if (language.vk_region_name) {
+                setVkRegion(JSON5.parse(language.vk_region_name.replace(/'/g, '"')));
+            }
+            if (language.vk_coordinates) {
+                setDictPointSeries (JSON5.parse(language.vk_coordinates));
+            }
+
+        }, [language]
     );
 
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up("lg"));
+
     return (
         <>
             {/* Carte largeur selon la taille du media */}
             <Card sx={{
                 width: {
-                    xs: 250, // 100%
-                    sm: 500,
-                    md: 640,
+                    xs: 350, // 100%
+                    sm: 640,
+                    md: 720,
                 },
             }}>
                 <CardActionArea sx={{ flexGrow: 1, }}>
@@ -85,9 +95,7 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
                                     p: 1,
                                     alignItems: 'center',
                                 }}>
-                                    <Typography variant="h5" sx={{
-                                        color: 'text.secondary'
-                                    }}>
+                                    <Typography className='text-zinc-500 text-xl'>
                                         {langDeck && langDeck.language_name_fr && langDeck.language_name_fr}
                                     </Typography>
                                 </Box>
@@ -96,26 +104,25 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
                             {/* carte */}
                             <Box className={`mx-0 px-0`} sx={{ gridArea: 'map', }}>
                                 {/* si la langue n'est pas répertoriée: on affiche une carte neutre (xxx) */}
-                                {langDeck ?
-                                    (<LgSmallMapAm5 language={langDeck}></LgSmallMapAm5>) :
+                                {langDeck && language.vk_region_name ?
+                                    (<LanguageRegionMapAm5 vkRegionName={vkRegion} dictPointSeries={dictPointSeries}></LanguageRegionMapAm5>) :
                                     (<></>)
                                 }
                             </Box>
                             <Box className={`mx-1 px-1`} sx={{ gridArea: 'Bloc2', }}>
-                                <Box sx={{
-                                    display: 'flex',
-                                    flexWrap: 'nowrap',
-                                    p: 1,
-                                    alignItems: 'center',
-                                }}>
+                                <Typography className={`font-articulat_cf leading-none tracking-wide font-base text-sm`}>
                                     {langDeck && langDeck.language_summary ? (
-                                        <ReadMore text={langDeck.language_summary} style={{ fontSize: 'small', borderTop: '1px solid white' }} />
+                                        <ReadMore
+                                            text={langDeck.language_summary}
+                                            style={{ fontSize: 'small', marginLeft: '-4px', paddingLeft: '8px', borderTop: '1px solid white', borderLeft: '6px solid rgba(244, 67, 54, 0.4)' }}
+                                            limit='200' />
                                     ) : (
                                         <Typography>
                                             &nbsp;
                                         </Typography>
-                                    )}
-                                </Box>
+                                    )
+                                    }
+                                </Typography>
                             </Box>
                             {/* 
                             */

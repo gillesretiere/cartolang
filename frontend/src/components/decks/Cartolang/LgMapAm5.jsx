@@ -149,12 +149,6 @@ class LgMapAm5 extends Component {
       },
       ]);
 
-      /*
-      this.setState({ country_points: country_points }, function () {
-        console.log(this.state.country_points);
-      });
-      */
-
       let pointSeries = this.chart.series.push(
         am5map.MapPointSeries.new(this.root, {
           geoJSON: country_points
@@ -279,45 +273,11 @@ class LgMapAm5 extends Component {
           })
         );
 
-        /*
-        var circle2 = container.children.push(
-          am5.Circle.new(this.root, {
-            radius: 4,
-            tooltipY: 0,
-            fill: colorIndexPulse,
-            opacity: 1.0,
-            above: true,
-            // tooltipText: "{name}"
-          })
-        );
-        */
-
-        /*
-        circle.animate({
-          key: "scale",
-          from: 1,
-          to: 5,
-          duration: 600,
-          easing: am5.ease.out(am5.ease.cubic),
-          loops: Infinity
-        });
-        circle.animate({
-          key: "opacity",
-          from: 1,
-          to: 0,
-          duration: 600,
-          easing: am5.ease.out(am5.ease.cubic),
-          loops: Infinity
-        });
-        */
-
         return am5.Bullet.new(this.root, {
           sprite: container
         });
       });
 
-
-      //this.chart.appear(1000, 100);
     } // endif
 
   }

@@ -6,6 +6,9 @@ import Typography from '@mui/material/Typography';
 import { Link, } from "react-router-dom";
 import { langdeck_languages } from '../../../assets/data/index.js';
 import ReadMore from '../../UI/Media/ReadMore.jsx';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import LanguageRegionMapAm5 from './LanguageRegionMapAm5.jsx';
 
 const CyDataLang = ({ deck }) => {
   let ctx = useContext(DeckContext);
@@ -17,15 +20,18 @@ const CyDataLang = ({ deck }) => {
     country_languages,
     country_iso2,
     country_wfb_languages_fr,
+    country_languages_summary,
     wfb_facts, } = deck;
 
   const [languages, setLanguages] = useState([]);
+  const [vkRegionName, setVkRegionName] = useState ([]);
 
   useEffect(() => {
     // on récupère le corpus langues
     const loadData = () => JSON.parse(JSON.stringify(langdeck_languages));
     setLanguages(loadData);
     ctx.current_deck.language_deck = languages;
+    setVkRegionName ( ['Golestān', 'Khorāsān-e Shomālī', ]);
   }, []);
 
   return (
@@ -38,10 +44,13 @@ const CyDataLang = ({ deck }) => {
                 Langues
               </Typography>
               <Typography className={`font-articulat_cf leading-none tracking-wide font-base text-sm lg:text-xl`}>
-                {country_wfb_languages_fr &&
-                  <ReadMore text={country_wfb_languages_fr}
-                    style={{ marginLeft: '-4px', paddingLeft: '8px', borderTop: '1px solid white', borderLeft: '6px solid rgba(244, 67, 54, 0.4)' }}
-                    limit='500' />
+                {country_languages_summary &&
+                  <>
+                    <ReadMore text={country_languages_summary}
+                      style={{ marginLeft: '-4px', paddingLeft: '8px', borderTop: '1px solid white', borderLeft: '6px solid rgba(244, 67, 54, 0.4)' }}
+                      limit='500' />
+                      <Markdown remarkPlugins={[remarkGfm]}>{country_languages_summary}</Markdown>
+                  </>
                 }
               </Typography>
             </div>

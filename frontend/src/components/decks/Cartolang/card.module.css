@@ -29,6 +29,11 @@ div[id^='smallmapdiv'] {
     height: 200px;
 }
 
+div[id^='regionmapdiv'] {
+    width: auto;
+    height: 200px;
+}
+
 .background {
     position: absolute;
     z-index: 1;

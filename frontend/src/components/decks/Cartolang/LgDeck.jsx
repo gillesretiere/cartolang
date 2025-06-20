@@ -30,14 +30,13 @@ const LgDeck = ({ langdeck }) => {
               xs:
                 `
             "lg_name_fr lg_name_fr . . ."
-            "lg_name_na lg_name_na . . ."
-            ". . lg_barchrt lg_barchrt lg_barchrt"
+            "lg_summary lg_summary lg_summary lg_summary ."
             "lg_rndchrt lg_rndchrt lg_rndchrt lg_rndchrt lg_rndchrt"
             `,
               md:
                 `
-            "lg_name_fr lg_name_fr lg_barchrt lg_barchrt ."
-            "lg_name_fr lg_name_fr lg_barchrt lg_barchrt ."
+            "lg_name_fr lg_name_fr lg_summary lg_summary ."
+            "lg_name_fr lg_name_fr lg_summary lg_summary ."
             "lg_rndchrt lg_rndchrt lg_rndchrt lg_rndchrt lg_rndchrt"
             `,
             },
@@ -66,17 +65,23 @@ const LgDeck = ({ langdeck }) => {
                 {langdeck.language_name_native}
               </Typography>
             </Box>
+          </Box>
+          <Box className={`mx-1 px-4`} sx={{ gridArea: 'lg_summary', }}>
             <Box sx={{
-              display: 'flex',
+              display: 'flex flex-cols',
               flexWrap: 'nowrap',
               p: 1,
               alignItems: 'center',
             }}>
               {langdeck.language_summary &&
-                <ReadMore text={langdeck.language_summary} style={{ fontSize: 'medium', borderTop: '1px solid white' }} />
+                <ReadMore
+                  text={langdeck.language_summary}
+                  style={{ fontSize: 'large', marginLeft: '-4px', paddingLeft: '8px', borderTop: '1px solid white', borderLeft: '6px solid rgba(244, 67, 54, 0.4)' }}
+                  limit='200' />
               }
             </Box>
           </Box>
+
           <Box className={`mx-1 px-1 my-4 mt-20 pt-6`} sx={{ gridArea: 'lg_rndchrt', border: 1, borderLeft: 0, borderBottom: 0, borderRight: 0, borderColor: 'grey.400', }}>
             <Grid container spacing={4}>
               {langdeck.language_countries && langdeck.language_countries.sort((a, b) => (a.popularity_as_float > b.popularity_as_float ? -1 : 1))

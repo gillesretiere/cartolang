@@ -69,7 +69,7 @@ const CyLangCard = ({ card, langDeck, }) => {
                     {currentLanguage &&
                         <>
                             <CyLangMap
-                                language={language}
+                                language={card}
                                 langDeck={currentLanguage[0]}
                                 callbackModal={callbackModal}>
 

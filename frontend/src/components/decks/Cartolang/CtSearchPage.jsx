@@ -89,10 +89,13 @@ const CtSearchPage = () => {
                 {/* si un pays est sélectionné, on affiche le deck de ce pays */}
                 {countries && selectedCountry &&
                     <>
-                        <CyMap deck={selectedCountry} callBackFunction={callBackFunctionMap}></CyMap>
+                    <div>
+                        <CyMap deck={selectedCountry} callBackFunction={callBackFunctionMap} className=''></CyMap>
                         <CyDeck
                             deck={selectedCountry}
-                            callBackFunction={callBackFunctionMap} />
+                            callBackFunction={callBackFunctionMap} 
+                            className=''/>
+                    </div>
                     </>
                 }
 
