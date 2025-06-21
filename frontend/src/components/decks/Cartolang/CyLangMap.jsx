@@ -15,6 +15,7 @@ import Typography from '@mui/material/Typography';
 import LgSmallMapAm5 from './LgSmallMapAm5.jsx';
 import ReadMore from '../../UI/Media/ReadMore.jsx';
 import LanguageRegionMapAm5 from './LanguageRegionMapAm5.jsx';
+import LanguageRegionMapAm5Registry from './LanguageRegionMapAm5Registry.jsx';
 import JSON5 from 'json5';
 
 const useStyles = makeStyles(theme => ({
@@ -28,21 +29,31 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const [vkRegion, setVkRegion] = useState([]);
-    const [dictPointSeries, setDictPointSeries] = useState (null);
+    const [vkPointSeries, setVkPointSeries] = useState([]);
+    const [mapConfig, setMapConfig] = useState({});
+    const [geoJsonCtryCode, setGeoJsonCtyCode] = useState('');
+    const [regionalStatus, setRegionalStatus] = useState('');
 
     const closeButtonClickHandler = () => {
         callbackModal();
     }
     useEffect(
         () => {
-            console.log(language);
             if (language.vk_region_name) {
                 setVkRegion(JSON5.parse(language.vk_region_name.replace(/'/g, '"')));
             }
             if (language.vk_coordinates) {
-                setDictPointSeries (JSON5.parse(language.vk_coordinates));
+                setVkPointSeries(JSON5.parse(language.vk_coordinates));
             }
-
+            if (language.map_config) {
+                setMapConfig(JSON5.parse(language.map_config));
+            }
+            if (language.geo_json) {
+                setGeoJsonCtyCode(language.geo_json);
+            }
+            if (language.regional_status) {
+                setRegionalStatus(language.regional_status);
+            }
         }, [language]
     );
 
@@ -90,31 +101,47 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
                         >
                             <Box className={`mx-1 px-1`} sx={{ gridArea: 'Bloc1', }}>
                                 <Box sx={{
-                                    display: 'flex',
+                                    display: 'flex flex-col',
                                     flexWrap: 'nowrap',
                                     p: 1,
                                     alignItems: 'center',
                                 }}>
+                                    <Typography className='text-zinc-700 text-2xl font-bold'>
+                                        {language && language.language_name_fr}
+                                    </Typography>
                                     <Typography className='text-zinc-500 text-xl'>
-                                        {langDeck && langDeck.language_name_fr && langDeck.language_name_fr}
+                                        {language && language.language_name_native}
                                     </Typography>
                                 </Box>
 
                             </Box>
                             {/* carte */}
                             <Box className={`mx-0 px-0`} sx={{ gridArea: 'map', }}>
-                                {/* si la langue n'est pas répertoriée: on affiche une carte neutre (xxx) */}
-                                {langDeck && language.vk_region_name ?
-                                    (<LanguageRegionMapAm5 vkRegionName={vkRegion} dictPointSeries={dictPointSeries}></LanguageRegionMapAm5>) :
+                                {/* si la langue n'est pas répertoriée: on affiche une carte neutre (xxx) 
+                                <LanguageRegionMapAm5 countryCode="iranLow" vkRegionName={vkRegion} vkPointSeries={vkPointSeries}></LanguageRegionMapAm5>
+                                <LanguageRegionMapAm5Registry
+                                        countryCode="afghanistanLow"
+                                        vkRegionName={['Balkh', 'Jowzjān', 'Fāryāb']}
+                                        vkPointSeries={[66.90, 36.89]}
+                                        vkMapConfig={{ homeGeoPoint: { longitude: 65, latitude: 33 }, homeZoomLevel: 5 }}
+                                    />
+                                */}
+                                {language.vk_region_name ?
+                                    (<LanguageRegionMapAm5Registry
+                                        countryCode={geoJsonCtryCode}
+                                        vkRegionName={vkRegion}
+                                        vkPointSeries={vkPointSeries}
+                                        vkMapConfig={mapConfig}
+                                    />) :
                                     (<></>)
                                 }
                             </Box>
                             <Box className={`mx-1 px-1`} sx={{ gridArea: 'Bloc2', }}>
                                 <Typography className={`font-articulat_cf leading-none tracking-wide font-base text-sm`}>
-                                    {langDeck && langDeck.language_summary ? (
+                                    {regionalStatus ? (
                                         <ReadMore
-                                            text={langDeck.language_summary}
-                                            style={{ fontSize: 'small', marginLeft: '-4px', paddingLeft: '8px', borderTop: '1px solid white', borderLeft: '6px solid rgba(244, 67, 54, 0.4)' }}
+                                            text={regionalStatus}
+                                            style={{ fontSize: 'large', marginLeft: '-4px', paddingLeft: '8px', borderTop: '1px solid white', borderLeft: '6px solid rgba(244, 67, 54, 0.4)' }}
                                             limit='200' />
                                     ) : (
                                         <Typography>

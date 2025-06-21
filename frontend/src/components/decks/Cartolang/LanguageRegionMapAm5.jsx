@@ -1,11 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, } from 'react';
 import * as am5 from '@amcharts/amcharts5';
 import * as am5map from '@amcharts/amcharts5/map';
 import am5geodata_iranLow from '@amcharts/amcharts5-geodata/iranLow';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
-const LanguageRegionMapAm5 = ({ vkRegionName, dictPointSeries }) => {
+const LanguageRegionMapAm5 = ({ countryCode, vkRegionName, vkPointSeries }) => {
 
+    const [geoJSON, setGeoJSON] = useState(null);
+    /*
+    useEffect(() => {
+        // Dynamically import GeoJSON based on countryCode
+        import(`@amcharts/amcharts5-geodata/${countryCode}`)
+            .then((module) => {
+                setGeoJSON(module.default);
+            })
+            .catch((error) => {
+                console.error(`Failed to load GeoJSON for ${countryCode}:`, error);
+            });
+    }, [countryCode]);
+    */
+   
     useEffect(() => {
         // Create root element
         const root = am5.Root.new('chartdiv');
@@ -52,17 +66,14 @@ const LanguageRegionMapAm5 = ({ vkRegionName, dictPointSeries }) => {
             polygonSeries.dataItems.forEach((dataItem, index) => {
                 const regionName = dataItem.dataContext?.properties?.name || dataItem.dataContext?.name;
                 const polygon = dataItem.get('mapPolygon'); // Use 'mapPolygon' instead of 'geometry'
-                /*
                 console.log(`DataItem ${index}:`, {
                     context: dataItem.dataContext,
                     hasPolygon: !!polygon,
                     regionName,
                 });
-                */
-                console.log(dictPointSeries);
                 if (polygon && vkRegionName.includes(regionName)) {
                     polygon.setAll({
-                        fill: am5.color(0xaedcda), // Orange for Turkmen regions
+                        fill: am5.color(0xf25f4b), // Orange for Turkmen regions
                         fillOpacity: 0.8,
                         stroke: am5.color(0xffffff),
                         strokeWidth: 1,
@@ -71,30 +82,6 @@ const LanguageRegionMapAm5 = ({ vkRegionName, dictPointSeries }) => {
             });
         });
 
-        // Alternative: Create a separate series for filtered Turkmen regions
-        const polygonSeriesFiltered = chart.series.push(
-            am5map.MapPolygonSeries.new(root, {
-                idField: 'id',
-                fill: am5.color(0xff6200), // Default orange fill
-                fillOpacity: 0.8,
-                stroke: am5.color(0xffffff),
-                strokeWidth: 1,
-            })
-        );
-
-        // Add filtered Turkmen regions to the separate series
-        polygonSeriesFiltered.events.on('datavalidated', () => {
-            const filteredData = am5geodata_iranLow.features
-                .filter(f => ['Golestān', 'Khorāsān-e Shomālī', 'Golestan', 'Khorasan-e Shomali'].includes(f.properties.name))
-                .map(f => ({
-                    id: f.id,
-                    geometry: f.geometry,
-                    name: f.properties.name,
-                }));
-
-            // console.log('Filtered Turkmen regions:', filteredData);
-            polygonSeriesFiltered.data.setAll(filteredData);
-        });
 
         // Alternative: Add point for Turkmen region (e.g., Gonbad-e Kavus)
         const pointSeries = chart.series.push(
@@ -114,12 +101,21 @@ const LanguageRegionMapAm5 = ({ vkRegionName, dictPointSeries }) => {
         );
         pointSeries.data.setAll([
             {
-                geometry: { 
-                    type: 'Point', 
-                    coordinates: dictPointSeries }, // Gonbad-e Kavus
-                name: 'Turkmen Region',
+                geometry: {
+                    type: 'Point',
+                    coordinates: vkPointSeries
+                }
             },
         ]);
+        pointSeries.events.on('datavalidated', () => {
+            // console.log(dictPointSeries);
+
+
+
+
+        });
+
+
 
 
 
@@ -130,7 +126,7 @@ const LanguageRegionMapAm5 = ({ vkRegionName, dictPointSeries }) => {
         return () => {
             root.dispose();
         };
-    }, [vkRegionName, dictPointSeries,]);
+    }, [vkRegionName, vkPointSeries,]);
 
     return (
         <div id="chartdiv" style={{ width: '100%', height: '500px' }}></div>
