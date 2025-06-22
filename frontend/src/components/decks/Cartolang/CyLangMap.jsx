@@ -17,6 +17,7 @@ import ReadMore from '../../UI/Media/ReadMore.jsx';
 import LanguageRegionMapAm5 from './LanguageRegionMapAm5.jsx';
 import LanguageRegionMapAm5Registry from './LanguageRegionMapAm5Registry.jsx';
 import JSON5 from 'json5';
+import geoJsonRegistry from './geoJsonRegistry.js';
 
 const useStyles = makeStyles(theme => ({
     rightIcon: {
@@ -54,6 +55,7 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
             if (language.regional_status) {
                 setRegionalStatus(language.regional_status);
             }
+            console.log (mapConfig);
         }, [language]
     );
 

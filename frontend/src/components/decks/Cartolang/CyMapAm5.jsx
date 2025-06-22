@@ -25,7 +25,12 @@ class CyMapAm5 extends Component {
     let setUpdatedCountry = this.props.setUpdatedCountry;
     // couleur des terres sur la carte
     let colorMap = am5.color(0xF7F6F1);
+
     let step = 0;
+    /*
+      On affiche à la première sélection (correct° bug)
+    */
+    let colorIndexPolygon = am5.color(0xFF7061); //0xF23D3D
 
     let { init, country, stage, } = this.state;
 
@@ -76,8 +81,8 @@ class CyMapAm5 extends Component {
     });
 
     polygonSeries.mapPolygons.template.states.create("active", {
-      // couleur de la mer sur la carte
-      fill: am5.color(0xdbd7c0)
+      // couleur du pays sélectionné
+      fill: colorIndexPolygon
     });
 
     let previousPolygon;
@@ -105,10 +110,7 @@ class CyMapAm5 extends Component {
     this.root = root;
     this.colorMap = colorMap;
 
-    /*
-      On affiche à la première sélection (correct° bug)
-    */
-    let colorIndexPolygon = am5.color(0xdbd7c0); //0xF23D3D
+
 
     this.polygonSeries.data.setAll([{
       id: this.props.country.country_iso2,
@@ -131,7 +133,7 @@ class CyMapAm5 extends Component {
 
   componentDidUpdate(oldProps) {
     // couleur de sélection
-    let colorIndexPolygon = am5.color(0xdbd7c0); //0xF23D3D
+    let colorIndexPolygon = am5.color(0xF44336); //0xF23D3D
     let mps = null;
 
     if (this.props.country.country_iso2) {

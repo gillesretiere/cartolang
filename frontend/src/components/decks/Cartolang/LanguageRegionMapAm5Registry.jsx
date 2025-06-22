@@ -28,7 +28,7 @@ const LanguageRegionMapAm5Registry = ({ countryCode, vkRegionName, vkPointSeries
         projection: am5map.geoMercator(),
         homeGeoPoint: vkMapConfig?.homeGeoPoint || { longitude: 54, latitude: 35 }, // Default: Iran
         homeZoomLevel: vkMapConfig?.homeZoomLevel || 4,
-        minZoomLevel: vkMapConfig?.minZoomLevel || 2,
+        minZoomLevel: vkMapConfig?.minZoomLevel || 1,
         maxZoomLevel: vkMapConfig?.maxZoomLevel || 10,
       })
     );
@@ -38,8 +38,8 @@ const LanguageRegionMapAm5Registry = ({ countryCode, vkRegionName, vkPointSeries
       am5map.MapPolygonSeries.new(root, {
         geoJSON: geoJSON,
         idField: 'id',
-        fill: am5.color(0x68aa79),
-        stroke: am5.color(0xffffff),
+        fill: am5.color(0xe0e0e0),
+        stroke: am5.color(0x2c2f33),
         strokeWidth: 0.5,
       })
     );
@@ -55,19 +55,17 @@ const LanguageRegionMapAm5Registry = ({ countryCode, vkRegionName, vkPointSeries
       polygonSeries.dataItems.forEach((dataItem, index) => {
         const regionName = dataItem.dataContext?.properties?.name || dataItem.dataContext?.name;
         const polygon = dataItem.get('mapPolygon');
-        /*
         console.log(`DataItem ${index}:`, {
           context: dataItem.dataContext,
           hasPolygon: !!polygon,
           regionName,
         });
-        */
         if (polygon && vkRegionName.includes(regionName)) {
           polygon.setAll({
-            fill: am5.color(0xf25f4b), // Orange for specified regions
-            fillOpacity: 0.8,
-            stroke: am5.color(0xffffff),
-            strokeWidth: 1,
+            fill: am5.color(0xFF7061), // Orange for specified regions
+            fillOpacity: 1.0,
+            stroke: am5.color(0x2c2f33),
+            strokeWidth: 0.8,
           });
         }
       });
@@ -83,7 +81,7 @@ const LanguageRegionMapAm5Registry = ({ countryCode, vkRegionName, vkPointSeries
       am5.Bullet.new(root, {
         sprite: am5.Circle.new(root, {
           radius: 10,
-          fill: am5.color(0xf25f4b),
+          fill: am5.color(0xF44336),
           stroke: am5.color(0xffffff),
           strokeWidth: 1,
         }),

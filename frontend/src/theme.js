@@ -101,6 +101,10 @@ const theme = createTheme({
         blue_tertiary: {
             main: '#6d9ab3',
         },
+        coral: {
+            main: '#FF7061',
+            dark: '#FF7061',
+        }
     },
 
     typography: {

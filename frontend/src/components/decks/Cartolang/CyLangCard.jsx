@@ -9,12 +9,13 @@ import Typography from '@mui/material/Typography';
 import Popper from "@mui/material/Popper";
 import { CyLangMap } from './CyLangMap';
 import { CircularProgressChart } from './CircularProgressChart';
+import VerifiedIcon from '@mui/icons-material/Verified';
 
 import Chart from './Chart';
 import { formHelperTextClasses } from '@mui/material';
 
 const CyLangCard = ({ card, langDeck, }) => {
-    let { language_name_fr, language_name_native, language_uid, popularity_as_float, } = card;
+    let { language_name_fr, language_name_native, language_uid, popularity_as_float, speakers, is_official, } = card;
     let ctx = useContext(DeckContext);
     const [currentLanguage, setCurrentLanguage] = useState([]);
 
@@ -54,7 +55,7 @@ const CyLangCard = ({ card, langDeck, }) => {
                 <Popper id={id}
                     open={openPopup}
                     anchorEl={anchorEl}
-                    placement="right-end"
+                    placement="top"
                     disablePortal={false}
                     modifiers={[
                         {
@@ -80,7 +81,7 @@ const CyLangCard = ({ card, langDeck, }) => {
                 </Popper>
             </div>
 
-            <Card sx={{ margin: 'auto' }}>
+            <Card className='bg-stone-50 dark:bg-stone-800' sx={{ margin: 'auto', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', }}>
                 {
                     /*
                 <CardMedia
@@ -90,22 +91,54 @@ const CyLangCard = ({ card, langDeck, }) => {
             />
             */
                 }
-                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', }}>
+                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', }}>
                     <CardContent>
-                        <Typography gutterBottom component="div" className='font-semibold tracking-tight text-zinc-700 dark:text-white text-3xl'>
+                        <Typography gutterBottom component="div" className='font-bold tracking-tight text-zinc-800 dark:text-white text-2xl'>
                             {language_name_fr}
                         </Typography>
-                        <Typography gutterBottom variant="h5" component="div" className='text-zinc-500'>
+                        <Typography gutterBottom component="div" className='font-semibold tracking-tight text-zinc-600 dark:text-white text-xl'>
                             {language_name_native}
                         </Typography>
+                        <Typography className="font-base text-zinc-500 dark:text-white text-lg">
+                            {language_uid}
+                        </Typography>
+                        <div className='my-4'></div>
+                        <hr />
+                        <div className='my-4'></div>
+                        <Typography className={`font-articulat_cf leading-none tracking-tight font-base text-sm md:text-md text-milano-500 `}>
+                            Nombre de locuteurs
+                        </Typography>
+                        <Typography gutterBottom component="div" className='font-semibold tracking-tight text-zinc-700 dark:text-white text-xl'>
+                            {speakers}
+                        </Typography>
+                        <Typography className={`font-articulat_cf leading-none tracking-tight font-base text-sm md:text-md text-milano-500 `}>
+                            Langue officielle
+                        </Typography>
+                        <div>
+                            {is_official === 'TRUE' ? (<>
+                                <Typography className={`font-thin text-zinc-700 dark:text-white text-lg `}>
+                                    Oui
+                                </Typography>
+                            </>
+                            ) : (<>
+                                <Typography className={`font-thin text-zinc-700 dark:text-white text-lg `}>
+                                    Non
+                                </Typography>
+                            </>)}
+                        </div>
                     </CardContent>
-                    <CardContent>
-                        <CircularProgressChart value={popularity_as_float*100} size="6rem"/>
-                    </CardContent>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+
+                        <CardContent>
+                            <CircularProgressChart value={popularity_as_float * 100} size="7rem" />
+                        </CardContent>
+                        <CardActions>
+                            <Button id={language_uid} onClick={handleClick} className="mt-2 text-xs dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small" sx={{ display: 'flex', }}>Voir carte</Button>
+                        </CardActions>
+                    </Box>
+
                 </Box>
-                <CardActions>
-                    <Button id={language_uid} onClick={handleClick} className="mt-2 dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small" sx={{ display: 'flex', }}>Voir plus</Button>
-                </CardActions>
+
             </Card>
         </>
     )

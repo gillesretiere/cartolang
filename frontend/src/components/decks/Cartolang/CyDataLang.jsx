@@ -40,7 +40,7 @@ const CyDataLang = ({ deck }) => {
         <div className='grid grid-cols-5 auto-rows-min gap-4 text-zinc-700 dark:text-white my-4'>
           <>
             <div className="col-start-1 col-end-6 px-4">
-              <Typography className={`font-articulat_cf leading-none tracking-tight font-base text-sm lg:text-lg text-milano-500 `}>
+              <Typography className={`px-2 font-articulat_cf leading-none tracking-tight font-base text-sm lg:text-lg text-milano-500 `}>
                 Langues
               </Typography>
               <Typography className={`font-articulat_cf leading-none tracking-wide font-base text-sm lg:text-xl`}>
@@ -49,7 +49,7 @@ const CyDataLang = ({ deck }) => {
                     <ReadMore text={country_languages_summary}
                       style={{ marginLeft: '-4px', paddingLeft: '8px', borderTop: '1px solid white', borderLeft: '6px solid rgba(244, 67, 54, 0.4)' }}
                       limit='500' />
-                      <Markdown remarkPlugins={[remarkGfm]}>{country_languages_summary}</Markdown>
+                      {/* <Markdown remarkPlugins={[remarkGfm]}>{country_languages_summary}</Markdown> */}
                   </>
                 }
               </Typography>
@@ -57,7 +57,7 @@ const CyDataLang = ({ deck }) => {
           </>
         </div>
       </section>
-    </>
+    </> 
   )
 }
 
