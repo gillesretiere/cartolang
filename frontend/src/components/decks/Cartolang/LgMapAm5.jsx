@@ -26,7 +26,8 @@ function geoJson(countries) {
       "properties": {
         "name": `${countries[i]["country_name_fr"]}`,
         "country_iso2": `${countries[i]["country_iso2"]}`,
-        "popularity": `${countries[i]["popularity_as_float"]}`,
+        "popularity_as_float": `${countries[i]["popularity_as_float"]}`,
+        "popularity": `${countries[i]["popularity"]}`,
       },
       "geometry": {
         "type": "Point",

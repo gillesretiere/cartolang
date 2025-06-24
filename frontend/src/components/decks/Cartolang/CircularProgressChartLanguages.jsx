@@ -1,0 +1,54 @@
+import * as React from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+import { Typography } from '@mui/material';
+
+export const CircularProgressChartLanguages = (props) => {
+    return (
+        <>
+            <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+
+                { /* https://stackoverflow.com/questions/71753127/how-can-i-customize-the-mui-circularprogress-bar  */ }
+                <CircularProgress
+                    variant="determinate"
+                    value={100}
+                    size={props.size}
+                    thickness={6}
+                    sx={{
+                        color: '#e0e0e0', // Light gray color for uncompleted (remaining) portion
+                        position: 'absolute',
+                    }}
+                />
+                <CircularProgress variant="determinate"
+                    thickness={6}
+                    sx={(theme) => ({
+                        color: theme.palette.coral,
+                        ...theme.applyStyles('dark', {
+                            color: theme.palette.coral.dark,
+                        }),
+                    })}
+                    {...props} />
+                <Box
+                    sx={{
+                        top: 0,
+                        left: 0,
+                        bottom: 0,
+                        right: 0,
+                        position: 'absolute',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <Typography
+                        variant="caption"
+                        component="div"
+                        className='font-articulat_cf leading-none text-xl sm:text-2xl font-bold text-milano-500 dark:text-white'
+                    >
+                        {`${Math.round(props.value)}%`}
+                    </Typography>
+                </Box>
+            </Box>
+        </>
+    )
+}

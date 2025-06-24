@@ -25,6 +25,10 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
+const loadRegionRegistry = async (region) => {
+  if (region === 'pakistanLow') return import('@amcharts/amcharts5-geodata/pakistanLow').then(module => console.log(module.default));
+};
+
 export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
     let ctx = useContext(DeckContext);
     const classes = useStyles();
@@ -35,28 +39,22 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
     const [geoJsonCtryCode, setGeoJsonCtyCode] = useState('');
     const [regionalStatus, setRegionalStatus] = useState('');
 
+    const dynamic_geo_json = "pakistanLow";
+    // import('@amcharts/amcharts5-geodata/pakistanLow').then(module => console.log(module.default));
+    loadRegionRegistry (dynamic_geo_json);
+
     const closeButtonClickHandler = () => {
         callbackModal();
     }
     useEffect(
         () => {
-            if (language.vk_region_name) {
-                setVkRegion(JSON5.parse(language.vk_region_name.replace(/'/g, '"')));
-            }
-            if (language.vk_coordinates) {
-                setVkPointSeries(JSON5.parse(language.vk_coordinates));
-            }
-            if (language.map_config) {
-                setMapConfig(JSON5.parse(language.map_config));
-            }
-            if (language.geo_json) {
-                setGeoJsonCtyCode(language.geo_json.trim());
-            }
-            if (language.regional_status) {
-                setRegionalStatus(language.regional_status);
-            }
-            console.log (mapConfig);
-            console.log(geoJsonRegistry['burkinaFasoLow'].features.map(f => f.properties.name));
+            language.vk_region_name && setVkRegion(JSON5.parse(language.vk_region_name.replace(/'/g, '"')));
+            language.vk_coordinates && setVkPointSeries(JSON5.parse(language.vk_coordinates));
+            language.map_config && setMapConfig(JSON5.parse(language.map_config));
+            language.geo_json && setGeoJsonCtyCode(language.geo_json.trim());
+            language.regional_status && setRegionalStatus(language.regional_status);
+            // console.log (mapConfig);
+            // console.log(geoJsonRegistry['burkinaFasoLow'].features.map(f => f.properties.name));
         }, [language]
     );
 

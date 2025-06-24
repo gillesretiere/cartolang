@@ -6,7 +6,8 @@ import { Box } from '@mui/material';
 
 
 const CyMap = ({ deck, callBackFunction, }) => {
-
+    console.log(deck);
+    
     const setUpdatedCountry = (updatedCountry) => {
         {/*
             on récupère le code alpha2 et on le remonte

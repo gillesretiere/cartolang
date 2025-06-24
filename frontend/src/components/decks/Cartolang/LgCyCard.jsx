@@ -6,7 +6,7 @@ import { Box } from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { CircularProgressChart } from './CircularProgressChart';
+import { CircularProgressChartLanguages } from './CircularProgressChartLanguages';
 
 import { withStyles } from '@material-ui/core/styles';
 
@@ -16,27 +16,36 @@ export const LgCyCard = ({ card, langdeck }) => {
     const handleClick = (event) => {
         return;
     }
+    console.log(card);
 
     return (
         <>
-            <Card sx={{ maxWidth: 345, margin: 'auto' }}>
-                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', }}>
+            <Card className='bg-stone-50 dark:bg-stone-800' sx={{ margin: 'auto', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', }}>
+                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', }}>
                     <Box sx={{ display: 'flex', flexDirection: 'column', }}>
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom component="div" className='font-bold tracking-tight text-zinc-800 dark:text-white text-2xl'>
                                 {country_name_fr}
                             </Typography>
-                            <Typography gutterBottom variant="h6" component="div" className='text-slate-500'>
-                                {country_name_native}
+                            <Typography className="font-base text-zinc-500 dark:text-white text-lg">
+                                {country_uid}
                             </Typography>
-                            <img width="40px" src={national_flag} />
-                            </CardContent>
+                            <img className='h-12 mt-2' src={national_flag} />
+
+                        </CardContent>
 
                     </Box>
+                    <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                        <CardContent>
+                            <CircularProgressChartLanguages value={popularity_as_float * 100} size="6rem" />
+                        </CardContent>
+                        <CardActions>
+                            <Button id={country_uid} className="mx-2 text-xs dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small">
+                                Voir carte
+                            </Button>
+                        </CardActions>
+                    </Box>
 
-                    <CardContent>
-                        <CircularProgressChart value={popularity_as_float * 100} size="4rem" />
-                    </CardContent>
 
                 </Box>
 
