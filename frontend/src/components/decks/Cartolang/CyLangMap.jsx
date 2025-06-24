@@ -50,12 +50,13 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
                 setMapConfig(JSON5.parse(language.map_config));
             }
             if (language.geo_json) {
-                setGeoJsonCtyCode(language.geo_json);
+                setGeoJsonCtyCode(language.geo_json.trim());
             }
             if (language.regional_status) {
                 setRegionalStatus(language.regional_status);
             }
             console.log (mapConfig);
+            console.log(geoJsonRegistry['burkinaFasoLow'].features.map(f => f.properties.name));
         }, [language]
     );
 
