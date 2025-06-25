@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const loadRegionRegistry = async (region) => {
-  if (region === 'pakistanLow') return import('@amcharts/amcharts5-geodata/pakistanLow').then(module => console.log(module.default));
+  if (region === 'maliLow') return import('@amcharts/amcharts5-geodata/maliLow').then(module => console.log(module.default));
 };
 
 export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
@@ -39,9 +39,9 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
     const [geoJsonCtryCode, setGeoJsonCtyCode] = useState('');
     const [regionalStatus, setRegionalStatus] = useState('');
 
-    const dynamic_geo_json = "pakistanLow";
-    // import('@amcharts/amcharts5-geodata/pakistanLow').then(module => console.log(module.default));
-    loadRegionRegistry (dynamic_geo_json);
+    const dynamic_geo_json = "maliLow";
+    // import('@amcharts/amcharts5-geodata/maliLow').then(module => console.log(module.default));
+    // loadRegionRegistry (dynamic_geo_json);
 
     const closeButtonClickHandler = () => {
         callbackModal();
@@ -54,7 +54,7 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
             language.geo_json && setGeoJsonCtyCode(language.geo_json.trim());
             language.regional_status && setRegionalStatus(language.regional_status);
             // console.log (mapConfig);
-            // console.log(geoJsonRegistry['burkinaFasoLow'].features.map(f => f.properties.name));
+            console.log(geoJsonRegistry['pakistanLow'].features.map(f => f.properties.name));
         }, [language]
     );
 
