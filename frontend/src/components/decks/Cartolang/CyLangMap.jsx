@@ -54,7 +54,7 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
             language.geo_json && setGeoJsonCtyCode(language.geo_json.trim());
             language.regional_status && setRegionalStatus(language.regional_status);
             // console.log (mapConfig);
-            console.log(geoJsonRegistry['pakistanLow'].features.map(f => f.properties.name));
+            console.log(geoJsonRegistry['romaniaLow'].features.map(f => f.properties.name));
         }, [language]
     );
 

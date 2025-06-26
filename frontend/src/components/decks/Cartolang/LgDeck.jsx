@@ -76,6 +76,46 @@ const LgDeck = ({ langdeck }) => {
                 {langdeck.language_uid}
               </Typography>
             </Box>
+            <Box sx={{
+              display: 'flex',
+              flexWrap: 'nowrap',
+              p: 1,
+              alignItems: 'center',
+            }}>
+              <Typography className={`font-articulat_cf leading-none tracking-tight font-base text-sm md:text-md text-milano-500 `}>
+                Nombre total de locuteurs dans le monde
+              </Typography>
+            </Box>
+            <Box sx={{
+              display: 'flex',
+              flexWrap: 'nowrap',
+              p: 1,
+              alignItems: 'center',
+            }}>
+              <Typography className="font-base text-zinc-500 dark:text-white text-lg lg:text-2xl">
+                {langdeck.language_uid}
+              </Typography>
+            </Box>
+            <Box sx={{
+              display: 'flex',
+              flexWrap: 'nowrap',
+              p: 1,
+              alignItems: 'center',
+            }}>
+              <Typography className={`font-articulat_cf leading-none tracking-tight font-base text-sm md:text-md text-milano-500 `}>
+                Nombre total de pays
+              </Typography>
+            </Box>
+            <Box sx={{
+              display: 'flex',
+              flexWrap: 'nowrap',
+              p: 1,
+              alignItems: 'center',
+            }}>
+              <Typography className="font-base text-zinc-500 dark:text-white text-lg lg:text-2xl">
+                {langdeck.language_uid}
+              </Typography>
+            </Box>
           </Box>
           <Box className={`mx-1 px-4`} sx={{ gridArea: 'lg_summary', }}>
             <Box sx={{
@@ -99,9 +139,9 @@ const LgDeck = ({ langdeck }) => {
                 .map(
                   (el, index) => {
                     return (
-                        <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-                          <LgCyCard card={el} langdeck={langdeck} />
-                        </Grid>
+                      <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
+                        <LgCyCard card={el} langdeck={langdeck} />
+                      </Grid>
                     )
                   }
                 )}

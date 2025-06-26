@@ -11,6 +11,10 @@ import am5geodata_maliLow from '@amcharts/amcharts5-geodata/maliLow';
 import am5geodata_nigerLow from '@amcharts/amcharts5-geodata/nigerLow';
 import am5geodata_somaliaLow from '@amcharts/amcharts5-geodata/somaliaLow';
 import am5geodata_pakistanLow from '@amcharts/amcharts5-geodata/pakistanLow';
+import am5geodata_romaniaLow from '@amcharts/amcharts5-geodata/romaniaLow';
+import am5geodata_moldovaLow from '@amcharts/amcharts5-geodata/moldovaLow';
+import am5geodata_centralAfricanRepublicLow from '@amcharts/amcharts5-geodata/centralAfricanRepublicLow';
+import am5geodata_mauritaniaLow from '@amcharts/amcharts5-geodata/mauritaniaLow';
 
 
 const geoJsonRegistry = {
@@ -27,6 +31,10 @@ const geoJsonRegistry = {
   nigerLow: am5geodata_nigerLow,  
   somaliaLow: am5geodata_somaliaLow,
   pakistanLow: am5geodata_pakistanLow,
+  romaniaLow: am5geodata_romaniaLow,
+  moldovaLow: am5geodata_moldovaLow,
+  centralAfricanRepublicLow: am5geodata_centralAfricanRepublicLow,
+  mauritaniaLow: am5geodata_mauritaniaLow,
 };
 
 export default geoJsonRegistry;

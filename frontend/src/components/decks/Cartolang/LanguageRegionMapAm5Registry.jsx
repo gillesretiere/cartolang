@@ -59,6 +59,7 @@ const LanguageRegionMapAm5Registry = ({ countryCode, vkRegionName, vkPointSeries
           context: dataItem.dataContext,
           hasPolygon: !!polygon,
           regionName,
+          vkRegionName,
         });
         if (polygon && vkRegionName.includes(regionName)) {
           polygon.setAll({

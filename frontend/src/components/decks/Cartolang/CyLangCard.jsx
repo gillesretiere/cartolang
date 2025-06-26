@@ -99,7 +99,7 @@ const CyLangCard = ({ card, langDeck, }) => {
                         <Typography gutterBottom component="div" className='font-semibold tracking-tight text-zinc-600 dark:text-white text-xl'>
                             {language_name_native}
                         </Typography>
-                        <Typography className="font-base text-zinc-500 dark:text-white text-lg">
+                        <Typography className="font-semibold border border-1 text-zinc-500 dark:text-white text-md px-2 w-fit">
                             {language_uid}
                         </Typography>
                         <div className='my-4'></div>
@@ -109,25 +109,25 @@ const CyLangCard = ({ card, langDeck, }) => {
                             Nombre de locuteurs
                         </Typography>
                         <Typography gutterBottom component="div" className='font-semibold tracking-tight text-zinc-700 dark:text-white text-xl'>
-                            {speakers}
+                            {parseInt(speakers).toLocaleString()}
                         </Typography>
                         <Typography className={`font-articulat_cf leading-none tracking-tight font-base text-sm md:text-md text-milano-500 `}>
                             Langue officielle
                         </Typography>
                         <div>
                             {is_official === 'TRUE' ? (<>
-                                <Typography className={`font-thin text-zinc-700 dark:text-white text-lg `}>
+                                <Typography className={`font-semibold bg-milano-500  border border-1 text-white text-xs w-fit px-2 my-2`}>
                                     Oui
                                 </Typography>
                             </>
                             ) : (<>
-                                <Typography className={`font-thin text-zinc-700 dark:text-white text-lg `}>
+                                <Typography className={`font-semibold text-zinc-700 border border-1 dark:text-white text-xs w-fit px-2 my-2`}>
                                     Non
                                 </Typography>
                             </>)}
                         </div>
                     </CardContent>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
 
                         <CardContent>
                             <CircularProgressChart value={popularity_as_float * 100} size="7rem" />
