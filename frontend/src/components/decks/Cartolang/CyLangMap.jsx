@@ -128,7 +128,7 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
                                     />
                                 */}
                                 {language.vk_region_name ?
-                                    (<LanguageRegionMapAm5Registry
+                                    (<LanguageRegionMapAm5
                                         countryCode={geoJsonCtryCode}
                                         vkRegionName={vkRegion}
                                         vkPointSeries={vkPointSeries}

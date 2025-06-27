@@ -8,7 +8,6 @@ import { langdeck_languages } from '../../../assets/data/index.js';
 import ReadMore from '../../UI/Media/ReadMore.jsx';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import LanguageRegionMapAm5 from './LanguageRegionMapAm5.jsx';
 
 const CyDataLang = ({ deck }) => {
   let ctx = useContext(DeckContext);
