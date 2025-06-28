@@ -8,8 +8,18 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Popper from "@mui/material/Popper";
 import { CyLangMap } from './CyLangMap';
+import CyLangVocable from './CyLangVocable';
 import { CircularProgressChart } from './CircularProgressChart';
 import VerifiedIcon from '@mui/icons-material/Verified';
+import { IconContext } from "react-icons";
+import { RiKakaoTalkFill } from "react-icons/ri";
+import { GiTalk } from "react-icons/gi";
+import { TbMapSearch } from "react-icons/tb";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import { FcSupport } from "react-icons/fc";
+import { FiTool } from "react-icons/fi";
+
+
 
 import Chart from './Chart';
 import { formHelperTextClasses } from '@mui/material';
@@ -28,13 +38,15 @@ const CyLangCard = ({ card, langDeck, }) => {
     const [language, setLanguage] = useState(null);
     const [arrowRef, setArrowRef] = useState(null);
     const [anchorEl, setAnchorEl] = useState(null);
+    const [anchorElVoc, setAnchorElVoc] = useState(null);
 
     const callbackModal = () => {
         setLanguage(null);
         setAnchorEl(null);
+        setAnchorElVoc (null);
     }
 
-    const handleClick = (event) => {
+    const handleClickMap = (event) => {
         setLanguage(event.target.id);
         const query = langDeck.filter(
             e => e.language_uid === event.target.id);
@@ -44,9 +56,22 @@ const CyLangCard = ({ card, langDeck, }) => {
         setAnchorEl(anchorEl ? null : event.currentTarget);
         return;
     }
-    const openPopup = Boolean(anchorEl);
-    const id = openPopup ? "simple-popper" : undefined;
 
+    const handleClickVocable = (event) => {
+        setLanguage(event.target.id);
+        const query = langDeck.filter(
+            e => e.language_uid === event.target.id);
+        ctx.current_deck.language_deck = query;
+        setCurrentLanguage(query);
+        setArrowRef(event.currentTarget);
+        setAnchorElVoc(anchorElVoc ? null : event.currentTarget);
+        return;
+    };
+
+    const openPopup = Boolean(anchorEl);
+    const openPopupVoc = Boolean(anchorElVoc);
+    const id = openPopup ? "simple-popper" : undefined;
+    const popvoc_id = openPopupVoc ? "popper_vocable" : undefined;
 
     return (
         <>
@@ -81,7 +106,31 @@ const CyLangCard = ({ card, langDeck, }) => {
                 </Popper>
             </div>
 
-            <Card className='bg-stone-50 dark:bg-stone-800' sx={{ margin: 'auto', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', }}>
+            <div>
+                <Popper id={popvoc_id}
+                    open={openPopupVoc}
+                    anchorEl={anchorElVoc}
+                    placement="top"
+                    disablePortal={false}
+                    modifiers={[
+                        {
+                            name: 'arrow',
+                            enabled: true,
+                            options: {
+                                element: arrowRef,
+                            }
+                        }
+                    ]}>
+                    {currentLanguage &&
+                        <CyLangVocable
+                        callbackModal={callbackModal} >
+
+                        </CyLangVocable>
+                    }
+                </Popper>
+            </div >
+
+            <Card className='bg-stone-50 dark:bg-stone-800' sx={{ margin: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'space-around', }}>
                 {
                     /*
                 <CardMedia
@@ -127,16 +176,28 @@ const CyLangCard = ({ card, langDeck, }) => {
                             </>)}
                         </div>
                     </CardContent>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                    <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
 
                         <CardContent>
                             <CircularProgressChart value={popularity_as_float * 100} size="7rem" />
                         </CardContent>
-                        <CardActions>
-                            <Button id={language_uid} onClick={handleClick} className="mt-2 text-xs dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small" sx={{ display: 'flex', }}>Voir carte</Button>
-                        </CardActions>
                     </Box>
 
+                </Box>
+                <hr />
+                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'right', }}>
+                    <CardContent className='flex gap-2' sx={{ display: 'flex', flexDirection: 'row', }}>
+                        <Button id={language_uid} onClick={handleClickMap} className="text-xs border border-1 border-milano-500 dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small" sx={{ display: 'flex', }}>
+                            <IconContext.Provider value={{ size: 24 }}>
+                                <TbMapSearch className='text-milano-500' />
+                            </IconContext.Provider>
+                        </Button>
+                        <Button id={language_uid} onClick={handleClickVocable} className="text-xs border border-1 border-milano-500 dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small" sx={{ display: 'flex', }}>
+                            <IconContext.Provider value={{ size: 24 }}>
+                                <FiTool className='text-milano-500' />
+                            </IconContext.Provider>
+                        </Button>
+                    </CardContent>
                 </Box>
 
             </Card>
