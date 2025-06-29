@@ -18,25 +18,25 @@ const CyLangDeck = withStyles(styles)(({ classes, justify, deck, langDeck, }) =>
 
     <div className={classes.root}>
         <Grid container spacing={4} justifyContent={justify}>
-            {deck && deck.sort ( (a,b) => (a.popularity_as_float > b.popularity_as_float ? -1 : 1))
-            .map(
-                (el) => {
-                    return (
-                        <Grid item xs={12} md={6} xl={3}>
-                            <div className={classes.card}>
-                                {langDeck && 
-                                                                <CyLangCard
-                                    className={classes.card} card={el} langDeck={langDeck} alignItems={justify}>
-                                </CyLangCard>
-                                }
+            {deck && deck.sort((a, b) => (a.popularity_as_float > b.popularity_as_float ? -1 : 1))
+                .map(
+                    (el) => {
+                        return (
+                            <Grid item xs={12} md={6} xl={3}>
+                                <div className={classes.card}>
+                                    {langDeck &&
+                                        <CyLangCard
+                                            className={classes.card} card={el} langDeck={langDeck} alignItems={justify}>
+                                        </CyLangCard>
+                                    }
 
-                            </div>
-                        </Grid>
-                    )
-                }
-            )}
+                                </div>
+                            </Grid>
+                        )
+                    }
+                )}
         </Grid>
-        
+
     </div>
 ));
 
