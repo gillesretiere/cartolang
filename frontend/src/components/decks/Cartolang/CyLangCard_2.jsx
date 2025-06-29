@@ -24,7 +24,7 @@ import { FiTool } from "react-icons/fi";
 import Chart from './Chart';
 import { formHelperTextClasses } from '@mui/material';
 
-const CyLangCard = ({ card, langDeck, }) => {
+const CyLangCard_2 = ({ card, langDeck, }) => {
     // card = pays en cours (data)
     // langdeck = liste des langues non filtrées
     let { language_name_fr, language_name_native, language_uid, popularity_as_float, speakers, is_official, } = card;
@@ -209,4 +209,4 @@ const CyLangCard = ({ card, langDeck, }) => {
     )
 }
 
-export default CyLangCard
+export default CyLangCard_2

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext, } from 'react';
 import DeckContext from '../../../store/DeckContext';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import CyLangCard from './CyLangCard_2';
+import CyLangCard from './CyLangCard';
 
 const styles = theme => ({
     root: {
