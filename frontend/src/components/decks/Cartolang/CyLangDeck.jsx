@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext, } from 'react';
 import DeckContext from '../../../store/DeckContext';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import CyLangCard from './CyLangCard';
+import CyLangCard from './CyLangCard_2';
 
 const styles = theme => ({
     root: {
@@ -24,9 +24,12 @@ const CyLangDeck = withStyles(styles)(({ classes, justify, deck, langDeck, }) =>
                     return (
                         <Grid item xs={12} md={6} xl={3}>
                             <div className={classes.card}>
-                                <CyLangCard
+                                {langDeck && 
+                                                                <CyLangCard
                                     className={classes.card} card={el} langDeck={langDeck} alignItems={justify}>
                                 </CyLangCard>
+                                }
+
                             </div>
                         </Grid>
                     )

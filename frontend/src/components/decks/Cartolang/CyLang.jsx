@@ -12,7 +12,7 @@ import ReadMore from '../../UI/Media/ReadMore.jsx';
 const CyLang = ({ deck }) => {
 
     let ctx = useContext(DeckContext);
-    console.log (deck);
+    // console.log (deck);
     const {
         country_name_fr,
         country_name_native,

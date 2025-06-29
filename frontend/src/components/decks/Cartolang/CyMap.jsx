@@ -6,7 +6,7 @@ import { Box } from '@mui/material';
 
 
 const CyMap = ({ deck, callBackFunction, }) => {
-    console.log(deck);
+    //console.log(deck);
     
     const setUpdatedCountry = (updatedCountry) => {
         {/*

@@ -20,10 +20,13 @@ import { FcSupport } from "react-icons/fc";
 import { FiTool } from "react-icons/fi";
 
 
+
 import Chart from './Chart';
 import { formHelperTextClasses } from '@mui/material';
 
 const CyLangCard = ({ card, langDeck, }) => {
+    // card = pays en cours (data)
+    // langdeck = liste des langues non filtrées
     let { language_name_fr, language_name_native, language_uid, popularity_as_float, speakers, is_official, } = card;
     let ctx = useContext(DeckContext);
     const [currentLanguage, setCurrentLanguage] = useState([]);
@@ -37,14 +40,15 @@ const CyLangCard = ({ card, langDeck, }) => {
     const [language, setLanguage] = useState(null);
     const [arrowRef, setArrowRef] = useState(null);
     const [anchorEl, setAnchorEl] = useState(null);
-    const [goto, setGoto] = useState(null);
+    const [anchorElVoc, setAnchorElVoc] = useState(null);
 
     const callbackModal = () => {
         setLanguage(null);
         setAnchorEl(null);
+        setAnchorElVoc(null);
     }
 
-    const setLanguageDeckAfterEvent = (uid) => {
+    const setLanguageAfterClick = (uid) => {
         setLanguage(uid);
         const query = langDeck.filter(
             e => e.language_uid === uid);
@@ -53,28 +57,29 @@ const CyLangCard = ({ card, langDeck, }) => {
         return;
     };
 
-    const handleClickSeeMap = (event) => {
-        setLanguageDeckAfterEvent(event.target.id);
+    const handleClickMap = (event) => {
+        setLanguageAfterClick(event.target.id);
         setArrowRef(event.currentTarget);
         setAnchorEl(anchorEl ? null : event.currentTarget);
-        setGoto("map");
         return;
     }
 
-    const handleClickSeeVocabulary = (event) => {
-        setLanguageDeckAfterEvent(event.target.id);
+    const handleClickVocable = (event) => {
+        setLanguageAfterClick(event.target.id);
         setArrowRef(event.currentTarget);
-        setAnchorEl(anchorEl ? null : event.currentTarget);
-        setGoto("vocable");
+        setAnchorElVoc(anchorElVoc ? null : event.currentTarget);
         return;
-    }
+    };
 
     const openPopup = Boolean(anchorEl);
+    const openPopupVoc = Boolean(anchorElVoc);
     const id = openPopup ? "simple-popper" : undefined;
+    const popvoc_id = openPopupVoc ? "popper_vocable" : undefined;
 
     return (
         <>
             <div>
+
                 <Popper id={id}
                     open={openPopup}
                     anchorEl={anchorEl}
@@ -90,27 +95,44 @@ const CyLangCard = ({ card, langDeck, }) => {
                         }
                     ]}
                 >
-                    {currentLanguage && goto &&
+                    {currentLanguage &&
                         <>
-                            {goto == "map" &&
-                                <CyLangMap
-                                    language={card}
-                                    langDeck={currentLanguage[0]}
-                                    callbackModal={callbackModal}>
-                                </CyLangMap>
-                            }
-                            {goto == "vocable" &&
-                                <CyLangVocable
-                                    language={card}
-                                    langDeck={currentLanguage[0]}
-                                    callbackModal={callbackModal}>
-                                </CyLangVocable>
-                            }
+                            <CyLangMap
+                                language={card}
+                                langDeck={currentLanguage[0]}
+                                callbackModal={callbackModal}>
+
+                            </CyLangMap>
                         </>
                     }
 
                 </Popper>
             </div>
+
+            <div>
+                <Popper id={popvoc_id}
+                    open={openPopupVoc}
+                    anchorEl={anchorElVoc}
+                    placement="top"
+                    disablePortal={false}
+                    modifiers={[
+                        {
+                            name: 'arrow',
+                            enabled: true,
+                            options: {
+                                element: arrowRef,
+                            }
+                        }
+                    ]}>
+                    {currentLanguage &&
+                        <CyLangVocable
+                            language={card}
+                            langDeck={currentLanguage[0]}
+                            callbackModal={callbackModal} >
+                        </CyLangVocable>
+                    }
+                </Popper>
+            </div >
 
             <Card className='bg-stone-50 dark:bg-stone-800' sx={{ margin: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'space-around', }}>
                 {
@@ -169,11 +191,15 @@ const CyLangCard = ({ card, langDeck, }) => {
                 <hr />
                 <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'right', }}>
                     <CardContent className='flex gap-2' sx={{ display: 'flex', flexDirection: 'row', }}>
-                        <Button id={language_uid} onClick={handleClickSeeMap} className="text-xs border border-1 border-milano-500 dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small" sx={{ display: 'flex', }}>
-                            Plus...
+                        <Button id={language_uid} onClick={handleClickMap} className="text-xs border border-1 border-milano-500 dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small" sx={{ display: 'flex', }}>
+                            <IconContext.Provider value={{ size: 24 }}>
+                                <TbMapSearch className='text-milano-500' />
+                            </IconContext.Provider>
                         </Button>
-                        <Button id={language_uid} key={language_uid} onClick={handleClickSeeVocabulary} className="text-xs border border-1 border-milano-500 dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small" sx={{ display: 'flex', }}>
-                            Vocabulaire
+                        <Button id={language_uid} key={language_uid} onClick={handleClickVocable} className="text-xs border border-1 border-milano-500 dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small" sx={{ display: 'flex', }}>
+                            <IconContext.Provider value={{ size: 24 }}>
+                                <FiTool className='text-milano-500' />
+                            </IconContext.Provider>
                         </Button>
                     </CardContent>
                 </Box>

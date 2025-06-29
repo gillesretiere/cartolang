@@ -39,7 +39,6 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
     const [geoJsonCtryCode, setGeoJsonCtyCode] = useState('');
     const [regionalStatus, setRegionalStatus] = useState('');
 
-    const dynamic_geo_json = "maliLow";
     // import('@amcharts/amcharts5-geodata/maliLow').then(module => console.log(module.default));
     // loadRegionRegistry (dynamic_geo_json);
 
@@ -53,8 +52,9 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
             language.map_config && setMapConfig(JSON5.parse(language.map_config));
             language.geo_json && setGeoJsonCtyCode(language.geo_json.trim());
             language.regional_status && setRegionalStatus(language.regional_status);
+            // console.log (language, langDeck);
             // console.log (mapConfig);
-            console.log(geoJsonRegistry['romaniaLow'].features.map(f => f.properties.name));
+            // console.log(geoJsonRegistry['romaniaLow'].features.map(f => f.properties.name));
         }, [language]
     );
 
