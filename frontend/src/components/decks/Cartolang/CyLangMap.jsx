@@ -52,7 +52,7 @@ export const CyLangMap = ({ language, langDeck, callbackModal, }) => {
             language.map_config && setMapConfig(JSON5.parse(language.map_config));
             language.geo_json && setGeoJsonCtyCode(language.geo_json.trim());
             language.regional_status && setRegionalStatus(language.regional_status);
-            // console.log (language, langDeck);
+            // console.log (vkRegion, vkPointSeries);
             // console.log (mapConfig);
             // console.log(geoJsonRegistry['romaniaLow'].features.map(f => f.properties.name));
         }, [language]

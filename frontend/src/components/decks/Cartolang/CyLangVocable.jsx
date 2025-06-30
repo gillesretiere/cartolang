@@ -18,6 +18,12 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
     let { language_vocable, } = langDeck;
 
     const [vocable, setVocable] = useState([]);
+    const [selected, setSelected] = useState(null);
+
+    const playAudio = (audioUrl) => {
+        const audio = new Audio(audioUrl);
+        audio.play();
+    };
 
     useEffect(
         () => {
@@ -29,53 +35,68 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
         callbackModal();
     }
 
-    const handleChange = (event, value) => {
-        return;
-    }
+
+    const handleChange = (e, v) => setSelected(v);
+    console.log(selected);
 
 
     return (
         <>
-            <Card sx={{
-                width: {
-                    xs: 350, // 100%
-                    sm: 640,
-                    md: 720,
-                },
-            }}>
+            <Card className='w-full'>
                 <CardActionArea sx={{ flexGrow: 1, }}>
 
                     <CardContent>
-                        <Box>
-                            <Typography onClick={closeButtonClickHandler} >
-                                Vocable de base
-                            </Typography>
-                            {vocable &&
-                                vocable.map((el) => {
-                                    return (
-                                        <Typography>
-                                            {el.proposition_tr}
-                                        </Typography>
-                                    )
-                                })
-                            }
-                            <div onClick={closeButtonClickHandler} >
-                                <SmallButton label="Fermer" />
-                            </div>
-                        </Box>
-                        <Box sx={{ display: 'flex', flexDirection: 'row', }} className="items-center">
+                        <Typography onClick={closeButtonClickHandler} >
+                            Vocable de base
+                        </Typography>
+                        <Box sx={{ display: 'flex', flexDirection: 'row', }} className="items-center my-4">
                             <Autocomplete
                                 className='bg-white w-[200px] md:w-[400px] xl:w-[600px]'
                                 id="combo-box-demo"
-                                options={vocable.filter (filtre => filtre.niveau==="Proposition").map((el) => el.proposition)}
-                                renderInput={(params) => <TextField {...params} label="Votre sélection" />}
+                                size='small'
+                                options={vocable.filter(filtre => filtre.niveau === "Proposition").map((el) => el.proposition)}
+                                renderInput={(params) =>
+                                    <TextField {...params} size='small' label="Votre sélection" />}
+                                value={selected}
                                 onChange={handleChange}
                             />
-                            <Link to="/">
-                                <Button className="ml-4" variant="contained" size="large" sx={{ display: 'flex', }}>
-                                    Rechercher
-                                </Button>
-                            </Link>
+                        </Box>
+                        <hr />
+                        <Box>
+
+                            {selected && vocable &&
+                                vocable.filter(filtre => filtre.proposition === selected).map((el) => {
+                                    return (
+                                        <>
+                                            <Card className='px-4 py-4 bg-zinc-100 '>
+                                                <Typography className={`font-articulat_cf leading-none tracking-tight font-thin text-sm md:text-md text-milano-500 `}>
+                                                    {el.pkid}
+                                                </Typography>
+                                                <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-xl md:text-2xl text-zinc-800 `}>
+                                                    {el.proposition}
+                                                </Typography>
+                                                <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-xl md:text-2xl text-milano-500 `}>
+                                                    {el.proposition_tr}
+                                                </Typography>
+
+                                                <button className='border border-1 border-milano-500 p-1 my-2 font-articulat_cf leading-none tracking-tight font-semibold text-sm text-milano-500'
+                                                    onClick={() => playAudio(`/audio/${el.language_uid}/${el.pkid}-${el.language_uid}.mp3`)}>
+                                                    Jouer
+                                                </button>
+                                            </Card>
+
+                                        </>
+
+                                    )
+                                })
+                            }
+
+                        </Box>
+                        <hr />
+                        <Box className='my-4'>
+                            <div onClick={closeButtonClickHandler} >
+                                <SmallButton label="Fermer" />
+                            </div>
                         </Box>
                     </CardContent>
                 </CardActionArea>
