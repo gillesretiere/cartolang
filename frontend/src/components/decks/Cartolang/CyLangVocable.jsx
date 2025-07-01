@@ -38,7 +38,7 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
 
     const handleChange = (e, v) => setSelected(v);
     console.log(selected);
-
+    console.log(vocable);
 
     return (
         <>
@@ -78,11 +78,39 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
                                                 <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-xl md:text-2xl text-milano-500 `}>
                                                     {el.proposition_tr}
                                                 </Typography>
-
                                                 <button className='border border-1 border-milano-500 p-1 my-2 font-articulat_cf leading-none tracking-tight font-semibold text-sm text-milano-500'
                                                     onClick={() => playAudio(`/audio/${el.language_uid}/${el.pkid}-${el.language_uid}.mp3`)}>
                                                     Jouer
                                                 </button>
+                                                {el.vk_options.map((opel) => (
+                                                    <>
+                                                        <Card className='px-4 py-2 bg-zinc-100 '>
+                                                            <Typography className={`font-articulat_cf leading-none tracking-tight font-thin text-sm md:text-md text-milano-500 `}>
+                                                                {opel}
+                                                            </Typography>
+                                                            {vocable.filter(filtre => filtre.pkid === opel).map((opid) =>
+                                                            (
+                                                                <>
+                                                                    <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-lg md:text-xl text-zinc-800 `}>
+                                                                        {opid['proposition']}
+                                                                    </Typography>
+                                                                    <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-lg md:text-xl text-milano-500 `}>
+                                                                        {opid['proposition_tr']}
+                                                                    </Typography>
+                                                                    <button className='border border-1 border-milano-500 p-1 my-2 font-articulat_cf leading-none tracking-tight font-semibold text-sm text-milano-500'
+                                                                        onClick={() => playAudio(`/audio/${el.language_uid}/${el.pkid}-${el.language_uid}.mp3`)}>
+                                                                        Jouer
+                                                                    </button>
+                                                                </>
+                                                            )
+                                                            )}
+                                                        </Card>
+                                                    </>
+                                                ))
+
+                                                }
+
+
                                             </Card>
 
                                         </>
