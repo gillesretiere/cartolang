@@ -9,8 +9,8 @@ import Autocomplete from "@mui/material/Autocomplete";
 import { Link } from "react-router-dom";
 import { Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
-
 import SmallButton from '../../UI/SmallButton.jsx';
+import ExpressionSelector from './ExpressionSelector.jsx';
 
 
 const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
@@ -35,6 +35,13 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
         callbackModal();
     }
 
+    const handleSelectExpression = (expression) => {
+        // Jouer l'audio associé
+        const audio = new Audio(expression.audio);
+        audio.play();
+        // Autres actions (par exemple, afficher la traduction)
+        console.log(`Expression sélectionnée : ${expression.text} (${expression.language})`);
+    };
 
     const handleChange = (e, v) => setSelected(v);
     console.log(selected);
@@ -61,6 +68,9 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
                                 onChange={handleChange}
                             />
                         </Box>
+                        <Box sx={{ gridArea: 'Bloc1' }}>
+                            <ExpressionSelector onSelectExpression={handleSelectExpression} />
+                        </Box>
                         <hr />
                         <Box>
 
@@ -79,7 +89,7 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
                                                     {el.proposition_tr}
                                                 </Typography>
                                                 <button className='border border-1 border-milano-500 p-1 my-2 font-articulat_cf leading-none tracking-tight font-semibold text-sm text-milano-500'
-                                                    onClick={() => playAudio(`/audio/${el.language_uid}/${el.pkid}-${el.language_uid}.mp3`)}>
+                                                    onClick={() => playAudio(`/audio/${el.language_uid}/${el.pkid}.mp3`)}>
                                                     Jouer
                                                 </button>
                                                 {el.vk_options.map((opel) => (
@@ -98,7 +108,7 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
                                                                         {opid['proposition_tr']}
                                                                     </Typography>
                                                                     <button className='border border-1 border-milano-500 p-1 my-2 font-articulat_cf leading-none tracking-tight font-semibold text-sm text-milano-500'
-                                                                        onClick={() => playAudio(`/audio/${el.language_uid}/${el.pkid}-${el.language_uid}.mp3`)}>
+                                                                        onClick={() => playAudio(`/audio/${el.language_uid}/${opid['pkid']}.mp3`)}>
                                                                         Jouer
                                                                     </button>
                                                                 </>
