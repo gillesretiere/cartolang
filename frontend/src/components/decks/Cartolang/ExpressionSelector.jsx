@@ -1,20 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-// Liste des expressions (exemple, à remplacer par tes données)
-const expressions = [
-  { id: 1, text: "Bonjour, parlez-vous hongrois ?", language: "hongrois", audio: "/audio/hongrois_0.mp3" },
-  { id: 2, text: "Oui", language: "hongrois", audio: "/audio/hongrois_1.mp3" },
-  { id: 3, text: "Non", language: "hongrois", audio: "/audio/hongrois_2.mp3" },
-  { id: 4, text: "Bonjour, parlez-vous turc ?", language: "turc", audio: "/audio/turc_0.mp3" },
-  { id: 5, text: "Oui", language: "turc", audio: "/audio/turc_1.mp3" },
-  { id: 6, text: "Non", language: "turc", audio: "/audio/turc_2.mp3" },
-  { id: 7, text: "Bonjour, parlez-vous dioula ?", language: "dioula", audio: "/audio/dioula_0.mp3" },
-  { id: 8, text: "Oui", language: "dioula", audio: "/audio/dioula_1.mp3" },
-  { id: 9, text: "Non", language: "dioula", audio: "/audio/dioula_2.mp3" },
-];
 
-const ExpressionSelector = ({ onSelectExpression }) => {
+const ExpressionSelector = ({ expressions, onSelectExpression }) => {
   const [query, setQuery] = useState('');
   const [filteredExpressions, setFilteredExpressions] = useState(expressions);
   const [isListening, setIsListening] = useState(false);
@@ -50,7 +38,7 @@ const ExpressionSelector = ({ onSelectExpression }) => {
   // Filtrer les expressions en fonction de la requête
   const filterExpressions = (searchTerm) => {
     const filtered = expressions.filter((exp) =>
-      exp.text.toLowerCase().includes(searchTerm.toLowerCase())
+      exp.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredExpressions(filtered);
   };
@@ -80,7 +68,7 @@ const ExpressionSelector = ({ onSelectExpression }) => {
 
   // Gérer la sélection d'une expression
   const handleSelect = (expression) => {
-    setQuery(expression.text);
+    setQuery(expression.proposition);
     setFilteredExpressions([expression]);
     onSelectExpression(expression);
   };
@@ -97,8 +85,8 @@ const ExpressionSelector = ({ onSelectExpression }) => {
         />
         <button
           onClick={toggleListening}
-          className={`p-2 rounded-md ${
-            isListening ? 'bg-red-500 text-white' : 'bg-blue-500 text-white'
+          className={`p-2 rounded-md text-sm font-bold ${
+            isListening ? 'bg-red-500 text-white' : 'bg-milano-500 text-white'
           } hover:bg-opacity-80 transition`}
         >
           {isListening ? 'Arrêter' : 'Parler'}
@@ -113,9 +101,9 @@ const ExpressionSelector = ({ onSelectExpression }) => {
             <li
               key={exp.id}
               onClick={() => handleSelect(exp)}
-              className="p-2 hover:bg-gray-100 cursor-pointer"
+              className="p-2 hover:bg-gray-100 cursor-pointer text-milano-500"
             >
-              {exp.text} ({exp.language})
+              {exp}
             </li>
           ))
         ) : (

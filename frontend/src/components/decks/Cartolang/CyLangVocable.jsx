@@ -37,6 +37,7 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
 
     const handleSelectExpression = (expression) => {
         // Jouer l'audio associé
+        setSelected (expression);
         const audio = new Audio(expression.audio);
         audio.play();
         // Autres actions (par exemple, afficher la traduction)
@@ -56,20 +57,9 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
                         <Typography onClick={closeButtonClickHandler} >
                             Vocable de base
                         </Typography>
-                        <Box sx={{ display: 'flex', flexDirection: 'row', }} className="items-center my-4">
-                            <Autocomplete
-                                className='bg-white w-[200px] md:w-[400px] xl:w-[600px]'
-                                id="combo-box-demo"
-                                size='small'
-                                options={vocable.filter(filtre => filtre.niveau === "Proposition").map((el) => el.proposition)}
-                                renderInput={(params) =>
-                                    <TextField {...params} size='small' label="Votre sélection" />}
-                                value={selected}
-                                onChange={handleChange}
-                            />
-                        </Box>
-                        <Box sx={{ gridArea: 'Bloc1' }}>
-                            <ExpressionSelector onSelectExpression={handleSelectExpression} />
+                        {/* Expression Selector (voice driven) */}
+                        <Box sx={{ gridArea: 'Bloc1' }}  className="items-center my-4 w-[200px] md:w-[400px] xl:w-[600px]">
+                            <ExpressionSelector expressions={vocable.filter(filtre => filtre.niveau === "Proposition").map((el) => el.proposition)} onSelectExpression={handleSelectExpression} />
                         </Box>
                         <hr />
                         <Box>
