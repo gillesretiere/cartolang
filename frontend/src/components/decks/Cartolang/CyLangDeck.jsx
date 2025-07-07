@@ -22,7 +22,7 @@ const CyLangDeck = withStyles(styles)(({ classes, justify, deck, langDeck, }) =>
                 .map(
                     (el) => {
                         return (
-                            <Grid item xs={12} md={6} xl={3}>
+                            <Grid item xs={12} lg={6}>
                                 <div className={classes.card}>
                                     {langDeck &&
                                         <CyLangCard

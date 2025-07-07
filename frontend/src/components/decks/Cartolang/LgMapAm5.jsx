@@ -79,7 +79,8 @@ class LgMapAm5 extends Component {
     let chart = root.container.children.push(am5map.MapChart.new(root, {
       panX: "translateX",
       projection: am5map.geoMercator(),
-      padding: "0px"
+      padding: "10px",
+      homeZoomLevel: 5,
     }));
 
     chart.chartContainer.set("background", am5.Rectangle.new(root, {
@@ -182,7 +183,7 @@ class LgMapAm5 extends Component {
         opacity: 0.7,
         strokeOpacity: 0.5,
         fillOpacity: 0.2,
-        exclude: vk_diffA
+        exclude: vk_diffA,
       }));
 
       polygonSeriesA.mapPolygons.template.states.create("hover", {

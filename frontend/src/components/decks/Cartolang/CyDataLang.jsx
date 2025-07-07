@@ -42,7 +42,9 @@ const CyDataLang = ({ deck }) => {
               <Typography className={`px-2 font-articulat_cf leading-none tracking-tight font-base text-sm lg:text-lg text-milano-500 `}>
                 Langues
               </Typography>
-              <Typography className={`font-articulat_cf leading-none tracking-wide font-base text-sm lg:text-xl`}>
+            </div>
+            <div className="col-start-1 col-end-6 lg:col-end-4 px-4">
+              <Typography className={`font-articulat_cf leading-none tracking-wide font-base`}>
                 {country_languages_summary &&
                   <>
                     <ReadMore text={country_languages_summary}

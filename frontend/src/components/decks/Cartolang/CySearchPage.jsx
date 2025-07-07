@@ -61,16 +61,16 @@ const CySearchPage = () => {
             <Layout>
                 {selectedCountry &&
                     <>  
-                        <div className='grid grid-cols-5 gap-1 text-black dark:bg-zinc-800 dark:text-white'>
+                        <div className='grid grid-cols-5 gap-1 mt-4 text-black dark:bg-zinc-800 dark:text-white container '>
 
-                            <div className='col-span-5'>
+                            <div className='col-span-5 content-center'>
                                 <CyMap
                                     deck={selectedCountry}
                                     callBackFunction={callBackFunctionMap}>
                                 </CyMap>
                             </div>
 
-                            <div className='col-span-5'>
+                            <div className='col-span-5 content-center'>
                                 <CyDeck
                                     deck={selectedCountry}
                                     callBackFunction={callBackFunctionMap} />

@@ -4,6 +4,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import { Box } from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
+import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { CircularProgressChartLanguages } from './CircularProgressChartLanguages';
@@ -12,12 +13,10 @@ import { withStyles } from '@material-ui/core/styles';
 
 
 export const LgCyCard = ({ card, langdeck }) => {
-    const { country_uid, country_name_native, country_name_fr, popularity_as_float, national_flag, } = card;
+    const { country_uid, country_iso2, country_name_native, country_name_fr, popularity_as_float, national_flag, } = card;
     const handleClick = (event) => {
         return;
     }
-    console.log(card);
-
     return (
         <>
             <Card className='bg-stone-50 dark:bg-stone-800' sx={{ margin: 'auto', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', }}>
@@ -39,9 +38,11 @@ export const LgCyCard = ({ card, langdeck }) => {
                             <CircularProgressChartLanguages value={popularity_as_float * 100} size="6rem" />
                         </CardContent>
                         <CardActions>
-                            <Button id={country_uid} className="mx-2 text-xs dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small">
-                                Voir carte
-                            </Button>
+                            <Link to={`/cy_search_page/${country_iso2}`}>
+                                <Button id={country_uid} className="mx-2 text-xs dark:text-[#FC6D50] dark:border-[#FC6D50]" variant="outlined" size="small">
+                                    Voir carte {country_iso2}
+                                </Button>
+                            </Link>
                         </CardActions>
                     </Box>
 

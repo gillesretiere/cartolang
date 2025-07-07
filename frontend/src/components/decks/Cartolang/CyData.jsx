@@ -19,6 +19,7 @@ const CyData = ({ deck }) => {
         country_wfb_religions_fr,
         country_wfb_economic_overview_fr,
         country_wfb_location_fr,
+        country_wfb_population,
         country_national_flag,
         country_summary,
         country_languages,
@@ -146,7 +147,7 @@ const CyData = ({ deck }) => {
                                 Population
                             </Typography>
                             <Typography className={`font-articulat_cf leading-none tracking-tight font-semibold text-xl lg:text-2xl`}>
-                                {wfb_facts.Population}
+                                {country_wfb_population}
                             </Typography>
                         </div>
                         <div className="col-start-3 col-end-6 row-start-1 row-end-3 px-4">

@@ -127,7 +127,7 @@ export const CylgSearchPage = ({ regions, countries, languages, }) => {
         <>
             <main>
                 <section id="search" className='min-h-screen max-container' sx={{ display: 'flex', alignItems: 'center', }}>
-                    <img src={banner_hero_languages} width="100%" className='h-full object-cover'></img>
+                    <img src={banner_hero_languages} width="100%" className='h-full object-cover mt-1'></img>
                     <div className='absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4'>
                         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', }}>
                             <Box sx={{ display: 'flex', flexDirection: 'column', }}>
@@ -136,7 +136,7 @@ export const CylgSearchPage = ({ regions, countries, languages, }) => {
                                     className={`font-articulat_cf font-black leading-none tracking-tight text-xl md:text-3xl lg:text-5xl text-slate-800 mb-10`}>
                                     Cartes &amp; Langues
                                 </Typography>
-                                <Box sx={{ display: 'flex', flexDirection: 'row', }} className="items-center">
+                                <Box sx={{ display: 'flex', flexDirection: 'row', }} className="items-center mt-9">
                                     <Autocomplete
                                         className='bg-white w-[200px] md:w-[400px] xl:w-[600px]'
                                         id="combo-box-demo"
