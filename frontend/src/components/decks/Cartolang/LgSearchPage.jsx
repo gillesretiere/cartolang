@@ -9,14 +9,17 @@ import DeckContext from '../../../store/DeckContext';
 const LgSearchPage = ({ uid }) => {
 
   let ctx = useContext(DeckContext);
-  console.log(ctx.current_deck);
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <>
-      <LayoutCartolang>
-        <LgMap langdeck={ctx.current_deck.language_deck[0]} />
-        <LgDeck langdeck={ctx.current_deck.language_deck[0]} />
-      </LayoutCartolang>
+        <LayoutCartolang>
+          <LgMap langdeck={ctx.current_deck.language_deck[0]} />
+          <LgDeck langdeck={ctx.current_deck.language_deck[0]} />
+        </LayoutCartolang>
     </>
 
   )

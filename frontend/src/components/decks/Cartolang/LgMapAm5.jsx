@@ -4,6 +4,7 @@ import * as am5 from "@amcharts/amcharts5";
 import * as am5map from "@amcharts/amcharts5/map";
 import am5geodata_worldLow from "@amcharts/amcharts5-geodata/worldLow";
 import am5geodata_usaLow from "@amcharts/amcharts5-geodata/usaLow";
+import am5geodata_ukLow from "@amcharts/amcharts5-geodata/ukLow";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import classes from './card.module.css';
 
@@ -58,10 +59,42 @@ class LgMapAm5 extends Component {
 
   componentDidMount() {
     // ... chart code goes here ...
-    if (! this.props.language) {
+    if (!this.props.language) {
       return;
     }
     let root = am5.Root.new(`mapdiv${this.props.language.language_uid}`);
+    root.setThemes([
+      am5themes_Animated.new(root)
+    ]);
+
+    // Create the map chart
+    // https://www.amcharts.com/docs/v5/charts/map-chart/
+    /*
+    var locationChart = root.container.children.push(am5map.MapChart.new(root, {
+      projection: am5map.geoMercator(),
+      rotationX: -10,
+      panX: "none",
+      panY: "none",
+      minZoomLevel: 4,
+      maxZoomLevel: 10,
+      zoomStep: 0.5,
+    }));
+
+    var locationPolygonSeries = locationChart.series.push(am5map.MapPolygonSeries.new(root, {
+      geoJSON: am5geodata_worldLow,
+      fill: am5.color("#E3E3E3"),
+      exclude: ["AQ"],
+      stroke: am5.color("#FFFFFF"),
+    }));
+
+    locationPolygonSeries.events.on("datavalidated", function () {
+      // changed from locationChart.events.on(...
+      locationChart.zoomToGeoPoint({
+        longitude: -0.1262,
+        latitude: 51.5002
+      }, 19);
+    });
+    */
     //console.log("mounted");
     // couleur des terres sur la carte
     let colorMap = am5.color(0xF7F6F1);
@@ -76,11 +109,15 @@ class LgMapAm5 extends Component {
       am5themes_Animated.new(root)
     ]);
 
+    let vkMapConfig = { homeGeoPoint: { longitude: -5, latitude: 7 }, homeZoomLevel: 6 };
+
     let chart = root.container.children.push(am5map.MapChart.new(root, {
       panX: "translateX",
       projection: am5map.geoMercator(),
       padding: "10px",
-      homeZoomLevel: 5,
+      minZoomLevel: 1,
+      maxZoomLevel: 10,
+      ...vkMapConfig,
     }));
 
     chart.chartContainer.set("background", am5.Rectangle.new(root, {
@@ -95,9 +132,17 @@ class LgMapAm5 extends Component {
         fill: am5.color(0xF7F6F1),
         fillOpacity: 0.9,
         stroke: am5.color(0x888888),
-        exclude: ["AQ"]
+        exclude: ["AQ"],
+        ...vkMapConfig,
       })
     );
+
+    // https://stackoverflow.com/questions/76851004/amcharts-5-zooming-into-location
+    polygonSeries.events.on("datavalidated", function () {
+      // changed from locationChart.events.on(...
+      chart.zoomToGeoPoint(
+        vkMapConfig.homeGeoPoint, vkMapConfig.homeZoomLevel);
+    });
     /*
         polygonSeries.mapPolygons.template.states.create("hover",
             {
@@ -140,6 +185,8 @@ class LgMapAm5 extends Component {
     let colorIndexCircle = colorset.getIndex(11);
     let colorIndexPulse = colorset.getIndex(9);
 
+    let vkMapConfig = { homeGeoPoint: { longitude: -5, latitude: 7 }, homeZoomLevel: 6 };
+
     if (this.props.language.language_uid) {
       let country_points = geoJson(this.props.language.language_countries);
       // on colorie les polygones éligibles
@@ -167,8 +214,8 @@ class LgMapAm5 extends Component {
       let vk_grp0 = vk_world.filter(x => !vk_sel.includes(x));
 
       // groupe de tous les tuples {XX, pop}
-      let vk_xx_pop = country_points.features.map(a => [a.properties.country_iso2, Number(a.properties.popularity)]);
-
+      // let vk_xx_popy = country_points.features.map(a => [a.properties.country_iso2, Number(a.properties.popularity)]);
+      let vk_xx_pop = country_points.features.map(a => [a.properties.country_iso2, Number(a.properties.popularity_as_float)]);
 
       // Groupe A
       // sous-groupe à exclure
@@ -297,10 +344,10 @@ class LgMapAm5 extends Component {
       <>
         {
           this.props && this.props.language &&
-          this.props.language.language_uid ? (
-          <div className="bg-[#8DCCCB] shadow-lg p-0">
-            <div id={`mapdiv${this.props.language.language_uid}`}></div>
-          </div>
+            this.props.language.language_uid ? (
+            <div className="bg-[#8DCCCB] shadow-lg p-0">
+              <div id={`mapdiv${this.props.language.language_uid}`}></div>
+            </div>
           ) : (
             <Navigate to="/cartolang/" push={true} />
           )

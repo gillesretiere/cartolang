@@ -10,6 +10,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import HomeIcon from '@mui/icons-material/Home';
+import TravelExploreIcon from '@mui/icons-material/TravelExplore';
+import PublicTwoToneIcon from '@mui/icons-material/PublicTwoTone';
 import { Link } from "react-router-dom";
 
 //drawer elements used
@@ -110,7 +112,7 @@ const HomeAppBar = () => {
 
   return (
     <AppBar position="static" sx={{ bgcolor: '#fff' }}>
-      <Container maxWidth="xl" disableGutters="true">
+      <Container minWidth="xl" disableGutters="true">
         <Toolbar>
           {/* 
           <Typography>
@@ -209,7 +211,7 @@ const HomeAppBar = () => {
                       {/* on teste si href interne (#) : composant "a" sinon "Link" */}
                       <ListItemButton key={index} component={item.url.startsWith('#') ? "a" : Link} href={`${item.url}`} to={`${item.url}`} className={!item.enabled && "disabled-link"}  >
                         <ListItemIcon>
-                          <DescriptionIcon sx={{ color: "primary.contrastText" }} />
+                          <PublicTwoToneIcon sx={{ color: "primary.contrastText" }} />
                         </ListItemIcon>
                         <ListItemText primary={`${item.label}`} sx={{ color: "primary.contrastText" }} />
                         {/* <Chip label={item.enabled ? "disponible" :"prochainement"} size="small"></Chip> */}

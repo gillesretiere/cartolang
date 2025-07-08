@@ -17,7 +17,6 @@ const styles = theme => ({
 });
 
 const LgDeck = ({ langdeck }) => {
-  console.log(langdeck);
   return (
     <>
       {langdeck ? (
