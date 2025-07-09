@@ -12,7 +12,7 @@ const LgSearchPage = ({ uid }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
+  }, [uid])
 
   return (
     <>

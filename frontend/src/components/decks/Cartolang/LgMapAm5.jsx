@@ -109,7 +109,7 @@ class LgMapAm5 extends Component {
       am5themes_Animated.new(root)
     ]);
 
-    let vkMapConfig = { homeGeoPoint: { longitude: -5, latitude: 7 }, homeZoomLevel: 6 };
+    let mapConfig = JSON.parse(JSON.stringify(this.props.language.geo_point));
 
     let chart = root.container.children.push(am5map.MapChart.new(root, {
       panX: "translateX",
@@ -117,7 +117,7 @@ class LgMapAm5 extends Component {
       padding: "10px",
       minZoomLevel: 1,
       maxZoomLevel: 10,
-      ...vkMapConfig,
+      ...mapConfig,
     }));
 
     chart.chartContainer.set("background", am5.Rectangle.new(root, {
@@ -133,7 +133,7 @@ class LgMapAm5 extends Component {
         fillOpacity: 0.9,
         stroke: am5.color(0x888888),
         exclude: ["AQ"],
-        ...vkMapConfig,
+        ...mapConfig,
       })
     );
 
@@ -141,7 +141,7 @@ class LgMapAm5 extends Component {
     polygonSeries.events.on("datavalidated", function () {
       // changed from locationChart.events.on(...
       chart.zoomToGeoPoint(
-        vkMapConfig.homeGeoPoint, vkMapConfig.homeZoomLevel);
+        mapConfig.homeGeoPoint, mapConfig.homeZoomLevel);
     });
     /*
         polygonSeries.mapPolygons.template.states.create("hover",
@@ -184,8 +184,6 @@ class LgMapAm5 extends Component {
     let colorIndexPolygon = am5.color(0xF2E0C9);
     let colorIndexCircle = colorset.getIndex(11);
     let colorIndexPulse = colorset.getIndex(9);
-
-    let vkMapConfig = { homeGeoPoint: { longitude: -5, latitude: 7 }, homeZoomLevel: 6 };
 
     if (this.props.language.language_uid) {
       let country_points = geoJson(this.props.language.language_countries);

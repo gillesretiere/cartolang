@@ -11,6 +11,7 @@ import { Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import SmallButton from '../../UI/SmallButton.jsx';
 import ExpressionSelector from './ExpressionSelector.jsx';
+import AudioPlayer from '../../UI/Media/AudioPlayer.jsx';
 
 
 const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
@@ -37,7 +38,7 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
 
     const handleSelectExpression = (expression) => {
         // Jouer l'audio associé
-        setSelected (expression);
+        setSelected(expression);
         const audio = new Audio(expression.audio);
         audio.play();
         // Autres actions (par exemple, afficher la traduction)
@@ -54,11 +55,14 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
                 <CardActionArea sx={{ flexGrow: 1, }}>
 
                     <CardContent>
-                        <Typography onClick={closeButtonClickHandler} >
-                            Vocable de base
+                        <Typography className='font-semibold text-xl text-milano-500' >
+                            Vocabulaire de base
+                        </Typography>
+                        <Typography className='font-thin text-sm text-zinc-500' >
+                            Choisissez une phrase ou une expression en français et obtenez la traduction en text et audio.
                         </Typography>
                         {/* Expression Selector (voice driven) */}
-                        <Box sx={{ gridArea: 'Bloc1' }}  className="items-center my-4 w-[200px] md:w-[400px] xl:w-[600px]">
+                        <Box sx={{ gridArea: 'Bloc1' }} className="items-center my-4 w-[200px] md:w-[400px] xl:w-[600px]">
                             <ExpressionSelector expressions={vocable.filter(filtre => filtre.niveau === "Proposition").map((el) => el.proposition)} onSelectExpression={handleSelectExpression} />
                         </Box>
                         <hr />
@@ -68,20 +72,29 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
                                 vocable.filter(filtre => filtre.proposition === selected).map((el) => {
                                     return (
                                         <>
-                                            <Card className='px-4 py-4 bg-zinc-100 '>
+                                            <Card className='px-4 py-4  '>
                                                 <Typography className={`font-articulat_cf leading-none tracking-tight font-thin text-sm md:text-md text-milano-500 `}>
                                                     {el.pkid}
                                                 </Typography>
                                                 <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-xl md:text-2xl text-zinc-800 `}>
                                                     {el.proposition}
                                                 </Typography>
-                                                <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-xl md:text-2xl text-milano-500 `}>
-                                                    {el.proposition_tr}
-                                                </Typography>
+                                                <div className='flex flex-row gap-6 items-center'>
+                                                    <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-xl md:text-2xl text-milano-500 `}>
+                                                        {el.proposition_tr}
+                                                    </Typography>
+                                                    <AudioPlayer media_url={`/audio/${el.language_uid}/${el.pkid}.mp3`} language={el.language_uid} />
+                                                </div>
+
+                                                {/*
                                                 <button className='border border-1 border-milano-500 p-1 my-2 font-articulat_cf leading-none tracking-tight font-semibold text-sm text-milano-500'
                                                     onClick={() => playAudio(`/audio/${el.language_uid}/${el.pkid}.mp3`)}>
                                                     Jouer
                                                 </button>
+                                                */
+                                                }
+
+
                                                 {el.vk_options.map((opel) => (
                                                     <>
                                                         <Card className='px-4 py-2 bg-zinc-100 '>
@@ -94,13 +107,20 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
                                                                     <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-lg md:text-xl text-zinc-800 `}>
                                                                         {opid['proposition']}
                                                                     </Typography>
-                                                                    <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-lg md:text-xl text-milano-500 `}>
-                                                                        {opid['proposition_tr']}
-                                                                    </Typography>
+                                                                    <div className='flex flex-row gap-6 items-center'>
+                                                                        <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-lg md:text-xl text-milano-500 `}>
+                                                                            {opid['proposition_tr']}
+                                                                        </Typography>
+                                                                        <AudioPlayer media_url={`/audio/${el.language_uid}/${opid['pkid']}.mp3`} language={el.language_uid} />
+                                                                    </div>
+
+                                                                    {/*
                                                                     <button className='border border-1 border-milano-500 p-1 my-2 font-articulat_cf leading-none tracking-tight font-semibold text-sm text-milano-500'
                                                                         onClick={() => playAudio(`/audio/${el.language_uid}/${opid['pkid']}.mp3`)}>
                                                                         Jouer
                                                                     </button>
+                                                                    */}
+
                                                                 </>
                                                             )
                                                             )}

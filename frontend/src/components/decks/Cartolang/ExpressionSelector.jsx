@@ -81,13 +81,13 @@ const ExpressionSelector = ({ expressions, onSelectExpression }) => {
           value={query}
           onChange={handleInputChange}
           placeholder="Entrez ou parlez (ex: Parlez-vous...)"
-          className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-milano-500"
         />
         <button
           onClick={toggleListening}
-          className={`p-2 rounded-md text-sm font-bold ${
-            isListening ? 'bg-red-500 text-white' : 'bg-milano-500 text-white'
-          } hover:bg-opacity-80 transition`}
+          className={`p-2 font-articulat_cf rounded-md text-sm font-bold ${
+            isListening ? 'bg-milano-500 text-white' : 'bg-milano-500 text-white'
+          } hover:bg-opacity-100 transition`}
         >
           {isListening ? 'Arrêter' : 'Parler'}
         </button>
@@ -101,7 +101,7 @@ const ExpressionSelector = ({ expressions, onSelectExpression }) => {
             <li
               key={exp.id}
               onClick={() => handleSelect(exp)}
-              className="p-2 hover:bg-gray-100 cursor-pointer text-milano-500"
+              className="font-articulat_cf font-bold text-md p-2 border border-gray-100 hover:bg-gray-400 hover:text-white cursor-pointer text-gray-600"
             >
               {exp}
             </li>
