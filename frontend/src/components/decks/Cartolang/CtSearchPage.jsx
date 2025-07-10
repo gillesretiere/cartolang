@@ -11,7 +11,7 @@ import DeckContext from '../../../store/DeckContext.jsx';
 
 const CtSearchPage = () => {
     const params = useParams();
-
+    console.log(params);
     const ctx = useContext(DeckContext);
     // la liste des pays pour la sélection
     const [countries, setCountries] = useState([]);

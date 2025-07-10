@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect, } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import DeckContext from '../../../store/DeckContext.jsx';
-
+import DrillDownMap from './DrillDownMap.jsx';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -12,7 +12,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import { Button } from '@mui/material';
-import {banner_hero_languages} from '../../../assets/img/index.js';
+import { banner_hero_languages } from '../../../assets/img/index.js';
 
 
 
@@ -28,6 +28,21 @@ export const CylgSearchPage = ({ regions, countries, languages, }) => {
 
     const [searchValue, setSearchValue] = useState('');
     const [uid, setUid] = useState('');
+
+    const [selectedCountry, setSelectedCountry] = useState(null);
+    const [selectedCountryName, setSelectedCountryName] = useState(null);
+
+    const handleCountrySelect = (countryCode) => {
+        setSelectedCountry(countryCode);
+        setUid(countryCode);
+        for (var i = 0; i < countries.length; i++) {
+            if (countries[i].country_iso2 === countryCode) {
+                setSelectedCountryName(countries[i].country_name_fr);
+            }
+        }
+        // Ici, tu peux passer le code pays à ExpressionSelector ou autre composant
+        console.log('Pays sélectionné :', countryCode);
+    };
 
     const ctx = useContext(DeckContext);
 
@@ -96,6 +111,7 @@ export const CylgSearchPage = ({ regions, countries, languages, }) => {
                 if (countries[i].country_name_fr === value) {
                     idx = i;
                     setUid(countries[i].country_iso2);
+                    setSelectedCountry(countries[i].country_iso2);
                     setToPage('cy_search_page');
                 }
             }
@@ -125,21 +141,27 @@ export const CylgSearchPage = ({ regions, countries, languages, }) => {
 
     return (
         <>
+
             <main>
-                <section id="search" className='min-h-screen max-container' sx={{ display: 'flex', alignItems: 'center', }}>
-                    <img src={banner_hero_languages} width="100%" className='h-full object-cover mt-1'></img>
-                    <div className='absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4'>
-                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', }}>
+
+                <section id="search" sx={{ display: 'flex', alignItems: 'center', }}>
+                    <img src={banner_hero_languages} width="100%" className='h-px mt-1'></img>
+                    <div className="bg-gray-50 p-4">
+                        <Typography
+                            sx={{ display: 'flex', justifyContent: 'center', }}
+                            className={`font-articulat_cf font-black leading-none tracking-tight text-xl md:text-3xl lg:text-5xl text-slate-800 mb-10`}>
+                            Cartes &amp; Langues
+                        </Typography>
+                        <DrillDownMap onCountrySelect={handleCountrySelect} />
+                    </div>
+                    <div>
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '20vh', }}>
                             <Box sx={{ display: 'flex', flexDirection: 'column', }}>
-                                <Typography
-                                    sx={{ display: 'flex', justifyContent: 'center', }}
-                                    className={`font-articulat_cf font-black leading-none tracking-tight text-xl md:text-3xl lg:text-5xl text-slate-800 mb-10`}>
-                                    Cartes &amp; Langues
-                                </Typography>
                                 <Box sx={{ display: 'flex', flexDirection: 'row', }} className="items-center mt-9">
                                     <Autocomplete
                                         className='bg-white w-[200px] md:w-[400px] xl:w-[600px]'
                                         id="combo-box-demo"
+                                        value={selectedCountryName}
                                         options={options.map((option) => option.label)}
                                         renderInput={(params) => <TextField {...params} label="Votre sélection" />}
                                         onChange={handleChange}
@@ -167,7 +189,6 @@ export const CylgSearchPage = ({ regions, countries, languages, }) => {
                             </Box>
                         </Box>
                     </div>
-
                 </section>
             </main>
         </>
