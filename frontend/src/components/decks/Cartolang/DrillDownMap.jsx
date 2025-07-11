@@ -101,10 +101,10 @@ const DrillDownMap = ({ onCountrySelect }) => {
     // Gestion du clic sur un pays
     worldSeries.mapPolygons.template.events.on('click', (ev) => {
       const countryCode = ev.target.dataItem.dataContext.id;
+      // Anyhow
       setSelectedCountry(countryCode);
       onCountrySelect(countryCode);
       if (countryGeoJSON[countryCode]) {
-
         countrySeries.set('geoJSON', countryGeoJSON[countryCode]);
         worldSeries.hide();
         countrySeries.show();

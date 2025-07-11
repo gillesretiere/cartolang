@@ -141,56 +141,51 @@ export const CylgSearchPage = ({ regions, countries, languages, }) => {
 
     return (
         <>
-
-            <main>
-
-                <section id="search" sx={{ display: 'flex', alignItems: 'center', }}>
-                    <img src={banner_hero_languages} width="100%" className='h-px mt-1'></img>
-                    <div className="bg-gray-50 p-4">
-                        <Typography
-                            sx={{ display: 'flex', justifyContent: 'center', }}
-                            className={`font-articulat_cf font-black leading-none tracking-tight text-xl md:text-3xl lg:text-5xl text-slate-800 mb-10`}>
-                            Cartes &amp; Langues
-                        </Typography>
-                        <DrillDownMap onCountrySelect={handleCountrySelect} />
-                    </div>
-                    <div>
-                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '20vh', }}>
-                            <Box sx={{ display: 'flex', flexDirection: 'column', }}>
-                                <Box sx={{ display: 'flex', flexDirection: 'row', }} className="items-center mt-9">
-                                    <Autocomplete
-                                        className='bg-white w-[200px] md:w-[400px] xl:w-[600px]'
-                                        id="combo-box-demo"
-                                        value={selectedCountryName}
-                                        options={options.map((option) => option.label)}
-                                        renderInput={(params) => <TextField {...params} label="Votre sélection" />}
-                                        onChange={handleChange}
-                                    />
-                                    <Link to={`/${toPage}/${uid}`}>
-                                        <Button className="ml-4" variant="contained" size="large" sx={{ display: 'flex', }}>
-                                            Rechercher
-                                        </Button>
-                                    </Link>
-                                </Box>
-                                <Box sx={{ display: 'flex', justifyContent: 'center', }} className="p-4">
-                                    <FormControl>
-                                        <RadioGroup
-                                            row
-                                            aria-labelledby="demo-controlled-radio-buttons-group"
-                                            name="controlled-radio-buttons-group"
-                                            value={searchMode}
-                                            onChange={handleRadioChange}
-                                        >
-                                            <FormControlLabel value="country" control={<Radio />} label="Pays" />
-                                            <FormControlLabel value="language" control={<Radio />} label="Langue" />
-                                        </RadioGroup>
-                                    </FormControl>
-                                </Box>
+            <section id="search" sx={{ display: 'flex', alignItems: 'center', }}>
+                <div className="bg-gray-50 p-4 my-4">
+                    <Typography
+                        sx={{ display: 'flex', justifyContent: 'center', }}
+                        className={`font-articulat_cf font-black leading-none tracking-tight text-xl md:text-3xl lg:text-5xl text-slate-800 mb-2`}>
+                        Cartes &amp; Langues
+                    </Typography>
+                    <DrillDownMap onCountrySelect={handleCountrySelect} />
+                </div>
+                <div>
+                    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '20vh', }}>
+                        <Box sx={{ display: 'flex', flexDirection: 'column', }}>
+                            <Box sx={{ display: 'flex', flexDirection: 'row', }} className="items-center mt-9">
+                                <Autocomplete
+                                    className='bg-white w-[300px] md:w-[600px] xl:w-[1000px]'
+                                    id="combo-box-demo"
+                                    value={selectedCountryName}
+                                    options={options.map((option) => option.label)}
+                                    renderInput={(params) => <TextField {...params} label="Votre sélection" />}
+                                    onChange={handleChange}
+                                />
+                                <Link to={`/${toPage}/${uid}`}>
+                                    <Button className="ml-4" variant="contained" size="large" sx={{ display: 'flex', }}>
+                                        Rechercher
+                                    </Button>
+                                </Link>
+                            </Box>
+                            <Box sx={{ display: 'flex', justifyContent: 'center', }} className="p-4">
+                                <FormControl>
+                                    <RadioGroup
+                                        row
+                                        aria-labelledby="demo-controlled-radio-buttons-group"
+                                        name="controlled-radio-buttons-group"
+                                        value={searchMode}
+                                        onChange={handleRadioChange}
+                                    >
+                                        <FormControlLabel value="country" control={<Radio />} label="Pays" />
+                                        <FormControlLabel value="language" control={<Radio />} label="Langue" />
+                                    </RadioGroup>
+                                </FormControl>
                             </Box>
                         </Box>
-                    </div>
-                </section>
-            </main>
+                    </Box>
+                </div>
+            </section>
         </>
     )
 }
