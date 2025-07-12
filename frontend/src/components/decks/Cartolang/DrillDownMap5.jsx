@@ -12,53 +12,109 @@ import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 const DrillDownMap5 = ({ onCountrySelect }) => {
   const chartRef = useRef(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
+  const [selectedCountryName, setSelectedCountryName] = useState(null);
   const [selectedContinent, setSelectedContinent] = useState(null);
 
-  const selectedColor = am5.color(0x60B5FF);
+  // selected country polygon color
+  const selectedColor = am5.color(0xff007f);
 
   // Paramètres de zoom, noms et couleurs pour chaque continent
   const continentSettings = {
     europe: {
       name: 'Europe',
       homeGeoPoint: { longitude: 10, latitude: 50 },
-      homeZoomLevel: 4,
+      homeZoomLevel: 12,
       color: am5.color(0x4D96FF), // Bleu474E93
-      vkColor: ['0x012A4A', '0x013A63', '0x01497C', '0x014F86', '0x2A6F97', '0x2C7DA0', '0x468FAF', '0x61A5C2'],
+      vkColor: ['0x8ecae6',
+        '0x73bfdc',
+        '0x58b4d1',
+        '0x219ebc',
+        '0x126782',
+        '0x023047',
+        '0xffb703',
+        '0xfd9e02',
+        '0xfb8500',
+        '0xfb9017'],
     },
     africa: {
       name: 'Afrique',
-      homeGeoPoint: { longitude: 20, latitude: 0 },
-      homeZoomLevel: 3,
+      homeGeoPoint: { longitude: 20, latitude: -10 },
+      homeZoomLevel: 5,
       color: am5.color(0x6BCB77), // Vert
-      vkColor: ['0x819A91', '0xA7C1A8', '0xD1D8BE', '0xEEEFE0', '0x727D73', '0xAAB99A', '0xD0DDD0', '0xF0F0D7'],
+      vkColor: ['0x8ecae6',
+        '0x73bfdc',
+        '0x58b4d1',
+        '0x219ebc',
+        '0x126782',
+        '0x023047',
+        '0xffb703',
+        '0xfd9e02',
+        '0xfb8500',
+        '0xfb9017'],
     },
     southAmerica: {
       name: 'Amérique du Sud',
-      homeGeoPoint: { longitude: -60, latitude: -15 },
-      homeZoomLevel: 3,
+      homeGeoPoint: { longitude: -60, latitude: -30 },
+      homeZoomLevel: 5,
       color: am5.color(0xFF8282), // Rouge
-      vkColor: ['0x819A91', '0xA7C1A8', '0xD1D8BE', '0xEEEFE0', '0x727D73', '0xAAB99A', '0xD0DDD0', '0xF0F0D7'],
+      vkColor: ['0x8ecae6',
+        '0x73bfdc',
+        '0x58b4d1',
+        '0x219ebc',
+        '0x126782',
+        '0x023047',
+        '0xffb703',
+        '0xfd9e02',
+        '0xfb8500',
+        '0xfb9017'],
     },
     asia: {
       name: 'Asie',
       homeGeoPoint: { longitude: 100, latitude: 30 },
       homeZoomLevel: 3,
       color: am5.color(0xFFD93D), // Jaune
-      vkColor: ['0x819A91', '0xA7C1A8', '0xD1D8BE', '0xEEEFE0', '0x727D73', '0xAAB99A', '0xD0DDD0', '0xF0F0D7'],
+      vkColor: ['0x8ecae6',
+        '0x73bfdc',
+        '0x58b4d1',
+        '0x219ebc',
+        '0x126782',
+        '0x023047',
+        '0xffb703',
+        '0xfd9e02',
+        '0xfb8500',
+        '0xfb9017'],
     },
     northAmerica: {
       name: 'Amérique du Nord',
       homeGeoPoint: { longitude: -100, latitude: 40 },
       homeZoomLevel: 3,
       color: am5.color(0xB7B1F2), // Violet
-      vkColor: ['0x819A91', '0xA7C1A8', '0xD1D8BE', '0xEEEFE0', '0x727D73', '0xAAB99A', '0xD0DDD0', '0xF0F0D7'],
+      vkColor: ['0x8ecae6',
+        '0x73bfdc',
+        '0x58b4d1',
+        '0x219ebc',
+        '0x126782',
+        '0x023047',
+        '0xffb703',
+        '0xfd9e02',
+        '0xfb8500',
+        '0xfb9017'],
     },
     oceania: {
       name: 'Océanie',
-      homeGeoPoint: { longitude: 140, latitude: -25 },
-      homeZoomLevel: 3,
+      homeGeoPoint: { longitude: 170, latitude: -35 },
+      homeZoomLevel: 5,
       color: am5.color(0xFF9A00), // Cyan
-      vkColor: ['0x819A91', '0xA7C1A8', '0xD1D8BE', '0xEEEFE0', '0x727D73', '0xAAB99A', '0xD0DDD0', '0xF0F0D7'],
+      vkColor: ['0x8ecae6',
+        '0x73bfdc',
+        '0x58b4d1',
+        '0x219ebc',
+        '0x126782',
+        '0x023047',
+        '0xffb703',
+        '0xfd9e02',
+        '0xfb8500',
+        '0xfb9017'],
     },
   };
 
@@ -178,7 +234,6 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
       })
     );
 
-    const myArray = ['0x819A91', '0xA7C1A8', '0xD1D8BE', '0xEEEFE0', '0x727D73', '0xAAB99A', '0xD0DDD0', '0xF0F0D7'];
     countrySeries.mapPolygons.template.setAll({
       tooltipText: '{name}',
       interactive: true,
@@ -190,13 +245,8 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
     // Appliquer les couleurs spécifiques à chaque continent
     countrySeries.events.on('datavalidated', () => {
       countrySeries.mapPolygons.each((polygon) => {
-        const continentId = polygon.dataItem.dataContext.id;
-        console.log(continentId);
-        console.log(continentSettings[selectedContinent].vkColor);
-        console.log(myArray);
-        const vc = continentSettings[selectedContinent].vkColor;
-        let clr = (vc[(Math.random() * myArray.length) | 0]);
-        polygon.set('fill', am5.color(parseInt(clr, 16)));
+        let randomColor = (continentSettings[selectedContinent].vkColor[(Math.random() * continentSettings[selectedContinent].vkColor.length) | 0]);
+        polygon.set('fill', am5.color(parseInt(randomColor, 16)));
       });
     });
 
@@ -228,13 +278,14 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
       continentSeries.hide();
       countrySeries.show();
       const settings = continentSettings[continentId];
-      chart.zoomIn();
-
+      chart.zoomToGeoPoint({ longitude: settings.homeGeoPoint.longitude, latitude: settings.homeGeoPoint.latitude }, settings.homeZoomLevel);
     });
     // Gestion du clic sur un pays
     countrySeries.mapPolygons.template.events.on('click', (ev) => {
       const countryCode = ev.target.dataItem.dataContext.id;
+      const countryName = ev.target.dataItem.dataContext.name;
       setSelectedCountry(countryCode);
+      setSelectedCountryName(countryName);
       onCountrySelect(countryCode);
     });
 
@@ -279,21 +330,27 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
     return () => {
       root.dispose();
     };
-  }, [onCountrySelect]);
+  }, [onCountrySelect, selectedContinent]);
 
   return (
-    <div className="w-full h-[500px] bg-gray-100">
+    <div className="w-full h-[200px] md:h-[400px] bg-gray-100">
       <div ref={chartRef} className="w-full h-full" />
+            {selectedCountry && (
+        <p className="text-center mt-2 text-lg font-semibold">
+          Pays sélectionné : {selectedCountryName}
+        </p>
+      )}
       {selectedContinent && (
-        <p className="text-center mt-2 text-lg font-semibold">
-          Continent sélectionné : {continentSettings[selectedContinent].name}
-        </p>
+        <>
+          <p className="font-articulat_cf font-bold text-center mt-2 text-md">
+            Continent sélectionné : {continentSettings[selectedContinent].name}
+          </p>
+          <p className="font-articulat_cf font-bold text-center mt-2 text-sm">
+            Cliquez une nouvelle fois pour zoomer
+          </p>
+        </>
       )}
-      {selectedCountry && (
-        <p className="text-center mt-2 text-lg font-semibold">
-          Pays sélectionné : {selectedCountry}
-        </p>
-      )}
+
     </div>
   );
 };
