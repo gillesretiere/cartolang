@@ -9,15 +9,16 @@ import am5geodata_region_world_northAmericaLow from '@amcharts/amcharts5-geodata
 import am5geodata_region_world_oceaniaLow from '@amcharts/amcharts5-geodata/region/world/oceaniaLow';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
-const DrillDownMap5 = ({ onCountrySelect }) => {
+const DrillDownMap6 = ({ onCountrySelect }) => {
   const chartRef = useRef(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [selectedCountryName, setSelectedCountryName] = useState(null);
   const [selectedContinent, setSelectedContinent] = useState(null);
 
-  // selected country polygon color
+  // Couleur pour les pays sélectionnés
   const selectedColor = am5.color(0xff007f);
-  const vkColorPalette = ['0x8ecae6',
+  const vkColorPalette = [
+    '0x8ecae6',
     '0x73bfdc',
     '0x58b4d1',
     '0x219ebc',
@@ -26,7 +27,8 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
     '0xffb703',
     '0xfd9e02',
     '0xfb8500',
-    '0xfb9017']
+    '0xfb9017',
+  ];
 
   // Paramètres de zoom, noms et couleurs pour chaque continent
   const continentSettings = {
@@ -34,7 +36,7 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
       name: 'Europe',
       homeGeoPoint: { longitude: 10, latitude: 50 },
       homeZoomLevel: 12,
-      color: am5.color(0x4D96FF), // Bleu474E93
+      color: am5.color(0x4D96FF),
       strokeWidth: 0.1,
       vkColor: vkColorPalette,
     },
@@ -42,7 +44,7 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
       name: 'Afrique',
       homeGeoPoint: { longitude: 20, latitude: -10 },
       homeZoomLevel: 5,
-      color: am5.color(0x6BCB77), // Vert
+      color: am5.color(0x6BCB77),
       strokeWidth: 0.1,
       vkColor: vkColorPalette,
     },
@@ -50,7 +52,7 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
       name: 'Amérique du Sud',
       homeGeoPoint: { longitude: -60, latitude: -30 },
       homeZoomLevel: 5,
-      color: am5.color(0xFF8282), // Rouge
+      color: am5.color(0xFF8282),
       strokeWidth: 0.1,
       vkColor: vkColorPalette,
     },
@@ -58,7 +60,7 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
       name: 'Asie',
       homeGeoPoint: { longitude: 100, latitude: 30 },
       homeZoomLevel: 3,
-      color: am5.color(0xFFD93D), // Jaune
+      color: am5.color(0xFFD93D),
       strokeWidth: 0.1,
       vkColor: vkColorPalette,
     },
@@ -66,7 +68,7 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
       name: 'Amérique du Nord',
       homeGeoPoint: { longitude: -100, latitude: 40 },
       homeZoomLevel: 3,
-      color: am5.color(0xB7B1F2), // Violet
+      color: am5.color(0xB7B1F2),
       strokeWidth: 0.1,
       vkColor: vkColorPalette,
     },
@@ -74,7 +76,7 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
       name: 'Océanie',
       homeGeoPoint: { longitude: 170, latitude: -35 },
       homeZoomLevel: 5,
-      color: am5.color(0xFF9A00), // Cyan
+      color: am5.color(0xFF9A00),
       strokeWidth: 0.1,
       vkColor: vkColorPalette,
     },
@@ -175,12 +177,15 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
       });
     });
 
+    // Configurer le template des polygones
     continentSeries.mapPolygons.template.setAll({
       tooltipText: '{name}',
       interactive: true,
       strokeWidth: 0.1,
+      stroke: am5.color(0x000000),
     });
 
+    // État hover
     continentSeries.mapPolygons.template.states.create('hover', {
       fillOpacity: 0.8,
     });
@@ -192,7 +197,7 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
       stroke: am5.color(0x000000),
     });
 
-    // Créer la série pour les pays (vide au départ)
+    // Créer la série pour les pays
     const countrySeries = chart.series.push(
       am5map.MapPolygonSeries.new(root, {
         geoJSON: null,
@@ -202,15 +207,16 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
     countrySeries.mapPolygons.template.setAll({
       tooltipText: '{name}',
       interactive: true,
-      fill: am5.color(am5.color(0xFF9A00)),
+      fill: am5.color(0xFF9A00),
       strokeWidth: 1,
     });
 
-
-    // Appliquer les couleurs spécifiques à chaque continent
+    // Appliquer les couleurs aléatoires aux pays
     countrySeries.events.on('datavalidated', () => {
       countrySeries.mapPolygons.each((polygon) => {
-        let randomColor = (continentSettings[selectedContinent].vkColor[(Math.random() * continentSettings[selectedContinent].vkColor.length) | 0]);
+        let randomColor = continentSettings[selectedContinent].vkColor[
+          Math.floor(Math.random() * continentSettings[selectedContinent].vkColor.length)
+        ];
         polygon.set('fill', am5.color(parseInt(randomColor, 16)));
       });
     });
@@ -244,17 +250,51 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
       continentSeries.mapPolygons.each((polygon) => {
         polygon.states.apply('default');
       });
+
       // Activer l'état actif pour le polygone cliqué
       ev.target.states.apply('active');
 
-      countrySeries.set('geoJSON', continentGeoJSON[continentId]);
-      console.log(ev.target);
-      // continentSettings[continentId].set('strokeWidth',3);
-      //continentSeries.hide();
-      countrySeries.show();
-      const settings = continentSettings[continentId];
-      chart.zoomToGeoPoint({ longitude: settings.homeGeoPoint.longitude, latitude: settings.homeGeoPoint.latitude }, settings.homeZoomLevel);
+      // Animation de pulsation
+      const animation = ev.target.animate({
+        key: 'fillOpacity',
+        from: 0.1,
+        to: 1.0,
+        duration: 800,
+        loops: 1,
+      });
+
+      // Attacher l'événement finished
+      animation.events.on('finished', () => {
+        // Après l’animation, passer à la série des pays
+        countrySeries.set('geoJSON', continentGeoJSON[continentId]);
+        continentSeries.hide();
+        countrySeries.show();
+        const settings = continentSettings[continentId];
+        chart.zoomToGeoPoint(
+          { longitude: settings.homeGeoPoint.longitude, latitude: settings.homeGeoPoint.latitude },
+          settings.homeZoomLevel,
+          true,
+          800
+        );
+      });
+      
+      setTimeout(() => {
+        if (!animation.isFinished()) {
+          animation.stop();
+          countrySeries.set('geoJSON', continentGeoJSON[continentId]);
+          continentSeries.hide();
+          countrySeries.show();
+          const settings = continentSettings[continentId];
+          chart.zoomToGeoPoint(
+            { longitude: settings.homeGeoPoint.longitude, latitude: settings.homeGeoPoint.latitude },
+            settings.homeZoomLevel,
+            true,
+            800
+          );
+        }
+      }, 150);
     });
+
     // Gestion du clic sur un pays
     countrySeries.mapPolygons.template.events.on('click', (ev) => {
       const countryCode = ev.target.dataItem.dataContext.id;
@@ -325,9 +365,8 @@ const DrillDownMap5 = ({ onCountrySelect }) => {
           </p>
         </>
       )}
-
     </div>
   );
 };
 
-export default DrillDownMap5;
+export default DrillDownMap6;

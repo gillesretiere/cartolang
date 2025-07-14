@@ -58,7 +58,7 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
                         <Typography className='font-semibold text-xl text-milano-500' >
                             Vocabulaire de base
                         </Typography>
-                        <Typography className='font-thin text-sm text-zinc-500' >
+                        <Typography className='font-thin text-sm text-zinc-500 dark:text-white' >
                             Choisissez une phrase ou une expression en français et obtenez la traduction en text et audio.
                         </Typography>
                         {/* Expression Selector (voice driven) */}
@@ -76,7 +76,7 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
                                                 <Typography className={`font-articulat_cf leading-none tracking-tight font-thin text-sm md:text-md text-milano-500 `}>
                                                     {el.pkid}
                                                 </Typography>
-                                                <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-xl md:text-2xl text-zinc-800 `}>
+                                                <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-xl md:text-2xl text-zinc-800 dark:text-white`}>
                                                     {el.proposition}
                                                 </Typography>
                                                 <div className='flex flex-row gap-6 items-center'>

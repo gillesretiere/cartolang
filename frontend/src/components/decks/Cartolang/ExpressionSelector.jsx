@@ -101,7 +101,7 @@ const ExpressionSelector = ({ expressions, onSelectExpression }) => {
             <li
               key={exp.id}
               onClick={() => handleSelect(exp)}
-              className="font-articulat_cf font-bold text-md p-2 border border-gray-100 hover:bg-gray-400 hover:text-white cursor-pointer text-gray-600"
+              className="font-articulat_cf font-bold text-md p-2 border border-gray-100 hover:bg-gray-400 hover:text-white cursor-pointer text-gray-600 dark:text-white"
             >
               {exp}
             </li>

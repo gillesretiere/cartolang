@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect, } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import DeckContext from '../../../store/DeckContext.jsx';
-import DrillDownMap5 from './DrillDownMap5.jsx';
+import DrillDownMap8 from './DrillDownMap8.jsx';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -142,20 +142,20 @@ export const CylgSearchPage = ({ regions, countries, languages, }) => {
     return (
         <>
             <section id="search" sx={{ display: 'flex', alignItems: 'center', }}>
-                <div className="bg-gray-50 p-4 my-4">
+                <div className="p-4 my-4">
                     <Typography
                         sx={{ display: 'flex', justifyContent: 'center', }}
-                        className={`font-articulat_cf font-thin leading-none tracking-tight text-xl md:text-3xl lg:text-5xl text-slate-800 mb-2`}>
+                        className={`font-articulat_cf font-thin leading-none tracking-tight text-xl md:text-3xl lg:text-5xl text-slate-800 dark:text-white mb-2`}>
                         Cartes &amp; Langues
                     </Typography>
-                    <DrillDownMap5 onCountrySelect={handleCountrySelect} />
+                    <DrillDownMap8 onCountrySelect={handleCountrySelect} />
                 </div>
                 <div>
                     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '20vh', }}>
                         <Box sx={{ display: 'flex', flexDirection: 'column', }}>
                             <Box sx={{ display: 'flex', flexDirection: 'row', }} className="items-center mt-9">
                                 <Autocomplete
-                                    className='bg-white w-[200px] md:w-[600px] xl:w-[1000px]'
+                                    className='font-articulat_cf font-thin bg-white dark:bg-zinc-800 w-[200px] md:w-[600px] xl:w-[1000px]'
                                     id="combo-box-demo"
                                     value={selectedCountryName}
                                     options={options.map((option) => option.label)}
