@@ -1,5 +1,5 @@
 frontend/node_modules/
-frontend/public/
+frontend/public/audio/
 frontend/src/nohup.out
 frontend/src/nohup.err
 frontend/src/save_pid.txt

@@ -20,6 +20,7 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
 
     const [vocable, setVocable] = useState([]);
     const [selected, setSelected] = useState(null);
+    const domainUrl = 'https://hammer-marteau.com/assets/cartolang/';
 
     const playAudio = (audioUrl) => {
         const audio = new Audio(audioUrl);
@@ -83,7 +84,7 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
                                                     <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-xl md:text-2xl text-milano-500 `}>
                                                         {el.proposition_tr}
                                                     </Typography>
-                                                    <AudioPlayer media_url={`/audio/${el.language_uid}/${el.pkid}.mp3`} language={el.language_uid} />
+                                                    <AudioPlayer media_url={`${domainUrl}/audio/${el.language_uid}/${el.pkid}.mp3`} language={el.language_uid} />
                                                 </div>
 
                                                 {/*
@@ -111,7 +112,7 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
                                                                         <Typography className={`font-articulat_cf leading-none tracking-tight font-bold text-lg md:text-xl text-milano-500 `}>
                                                                             {opid['proposition_tr']}
                                                                         </Typography>
-                                                                        <AudioPlayer media_url={`/audio/${el.language_uid}/${opid['pkid']}.mp3`} language={el.language_uid} />
+                                                                        <AudioPlayer media_url={`${domainUrl}/audio/${el.language_uid}/${opid['pkid']}.mp3`} language={el.language_uid} />
                                                                     </div>
 
                                                                     {/*

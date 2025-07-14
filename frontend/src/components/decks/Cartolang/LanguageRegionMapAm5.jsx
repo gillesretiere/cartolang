@@ -12,6 +12,8 @@ const LanguageRegionMapAm5 = ({ countryCode, vkRegionName, vkPointSeries, vkMapC
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const domainUrl = '';
+
     // Charger le GeoJSON dynamiquement
     // Charger le GeoJSON dynamiquement
     useEffect(() => {
@@ -19,7 +21,7 @@ const LanguageRegionMapAm5 = ({ countryCode, vkRegionName, vkPointSeries, vkMapC
             try {
                 setLoading(true);
                 // URL du fichier GeoJSON (par exemple, /public/geojson/maliLow.json)
-                const response = await fetch(`/geojson/${countryCode}.json`);
+                const response = await fetch(`${domainUrl}/geojson/${countryCode}.json`);
                 if (!response.ok) {
                     throw new Error(`Failed to fetch GeoJSON for ${countryCode}`);
                 }
