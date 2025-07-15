@@ -8,12 +8,35 @@ import am5geodata_region_world_asiaLow from '@amcharts/amcharts5-geodata/region/
 import am5geodata_region_world_northAmericaLow from '@amcharts/amcharts5-geodata/region/world/northAmericaLow';
 import am5geodata_region_world_oceaniaLow from '@amcharts/amcharts5-geodata/region/world/oceaniaLow';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-const DrillDownMap8 = ({ onCountrySelect }) => {
+const DrillDownMap8 = ({ onCountrySelect, countries }) => {
   const chartRef = useRef(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [selectedCountryName, setSelectedCountryName] = useState(null);
   const [selectedContinent, setSelectedContinent] = useState(null);
+  const [selectedCountryNameFr, setSelectedCountryNameFr] = useState(null);
+  const [vkCountries, setVkCountries] = useState([]);
+
+  useEffect(() => {
+    setVkCountries(countries);
+  }, [countries]);
+
+  const getCountryNameFr = (input) => {
+    // recherche la clé
+    for (var i = 0; i < vkCountries.length; i++) {
+      if (vkCountries[i].country_iso2 === input) {
+        // Found
+        setSelectedCountryNameFr(vkCountries[i].country_name_fr)
+        break;
+      } else {
+        // Not found
+        setSelectedCountryNameFr('');
+      }
+    }
+    return;
+  };
 
   // Couleur pour les pays sélectionnés
   const selectedColor = am5.color(0xff007f);
@@ -296,9 +319,10 @@ const DrillDownMap8 = ({ onCountrySelect }) => {
       const countryCode = ev.target.dataItem.dataContext.id;
       const countryName = ev.target.dataItem.dataContext.name;
       setSelectedCountry(countryCode);
+      getCountryNameFr(countryCode);
       setSelectedCountryName(countryName);
       onCountrySelect(countryCode);
-      alert(`Séléctionné ${countryName}!`);
+      alert(`${countryName} séléctionné !`);
     });
 
     // Bouton de retour à la carte mondiale
@@ -348,16 +372,18 @@ const DrillDownMap8 = ({ onCountrySelect }) => {
     <div className="w-full h-[200px] md:h-[400px] bg-blue-50 dark:bg-gray-800">
       <div ref={chartRef} className="w-full h-full" />
       {selectedCountry && (
-        <p className="font-articulat_cf text-center mt-2 text-xl font-base text-milano-500">
-          Pays sélectionné : {selectedCountryName}
-        </p>
+        <>
+          <p className="font-articulat_cf text-center mt-2 text-xl font-base text-blue-500">
+            Pays sélectionné : {selectedCountryNameFr}  <CheckCircleOutlineIcon />
+          </p>
+        </>
       )}
       {selectedContinent && (
         !selectedCountry ? (
-        <p className="font-articulat_cf font-base text-center mt-2 text-xl">
-          Continent sélectionné : {continentSettings[selectedContinent].name}
-        </p>
-        ):(
+          <p className="font-articulat_cf font-base text-center mt-2 text-xl">
+            Continent sélectionné : {continentSettings[selectedContinent].name} (cliquez de nouveau pour choisir)
+          </p>
+        ) : (
           <></>
         )
       )}

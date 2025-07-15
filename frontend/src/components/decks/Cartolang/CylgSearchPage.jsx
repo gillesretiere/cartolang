@@ -57,6 +57,8 @@ export const CylgSearchPage = ({ regions, countries, languages, }) => {
                     item["label"] = el.country_name_fr;
                     item["country_uid"] = el.country_uid;
                     item["label_en"] = el.country_name_en;
+                    item["country_iso2"] = el.country_iso2;
+                    item["country_name_fr"] = el.country_name_fr;
                     vk.push(item);
                 }
             )
@@ -148,7 +150,8 @@ export const CylgSearchPage = ({ regions, countries, languages, }) => {
                         className={`font-articulat_cf font-thin leading-none tracking-tight text-xl md:text-3xl lg:text-5xl text-slate-800 dark:text-white mb-2`}>
                         Cartes &amp; Langues
                     </Typography>
-                    <DrillDownMap8 onCountrySelect={handleCountrySelect} />
+                    {vkCtry && <DrillDownMap8 onCountrySelect={handleCountrySelect} countries={vkCtry} />}
+                    
                 </div>
                 <div>
                     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '20vh', }}>
@@ -159,14 +162,25 @@ export const CylgSearchPage = ({ regions, countries, languages, }) => {
                                     id="combo-box-demo"
                                     value={selectedCountryName}
                                     options={options.map((option) => option.label)}
-                                    renderInput={(params) => <TextField {...params} label="Votre sélection" />}
+                                    renderInput={(params) => <TextField {...params} label="Selon votre choix, entrez le nom d'un pays, d'une langue, ou cliquez sur la carte" />}
                                     onChange={handleChange}
                                 />
-                                <Link to={`/${toPage}/${uid}`}>
-                                    <Button className="ml-4" variant="contained" size="small" sx={{ display: 'flex', }}>
-                                        OK
-                                    </Button>
-                                </Link>
+                                {uid ?
+                                    (<>
+                                        <Link to={`/${toPage}/${uid}`}>
+                                            <Button className="ml-4" variant="contained" size="small" sx={{ display: 'flex', }}>
+                                                OK
+                                            </Button>
+                                        </Link>
+                                    </>
+                                    ) :
+                                    (<>
+                                        <Button className="ml-4" disabled variant="contained" size="small" sx={{ display: 'flex', }}>
+                                            OK
+                                        </Button>
+                                    </>)
+                                }
+
                             </Box>
                             <Box sx={{ display: 'flex', justifyContent: 'center', }} className="p-4">
                                 <FormControl>
