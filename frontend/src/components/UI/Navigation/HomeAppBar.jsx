@@ -12,6 +12,7 @@ import Box from "@mui/material/Box";
 import HomeIcon from '@mui/icons-material/Home';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import PublicTwoToneIcon from '@mui/icons-material/PublicTwoTone';
+import InfoIcon from '@mui/icons-material/Info';
 import { Link } from "react-router-dom";
 
 //drawer elements used
@@ -142,21 +143,23 @@ const HomeAppBar = () => {
           >
             <HomeIcon />
           </IconButton>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            onClick={toggleDrawer(true)}
-            sx={{
-              mr: 2,
-              display: {
-                xs: "block",
-                /* md: "none", hidden if device >= md */
-              }
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
+          {deckContext.current_deck.navlinks &&
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              onClick={toggleDrawer(true)}
+              sx={{
+                mr: 2,
+                display: {
+                  xs: "block",
+                  /* md: "none", hidden if device >= md */
+                }
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
+          }
           <Box
             component="div"
             sx={{
@@ -172,56 +175,65 @@ const HomeAppBar = () => {
           </Box>
 
 
-
           {/* The outside of the drawer */}
-          <Drawer
-            //from which side the drawer slides in
-            anchor="right"
-            //if open is true --> drawer is shown
-            open={open}
-            //function that is called when the drawer should close
-            onClose={toggleDrawer(false)}
-          //function that is called when the drawer should open
-          // onOpen={toggleDrawer(true)}
-          >
-            {/* The inside of the drawer */}
-            <Box
-              className="bg-primary-orange"
-              sx={{
-                p: 2,
-                height: 1,
-              }}
-            >
-              {/* when clicking the icon it calls the function toggleDrawer and closes the drawer by setting the variable open to false */}
-              <IconButton sx={{ mb: 2 }}>
-                <CloseIcon onClick={toggleDrawer(false)} />
-              </IconButton>
+          {deckContext.current_deck.navlinks &&
 
-              <Divider sx={{ mb: 2 }} />
-              {/* 
+            <Drawer
+              //from which side the drawer slides in
+              anchor="right"
+              //if open is true --> drawer is shown
+              open={open}
+              //function that is called when the drawer should close
+              onClose={toggleDrawer(false)}
+            //function that is called when the drawer should open
+            // onOpen={toggleDrawer(true)}
+            >
+              {/* The inside of the drawer */}
+              <Box
+                className="bg-primary-orange"
+                sx={{
+                  p: 2,
+                  height: 1,
+                }}
+              >
+                {/* when clicking the icon it calls the function toggleDrawer and closes the drawer by setting the variable open to false */}
+                <IconButton sx={{ mb: 2 }}>
+                  <CloseIcon onClick={toggleDrawer(false)} />
+                </IconButton>
+
+                <Divider sx={{ mb: 2 }} />
+                {/* 
               search}            
               */}
-              <Box sx={{ mb: 2 }}>
-                {/* on itère sur les liens de navigations intrapage : ajout du lien 
+                <Box sx={{ mb: 2 }}>
+                  {/* on itère sur les liens de navigations intrapage : ajout du lien 
                https://stackoverflow.com/questions/47206639/how-to-add-a-link-to-a-list-in-material-ui-1-0
                */}
-                {deckContext.current_deck.navlinks && deckContext.current_deck.navlinks.map(
-                  (item, index) => (
-                    <>
-                      {/* on teste si href interne (#) : composant "a" sinon "Link" */}
-                      <ListItemButton key={index} component={item.url.startsWith('#') ? "a" : Link} href={`${item.url}`} to={`${item.url}`} className={!item.enabled && "disabled-link"}  >
-                        <ListItemIcon>
-                          <PublicTwoToneIcon sx={{ color: "primary.contrastText" }} />
-                        </ListItemIcon>
-                        <ListItemText primary={`${item.label}`} sx={{ color: "primary.contrastText" }} />
-                        {/* <Chip label={item.enabled ? "disponible" :"prochainement"} size="small"></Chip> */}
-                      </ListItemButton>
-                    </>
-                  ))}
-              </Box>
+                  {deckContext.current_deck.navlinks && deckContext.current_deck.navlinks.map(
+                    (item, index) => (
+                      <>
+                        {/* on teste si href interne (#) : composant "a" sinon "Link" */}
+                        <ListItemButton key={index} component={item.url.startsWith('#') ? "a" : Link} href={`${item.url}`} to={`${item.url}`} className={!item.enabled && "disabled-link"}  >
+                          <ListItemIcon>
+                            <PublicTwoToneIcon sx={{ color: "primary.contrastText" }} />
+                          </ListItemIcon>
+                          <ListItemText primary={`${item.label}`} sx={{ color: "primary.contrastText" }} />
+                          {/* <Chip label={item.enabled ? "disponible" :"prochainement"} size="small"></Chip> */}
+                        </ListItemButton>
+                      </>
+                    ))}
+                  <hr />
+                  <ListItemButton key="about" component="a" href={`/about`} to={`/about`} >
+                    <ListItemIcon>
+                      <InfoIcon sx={{ color: "primary.contrastText" }} />
+                    </ListItemIcon>
+                    <ListItemText sx={{ color: "primary.contrastText" }}>&Agrave; propos</ListItemText>
+                  </ListItemButton>
+                </Box>
 
-            </Box>
-          </Drawer>
+              </Box>
+            </Drawer>
+          }
         </Toolbar>
       </Container>
     </AppBar>

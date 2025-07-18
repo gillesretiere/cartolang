@@ -9,6 +9,7 @@ import DeckContext from '../../../store/DeckContext';
 const LgSearchPage = ({ uid }) => {
 
   let ctx = useContext(DeckContext);
+  console.log (ctx.current_deck.language_deck[0]);
 
   useEffect(() => {
     window.scrollTo(0, 0)

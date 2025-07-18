@@ -5,3 +5,4 @@ frontend/src/nohup.err
 frontend/src/save_pid.txt
 frontend/package-lock.json
 frontend/package.json
+.vercel

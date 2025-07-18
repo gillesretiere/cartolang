@@ -9,11 +9,10 @@ import CssBaseline from '@mui/material/CssBaseline';
 import theme from './theme';
 
 import CyLandingPage from './pages/CyLandingPage';
-import CountryLanguagesPage from './components/decks/Cartolang/CountryLanguagesPage';
 import CtSearchPage from './components/decks/Cartolang/CtSearchPage';
 import LgSearchPage from './components/decks/Cartolang/LgSearchPage';
 import CySearchPage from './components/decks/Cartolang/CySearchPage';
-import HomePage2 from './components/decks/Cartolang/HomePage2';
+import AboutPage from './pages/AboutPage';
 import App from './App';
 
 // import reportWebVitals from './reportWebVitals';
@@ -33,7 +32,8 @@ root.render(
           <CssBaseline />
           <Routes>
             <Route path="/" element={<CyLandingPage />} />
-            <Route path="cartolang" element={<HomePage2 />} />
+            <Route path="cartolang" element={<CyLandingPage />} />
+            <Route path="about" element={<AboutPage />} />
             <Route path="ct_search_page/:id" element={<CtSearchPage />} />
             <Route path="cy_search_page/:id" element={<CySearchPage />} />
             <Route path="lg_search_page/:id" element={<LgSearchPage uid={<ComponentGetID />} />} />

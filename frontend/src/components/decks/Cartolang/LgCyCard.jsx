@@ -27,7 +27,7 @@ export const LgCyCard = ({ card, langdeck }) => {
                                 {country_name_fr}
                             </Typography>
                             <Typography className="font-base text-zinc-500 dark:text-white text-lg">
-                                {country_uid}
+                                {country_iso2} - {country_name_native}
                             </Typography>
                             <img className='h-12 mt-2' src={national_flag} />
                         </CardContent>
