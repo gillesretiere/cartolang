@@ -1,6 +1,6 @@
 [{
   "_id": {
-    "$oid": "6874d0ad916fe0582e769517"
+    "$oid": "68808cc7c4b448614dbf17ea"
   },
   "country_uid": "afg",
   "country_iso2": "AF",
@@ -534,7 +534,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769518"
+    "$oid": "68808cc7c4b448614dbf17eb"
   },
   "country_uid": "alb",
   "country_iso2": "AL",
@@ -1046,7 +1046,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769519"
+    "$oid": "68808cc7c4b448614dbf17ec"
   },
   "country_uid": "dza",
   "country_iso2": "DZ",
@@ -1577,7 +1577,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76951a"
+    "$oid": "68808cc7c4b448614dbf17ed"
   },
   "country_uid": "and",
   "country_iso2": "AD",
@@ -1974,7 +1974,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76951b"
+    "$oid": "68808cc7c4b448614dbf17ee"
   },
   "country_uid": "ago",
   "country_iso2": "AO",
@@ -2518,7 +2518,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76951c"
+    "$oid": "68808cc7c4b448614dbf17ef"
   },
   "country_uid": "arg",
   "country_iso2": "AR",
@@ -3046,7 +3046,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76951d"
+    "$oid": "68808cc7c4b448614dbf17f0"
   },
   "country_uid": "arm",
   "country_iso2": "AM",
@@ -3509,7 +3509,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76951e"
+    "$oid": "68808cc7c4b448614dbf17f1"
   },
   "country_uid": "aus",
   "country_iso2": "AU",
@@ -3985,7 +3985,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76951f"
+    "$oid": "68808cc7c4b448614dbf17f2"
   },
   "country_uid": "aut",
   "country_iso2": "AT",
@@ -3996,10 +3996,10 @@
   "country_national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/at.png",
   "region_uid": "eur",
   "country_region_fr": "Europe",
-  "country_openstreetmap_xy": "https://www.openstreetmap.org/#map=5/47.3333/13.3333&layers=T",
+  "country_openstreetmap_xy": "https://www.openstreetmap.org/#map=6/47.3333/13.3333&layers=V",
   "country_xy": "47.3333,13.3333",
   "country_summary": "L'Autriche est un pays d'Europe Centrale. Elle est entourée par huit pays : la Suisse et le Liechtenstein à l'ouest, l'Italie et la Slovénie au sud, la Hongrie et la Slovaquie à l'est, l'Allemagne et la République tchèque au nord.\nLa capitale est Vienne et ses habitants sont appelés les Autrichiens.",
-  "country_languages_summary": "Allemand langue officielle. Minorités linguistiques slovène, croate, hongroise et tsigane (100000 hab.)",
+  "country_languages_summary": "Allemand : Langue officielle, dominante dans tout le pays.\nAnglais : Langue seconde, largement apprise dans les écoles, sans locuteurs natifs.\nTurc : Parlée par la communauté immigrée turque, concentrée à Vienne.\nSerbe : Parlée par la communauté immigrée serbe, surtout à Vienne.",
   "country_mapicon": "https://github.com/djaiss/mapsicon/blob/master/all/at/256.png",
   "country_languages": [
     {
@@ -4008,18 +4008,75 @@
       "language_uid": "ger",
       "language_name_fr": "Allemand",
       "language_name_en": "German",
-      "popularity": "100.00%",
-      "popularity_as_float": "1",
-      "speakers": "8,000,000",
+      "popularity": "98.00%",
+      "popularity_as_float": "0.98",
+      "speakers": "8900000",
       "is_official": "TRUE",
       "language_name_native": "Deutsch",
       "language_wals_code": "ger",
-      "xy_coordinates": "#REF!",
+      "xy_coordinates": "",
       "vk_region_name": "",
       "vk_coordinates": "",
-      "regional_status": "",
-      "geo_json": "",
-      "map_config": ""
+      "regional_status": "Langue germanique officielle, parlée dans tout le pays comme langue maternelle ou seconde.\t",
+      "geo_json": "austriaLow",
+      "map_config": "{ homeGeoPoint: { longitude: 14.5, latitude: 47.5 }, homeZoomLevel: 6 }\t"
+    },
+    {
+      "country_uid": "aut",
+      "country_name_fr": "Autriche",
+      "language_uid": "eng",
+      "language_name_fr": "Anglais",
+      "language_name_en": "English",
+      "popularity": "60.00%",
+      "popularity_as_float": "0.6",
+      "speakers": "5500000",
+      "is_official": "FALSE",
+      "language_name_native": "English",
+      "language_wals_code": "eng",
+      "xy_coordinates": "",
+      "vk_region_name": "",
+      "vk_coordinates": "",
+      "regional_status": "Langue seconde, largement enseignée dans les écoles et utilisée dans le tourisme et les affaires.\t",
+      "geo_json": "austriaLow",
+      "map_config": "{ homeGeoPoint: { longitude: 14.5, latitude: 47.5 }, homeZoomLevel: 6 }\t"
+    },
+    {
+      "country_uid": "aut",
+      "country_name_fr": "Autriche",
+      "language_uid": "tur",
+      "language_name_fr": "Turc",
+      "language_name_en": "Turkish",
+      "popularity": "2.20%",
+      "popularity_as_float": "0.022",
+      "speakers": "200000",
+      "is_official": "FALSE",
+      "language_name_native": "Türkçe",
+      "language_wals_code": "tur",
+      "xy_coordinates": "",
+      "vk_region_name": "['Vienna']        ",
+      "vk_coordinates": "[16.37, 48.21]\t",
+      "regional_status": "Langue turque parlée par la communauté immigrée turque, principalement à Vienne. Centre représentatif : Vienne.\t",
+      "geo_json": "austriaLow",
+      "map_config": "{ homeGeoPoint: { longitude: 14.5, latitude: 47.5 }, homeZoomLevel: 6 }\t"
+    },
+    {
+      "country_uid": "aut",
+      "country_name_fr": "Autriche",
+      "language_uid": "srp",
+      "language_name_fr": "Serbe",
+      "language_name_en": "Serbian",
+      "popularity": "1.60%",
+      "popularity_as_float": "0.016",
+      "speakers": "150000",
+      "is_official": "FALSE",
+      "language_name_native": "српски‎",
+      "language_wals_code": "",
+      "xy_coordinates": "",
+      "vk_region_name": "['Vienna']        ",
+      "vk_coordinates": "[16.37, 48.21]\t",
+      "regional_status": "Langue slave parlée par la communauté immigrée serbe, principalement à Vienne. Centre représentatif : Vienne.\t",
+      "geo_json": "austriaLow",
+      "map_config": "{ homeGeoPoint: { longitude: 14.5, latitude: 47.5 }, homeZoomLevel: 6 }\t"
     }
   ],
   "country_facts": [
@@ -4432,8 +4489,8 @@
   "country_wfb_location_fr": "Europe centrale, nord de l'Italie et Slovénie",
   "country_wfb_ethnic_groups": "Austrian 80.8%, German 2.6%, Bosnian and Herzegovinian 1.9%, Turkish 1.8%, Serbian 1.6%, Romanian 1.3%, other 10% (2018 est.)",
   "country_wfb_ethnic_groups_fr": "Autrichiens 80,8 %, Allemands 2,6 %, Bosniaques et Herzégovine 1,9 %, Turcs 1,8 %, Serbes 1,6 %, Roumains 1,3 %, autres 10 % (estimation 2018).",
-  "country_wfb_population": "8,884,864 (July 2021 est.)",
-  "country_wfb_population_fr": "8,884,864 (July 2021 est.)",
+  "country_wfb_population": "Estimation de 9,1 millions (2025)",
+  "country_wfb_population_fr": "Estimation de 9,1 millions (2025)",
   "country_wfb_area": "83,871 sq km",
   "country_wfb_languages": "German (official nationwide) 88.6%, Turkish 2.3%, Serbian 2.2%, Croatian (official in Burgenland) 1.6%, other (includes Slovene, official in southern Carinthia, and Hungarian, official in Burgenland) 5.3% (2001 est.)",
   "country_wfb_languages_fr": "Allemand (langue officielle à l'échelle nationale) 88,6 %, turc 2,3 %, serbe 2,2 %, croate (langue officielle au Burgenland) 1,6 %, autres (y compris le slovène, langue officielle dans le sud de la Carinthie, et le hongrois, langue officielle au Burgenland) 5,3 % (estimation 2001).",
@@ -4445,7 +4502,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769520"
+    "$oid": "68808cc7c4b448614dbf17f3"
   },
   "country_uid": "aze",
   "country_iso2": "AZ",
@@ -4939,8 +4996,8 @@
   "country_wfb_location_fr": "Asie du Sud-Ouest, bordant la mer Caspienne, entre l'Iran et la Russie, avec une petite partie européenne au nord de la chaîne du Caucase",
   "country_wfb_ethnic_groups": "Azerbaijani 91.6%, Lezghin 2%, Russian 1.3%, Armenian 1.3%, Talysh 1.3%, other 2.4% (2009 est.)",
   "country_wfb_ethnic_groups_fr": "Azerbaïdjanais 91,6%, Lezghin 2%, Russe 1,3%, Arménien 1,3%, Talysh 1,3%, autres 2,4% (est. 2009)",
-  "country_wfb_population": "10,282,283 (July 2021 est.)",
-  "country_wfb_population_fr": "10,282,283 (July 2021 est.)",
+  "country_wfb_population": "~9,1 millions",
+  "country_wfb_population_fr": "~9,1 millions",
   "country_wfb_area": "86,600 sq km",
   "country_wfb_languages": "Azerbaijani (Azeri) (official) 92.5%, Russian 1.4%, Armenian 1.4%, other 4.7% (2009 est.)",
   "country_wfb_languages_fr": "Azerbaïdjanais (azéri) (officiel) 92,5 %, russe 1,4 %, arménien 1,4 %, autres 4,7 % (estimation 2009).",
@@ -4952,7 +5009,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769521"
+    "$oid": "68808cc7c4b448614dbf17f4"
   },
   "country_uid": "bhr",
   "country_iso2": "BH",
@@ -5396,7 +5453,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769522"
+    "$oid": "68808cc7c4b448614dbf17f5"
   },
   "country_uid": "bgd",
   "country_iso2": "BD",
@@ -5896,7 +5953,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769523"
+    "$oid": "68808cc7c4b448614dbf17f6"
   },
   "country_uid": "blr",
   "country_iso2": "BY",
@@ -6359,7 +6416,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769524"
+    "$oid": "68808cc7c4b448614dbf17f7"
   },
   "country_uid": "bel",
   "country_iso2": "BE",
@@ -6872,7 +6929,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769525"
+    "$oid": "68808cc7c4b448614dbf17f8"
   },
   "country_uid": "ben",
   "country_iso2": "BJ",
@@ -7321,7 +7378,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769526"
+    "$oid": "68808cc7c4b448614dbf17f9"
   },
   "country_uid": "btn",
   "country_iso2": "BT",
@@ -7722,7 +7779,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769527"
+    "$oid": "68808cc7c4b448614dbf17fa"
   },
   "country_uid": "bol",
   "country_iso2": "BO",
@@ -8174,7 +8231,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769528"
+    "$oid": "68808cc7c4b448614dbf17fb"
   },
   "country_uid": "bih",
   "country_iso2": "BA",
@@ -8638,7 +8695,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769529"
+    "$oid": "68808cc7c4b448614dbf17fc"
   },
   "country_uid": "bwa",
   "country_iso2": "BW",
@@ -9089,7 +9146,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76952a"
+    "$oid": "68808cc7c4b448614dbf17fd"
   },
   "country_uid": "bra",
   "country_iso2": "BR",
@@ -9556,7 +9613,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76952b"
+    "$oid": "68808cc7c4b448614dbf17fe"
   },
   "country_uid": "bgr",
   "country_iso2": "BG",
@@ -10033,7 +10090,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76952c"
+    "$oid": "68808cc7c4b448614dbf17ff"
   },
   "country_uid": "bfa",
   "country_iso2": "BF",
@@ -10533,7 +10590,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76952d"
+    "$oid": "68808cc7c4b448614dbf1800"
   },
   "country_uid": "bdi",
   "country_iso2": "BI",
@@ -10970,7 +11027,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76952e"
+    "$oid": "68808cc7c4b448614dbf1801"
   },
   "country_uid": "blz",
   "country_iso2": "BZ",
@@ -11397,7 +11454,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76952f"
+    "$oid": "68808cc7c4b448614dbf1802"
   },
   "country_uid": "cpv",
   "country_iso2": "CV",
@@ -11793,7 +11850,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769530"
+    "$oid": "68808cc7c4b448614dbf1803"
   },
   "country_uid": "khm",
   "country_iso2": "KH",
@@ -12267,7 +12324,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769531"
+    "$oid": "68808cc7c4b448614dbf1804"
   },
   "country_uid": "cmr",
   "country_iso2": "CM",
@@ -12749,7 +12806,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769532"
+    "$oid": "68808cc7c4b448614dbf1805"
   },
   "country_uid": "can",
   "country_iso2": "CA",
@@ -13260,7 +13317,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769533"
+    "$oid": "68808cc7c4b448614dbf1806"
   },
   "country_uid": "caf",
   "country_iso2": "CF",
@@ -13769,7 +13826,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769534"
+    "$oid": "68808cc7c4b448614dbf1807"
   },
   "country_uid": "tcd",
   "country_iso2": "TD",
@@ -14327,7 +14384,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769535"
+    "$oid": "68808cc7c4b448614dbf1808"
   },
   "country_uid": "chl",
   "country_iso2": "CL",
@@ -14790,7 +14847,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769536"
+    "$oid": "68808cc7c4b448614dbf1809"
   },
   "country_uid": "chn",
   "country_iso2": "CN",
@@ -15362,7 +15419,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769537"
+    "$oid": "68808cc7c4b448614dbf180a"
   },
   "country_uid": "col",
   "country_iso2": "CO",
@@ -15848,7 +15905,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769538"
+    "$oid": "68808cc7c4b448614dbf180b"
   },
   "country_uid": "com",
   "country_iso2": "KM",
@@ -16272,7 +16329,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769539"
+    "$oid": "68808cc7c4b448614dbf180c"
   },
   "country_uid": "cog",
   "country_iso2": "CG",
@@ -16746,7 +16803,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76953a"
+    "$oid": "68808cc7c4b448614dbf180d"
   },
   "country_uid": "cod",
   "country_iso2": "CD",
@@ -17205,7 +17262,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76953b"
+    "$oid": "68808cc7c4b448614dbf180e"
   },
   "country_uid": "cri",
   "country_iso2": "CR",
@@ -17681,7 +17738,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76953c"
+    "$oid": "68808cc7c4b448614dbf180f"
   },
   "country_uid": "civ",
   "country_iso2": "CI",
@@ -18218,7 +18275,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76953d"
+    "$oid": "68808cc7c4b448614dbf1810"
   },
   "country_uid": "hrv",
   "country_iso2": "HR",
@@ -18690,7 +18747,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76953e"
+    "$oid": "68808cc7c4b448614dbf1811"
   },
   "country_uid": "cub",
   "country_iso2": "CU",
@@ -19143,7 +19200,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76953f"
+    "$oid": "68808cc7c4b448614dbf1812"
   },
   "country_uid": "cyp",
   "country_iso2": "CY",
@@ -19618,7 +19675,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769540"
+    "$oid": "68808cc7c4b448614dbf1813"
   },
   "country_uid": "cze",
   "country_iso2": "CZ",
@@ -19632,46 +19689,46 @@
   "country_openstreetmap_xy": "https://www.openstreetmap.org/#map=5/49.75/15.5&layers=T",
   "country_xy": "49.75,15.5",
   "country_summary": "La Tchéquie est un pays d'Europe centrale sans accès à la mer, entouré par la Pologne au nord-est, l’Allemagne au nord-ouest et à l’ouest, l’Autriche au sud et la Slovaquie à l'est-sud-est.\nRegroupant les régions historiques de Bohême, de Moravie, et une partie de la Silésie, la République tchèque5 naît formellement le 1er janvier 1969 de la fédéralisation de la Tchécoslovaquie.\nElle est indépendante depuis le 1er janvier 1993 à l'occasion de la scission de la République fédérale tchèque et slovaque, dernière forme de gouvernement de la Tchécoslovaquie6.",
-  "country_languages_summary": "La langue officielle de la République tchèque est le tchèque, qui est la langue maternelle de 93 % de la population du pays.\n\nComposée de la Bohème et de la Moravie, cette république a pour langue officielle le tchèque, langue slave écrite en lettres latines et très proche du slovaque. Il existe une minorité allemande d’environ 150 000 personnes.\n\nDans le système scolaire, l'allemand ou l'anglais sont des langues secondes obligatoires.",
+  "country_languages_summary": "Tchèque : Langue officielle, dominante dans tout le pays.\nAnglais : Langue seconde, apprise dans les écoles, sans locuteurs natifs.\nSlovaque : Parlée par la minorité slovaque, concentrée en Moravie.\nAllemand : Parlée par une petite minorité, surtout en Bohême.La langue officielle de la République tchèque est le tchèque, qui est la langue maternelle de 93 % de la population du pays.\n\nComposée de la Bohème et de la Moravie, cette république a pour langue officielle le tchèque, langue slave écrite en lettres latines et très proche du slovaque. Il existe une minorité allemande d’environ 150 000 personnes.\n\nDans le système scolaire, l'allemand ou l'anglais sont des langues secondes obligatoires.",
   "country_mapicon": "https://github.com/djaiss/mapsicon/blob/master/all/cz/256.png",
   "country_languages": [
     {
       "country_uid": "cze",
       "country_name_fr": "Tchéquie",
-      "language_uid": "cze",
+      "language_uid": "ces",
       "language_name_fr": "Tchèque",
       "language_name_en": "Czech",
-      "popularity": "93.00%",
-      "popularity_as_float": "0.93",
-      "speakers": "11,000,000",
+      "popularity": "97.00%",
+      "popularity_as_float": "0.97",
+      "speakers": "10,200,000.00",
       "is_official": "TRUE",
-      "language_name_native": "čeština",
+      "language_name_native": "Český jazyk, čeština",
       "language_wals_code": "cze",
-      "xy_coordinates": "#REF!",
+      "xy_coordinates": "",
       "vk_region_name": "",
       "vk_coordinates": "",
-      "regional_status": "",
-      "geo_json": "",
-      "map_config": ""
+      "regional_status": "Langue slave officielle, parlée dans tout le pays comme langue maternelle ou seconde.\t",
+      "geo_json": "czechiaLow",
+      "map_config": "{ homeGeoPoint: { longitude: 15.5, latitude: 49.8 }, homeZoomLevel: 6 }\t"
     },
     {
       "country_uid": "cze",
       "country_name_fr": "Tchéquie",
-      "language_uid": "svk",
+      "language_uid": "slk",
       "language_name_fr": "Slovaque",
       "language_name_en": "Slovak",
-      "popularity": "16.00%",
-      "popularity_as_float": "0.16",
-      "speakers": "1,760,000",
+      "popularity": "4.80%",
+      "popularity_as_float": "0.048",
+      "speakers": "500,000.00",
       "is_official": "FALSE",
       "language_name_native": "slovenčina",
       "language_wals_code": "svk",
-      "xy_coordinates": "#REF!",
-      "vk_region_name": "",
-      "vk_coordinates": "",
-      "regional_status": "",
-      "geo_json": "",
-      "map_config": ""
+      "xy_coordinates": "",
+      "vk_region_name": "['Jihomoravský', 'Zlínský', 'Moravskoslezský' ]        ",
+      "vk_coordinates": "[16.61, 49.19]\t",
+      "regional_status": "Langue slave parlée par la minorité slovaque, surtout en Moravie. Centre représentatif : Brno.\t",
+      "geo_json": "czechiaLow",
+      "map_config": "{ homeGeoPoint: { longitude: 15.5, latitude: 49.8 }, homeZoomLevel: 6 }\t"
     },
     {
       "country_uid": "cze",
@@ -19679,37 +19736,18 @@
       "language_uid": "ger",
       "language_name_fr": "Allemand",
       "language_name_en": "German",
-      "popularity": "15.00%",
-      "popularity_as_float": "0.15",
-      "speakers": "1,650,000",
+      "popularity": "2.90%",
+      "popularity_as_float": "0.029",
+      "speakers": "300,000.00",
       "is_official": "FALSE",
       "language_name_native": "Deutsch",
       "language_wals_code": "ger",
-      "xy_coordinates": "#REF!",
-      "vk_region_name": "",
-      "vk_coordinates": "",
-      "regional_status": "",
-      "geo_json": "",
-      "map_config": ""
-    },
-    {
-      "country_uid": "cze",
-      "country_name_fr": "Tchéquie",
-      "language_uid": "rus",
-      "language_name_fr": "Russe",
-      "language_name_en": "Russian",
-      "popularity": "13.00%",
-      "popularity_as_float": "0.13",
-      "speakers": "1,430,000",
-      "is_official": "FALSE",
-      "language_name_native": "Русский",
-      "language_wals_code": "rus",
-      "xy_coordinates": "#REF!",
-      "vk_region_name": "",
-      "vk_coordinates": "",
-      "regional_status": "",
-      "geo_json": "",
-      "map_config": ""
+      "xy_coordinates": "",
+      "vk_region_name": "['Praha', 'Středočeský']        ",
+      "vk_coordinates": "[14.42, 50.08]\t",
+      "regional_status": "Langue germanique parlée par une petite minorité, surtout en Bohême. Centre représentatif : Prague.\t",
+      "geo_json": "czechiaLow",
+      "map_config": "{ homeGeoPoint: { longitude: 15.5, latitude: 49.8 }, homeZoomLevel: 6 }\t"
     },
     {
       "country_uid": "cze",
@@ -19717,18 +19755,18 @@
       "language_uid": "eng",
       "language_name_fr": "Anglais",
       "language_name_en": "English",
-      "popularity": "27.00%",
-      "popularity_as_float": "0.27",
-      "speakers": "2,970,000",
+      "popularity": "30.00%",
+      "popularity_as_float": "0.3",
+      "speakers": "3,200,000.00",
       "is_official": "FALSE",
       "language_name_native": "English",
       "language_wals_code": "eng",
-      "xy_coordinates": "#REF!",
+      "xy_coordinates": "",
       "vk_region_name": "",
       "vk_coordinates": "",
-      "regional_status": "",
-      "geo_json": "",
-      "map_config": ""
+      "regional_status": "Langue seconde, enseignée dans les écoles et utilisée dans le tourisme et les affaires.\t",
+      "geo_json": "czechiaLow",
+      "map_config": "{ homeGeoPoint: { longitude: 15.5, latitude: 49.8 }, homeZoomLevel: 6 }\t"
     }
   ],
   "country_facts": [
@@ -20140,8 +20178,8 @@
   "country_wfb_location_fr": "Europe centrale, entre l'Allemagne, la Pologne, la Slovaquie et l'Autriche",
   "country_wfb_ethnic_groups": "Czech 64.3%, Moravian 5%, Slovak 1.4%, other 1.8%, unspecified 27.5% (2011 est.)",
   "country_wfb_ethnic_groups_fr": "Tchèque 64,3 %, Moravie 5 %, Slovaque 1,4 %, autres 1,8 %, non spécifié 27,5 % (estimation 2011).",
-  "country_wfb_population": "10,702,596 (July 2021 est.)",
-  "country_wfb_population_fr": "10,702,596 (July 2021 est.)",
+  "country_wfb_population": "Estimation de 10,5 millions d’habitants pour 2025.",
+  "country_wfb_population_fr": "Estimation de 10,5 millions d’habitants pour 2025.",
   "country_wfb_area": "78,867 sq km",
   "country_wfb_languages": "Czech (official) 95.4%, Slovak 1.6%, other 3% (2011 est.)",
   "country_wfb_languages_fr": "Tchèque (officiel) 95,4 %, slovaque 1,6 %, autres 3 % (estimation 2011).",
@@ -20153,7 +20191,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769541"
+    "$oid": "68808cc7c4b448614dbf1814"
   },
   "country_uid": "dnk",
   "country_iso2": "DK",
@@ -20344,7 +20382,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769542"
+    "$oid": "68808cc7c4b448614dbf1815"
   },
   "country_uid": "dji",
   "country_iso2": "DJ",
@@ -20458,7 +20496,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769543"
+    "$oid": "68808cc7c4b448614dbf1816"
   },
   "country_uid": "dom",
   "country_iso2": "DO",
@@ -20570,7 +20608,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769544"
+    "$oid": "68808cc7c4b448614dbf1817"
   },
   "country_uid": "ecu",
   "country_iso2": "EC",
@@ -20686,7 +20724,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769545"
+    "$oid": "68808cc7c4b448614dbf1818"
   },
   "country_uid": "egy",
   "country_iso2": "EG",
@@ -20820,7 +20858,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769546"
+    "$oid": "68808cc7c4b448614dbf1819"
   },
   "country_uid": "slv",
   "country_iso2": "SV",
@@ -20933,7 +20971,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769547"
+    "$oid": "68808cc7c4b448614dbf181a"
   },
   "country_uid": "gnq",
   "country_iso2": "GQ",
@@ -21123,7 +21161,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769548"
+    "$oid": "68808cc7c4b448614dbf181b"
   },
   "country_uid": "eri",
   "country_iso2": "ER",
@@ -21313,7 +21351,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769549"
+    "$oid": "68808cc7c4b448614dbf181c"
   },
   "country_uid": "est",
   "country_iso2": "EE",
@@ -21467,7 +21505,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76954a"
+    "$oid": "68808cc7c4b448614dbf181d"
   },
   "country_uid": "swz",
   "country_iso2": "SZ",
@@ -21601,7 +21639,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76954b"
+    "$oid": "68808cc7c4b448614dbf181e"
   },
   "country_uid": "eth",
   "country_iso2": "ET",
@@ -21793,7 +21831,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76954c"
+    "$oid": "68808cc7c4b448614dbf181f"
   },
   "country_uid": "fin",
   "country_iso2": "FI",
@@ -21964,7 +22002,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76954d"
+    "$oid": "68808cc7c4b448614dbf1820"
   },
   "country_uid": "fra",
   "country_iso2": "FR",
@@ -22075,7 +22113,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76954e"
+    "$oid": "68808cc7c4b448614dbf1821"
   },
   "country_uid": "guf",
   "country_iso2": "GF",
@@ -22141,7 +22179,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76954f"
+    "$oid": "68808cc7c4b448614dbf1822"
   },
   "country_uid": "pyf",
   "country_iso2": "PF",
@@ -22251,7 +22289,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769550"
+    "$oid": "68808cc7c4b448614dbf1823"
   },
   "country_uid": "gab",
   "country_iso2": "GA",
@@ -22359,7 +22397,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769551"
+    "$oid": "68808cc7c4b448614dbf1824"
   },
   "country_uid": "gmb",
   "country_iso2": "GM",
@@ -22466,7 +22504,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769552"
+    "$oid": "68808cc7c4b448614dbf1825"
   },
   "country_uid": "geo",
   "country_iso2": "GE",
@@ -22593,7 +22631,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769553"
+    "$oid": "68808cc7c4b448614dbf1826"
   },
   "country_uid": "deu",
   "country_iso2": "DE",
@@ -22760,7 +22798,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769554"
+    "$oid": "68808cc7c4b448614dbf1827"
   },
   "country_uid": "gha",
   "country_iso2": "GH",
@@ -22868,7 +22906,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769555"
+    "$oid": "68808cc7c4b448614dbf1828"
   },
   "country_uid": "gib",
   "country_iso2": "GI",
@@ -22995,7 +23033,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769556"
+    "$oid": "68808cc7c4b448614dbf1829"
   },
   "country_uid": "grl",
   "country_iso2": "GL",
@@ -23120,7 +23158,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769557"
+    "$oid": "68808cc7c4b448614dbf182a"
   },
   "country_uid": "grk",
   "country_iso2": "GR",
@@ -23227,7 +23265,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769558"
+    "$oid": "68808cc7c4b448614dbf182b"
   },
   "country_uid": "gtm",
   "country_iso2": "GT",
@@ -23335,7 +23373,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769559"
+    "$oid": "68808cc7c4b448614dbf182c"
   },
   "country_uid": "gin",
   "country_iso2": "GN",
@@ -23557,7 +23595,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76955a"
+    "$oid": "68808cc7c4b448614dbf182d"
   },
   "country_uid": "gnb",
   "country_iso2": "GW",
@@ -23720,7 +23758,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76955b"
+    "$oid": "68808cc7c4b448614dbf182e"
   },
   "country_uid": "guy",
   "country_iso2": "GY",
@@ -23826,7 +23864,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76955c"
+    "$oid": "68808cc7c4b448614dbf182f"
   },
   "country_uid": "hti",
   "country_iso2": "HT",
@@ -23933,7 +23971,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76955d"
+    "$oid": "68808cc7c4b448614dbf1830"
   },
   "country_uid": "hnd",
   "country_iso2": "HN",
@@ -24041,7 +24079,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76955e"
+    "$oid": "68808cc7c4b448614dbf1831"
   },
   "country_uid": "hkg",
   "country_iso2": "HK",
@@ -24144,7 +24182,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76955f"
+    "$oid": "68808cc7c4b448614dbf1832"
   },
   "country_uid": "hun",
   "country_iso2": "HU",
@@ -24289,7 +24327,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769560"
+    "$oid": "68808cc7c4b448614dbf1833"
   },
   "country_uid": "isl",
   "country_iso2": "IS",
@@ -24434,7 +24472,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769561"
+    "$oid": "68808cc7c4b448614dbf1834"
   },
   "country_uid": "ind",
   "country_iso2": "IN",
@@ -24646,7 +24684,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769562"
+    "$oid": "68808cc7c4b448614dbf1835"
   },
   "country_uid": "idn",
   "country_iso2": "ID",
@@ -24811,7 +24849,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769563"
+    "$oid": "68808cc7c4b448614dbf1836"
   },
   "country_uid": "irn",
   "country_iso2": "IR",
@@ -25128,7 +25166,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769564"
+    "$oid": "68808cc7c4b448614dbf1837"
   },
   "country_uid": "irq",
   "country_iso2": "IQ",
@@ -25293,7 +25331,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769565"
+    "$oid": "68808cc7c4b448614dbf1838"
   },
   "country_uid": "irl",
   "country_iso2": "IE",
@@ -25420,7 +25458,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769566"
+    "$oid": "68808cc7c4b448614dbf1839"
   },
   "country_uid": "isr",
   "country_iso2": "IL",
@@ -25547,7 +25585,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769567"
+    "$oid": "68808cc7c4b448614dbf183a"
   },
   "country_uid": "ita",
   "country_iso2": "IT",
@@ -25655,7 +25693,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769568"
+    "$oid": "68808cc7c4b448614dbf183b"
   },
   "country_uid": "jam",
   "country_iso2": "JM",
@@ -25758,7 +25796,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769569"
+    "$oid": "68808cc7c4b448614dbf183c"
   },
   "country_uid": "jpn",
   "country_iso2": "JP",
@@ -25885,7 +25923,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76956a"
+    "$oid": "68808cc7c4b448614dbf183d"
   },
   "country_uid": "jor",
   "country_iso2": "JO",
@@ -25992,7 +26030,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76956b"
+    "$oid": "68808cc7c4b448614dbf183e"
   },
   "country_uid": "kaz",
   "country_iso2": "KZ",
@@ -26100,7 +26138,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76956c"
+    "$oid": "68808cc7c4b448614dbf183f"
   },
   "country_uid": "ken",
   "country_iso2": "KE",
@@ -26206,7 +26244,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76956d"
+    "$oid": "68808cc7c4b448614dbf1840"
   },
   "country_uid": "prk",
   "country_iso2": "KP",
@@ -26313,7 +26351,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76956e"
+    "$oid": "68808cc7c4b448614dbf1841"
   },
   "country_uid": "kor",
   "country_iso2": "KR",
@@ -26420,7 +26458,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76956f"
+    "$oid": "68808cc7c4b448614dbf1842"
   },
   "country_uid": "kwt",
   "country_iso2": "KW",
@@ -26566,7 +26604,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769570"
+    "$oid": "68808cc7c4b448614dbf1843"
   },
   "country_uid": "kgz",
   "country_iso2": "KG",
@@ -26750,7 +26788,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769571"
+    "$oid": "68808cc7c4b448614dbf1844"
   },
   "country_uid": "lao",
   "country_iso2": "LA",
@@ -26859,7 +26897,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769572"
+    "$oid": "68808cc7c4b448614dbf1845"
   },
   "country_uid": "lva",
   "country_iso2": "LV",
@@ -27004,7 +27042,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769573"
+    "$oid": "68808cc7c4b448614dbf1846"
   },
   "country_uid": "lbn",
   "country_iso2": "LB",
@@ -27168,7 +27206,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769574"
+    "$oid": "68808cc7c4b448614dbf1847"
   },
   "country_uid": "lso",
   "country_iso2": "LS",
@@ -27274,7 +27312,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769575"
+    "$oid": "68808cc7c4b448614dbf1848"
   },
   "country_uid": "lbr",
   "country_iso2": "LR",
@@ -27399,7 +27437,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769576"
+    "$oid": "68808cc7c4b448614dbf1849"
   },
   "country_uid": "lby",
   "country_iso2": "LY",
@@ -27545,7 +27583,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769577"
+    "$oid": "68808cc7c4b448614dbf184a"
   },
   "country_uid": "ltu",
   "country_iso2": "LT",
@@ -27671,7 +27709,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769578"
+    "$oid": "68808cc7c4b448614dbf184b"
   },
   "country_uid": "lux",
   "country_iso2": "LU",
@@ -27857,7 +27895,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769579"
+    "$oid": "68808cc7c4b448614dbf184c"
   },
   "country_uid": "mdg",
   "country_iso2": "MG",
@@ -27967,7 +28005,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76957a"
+    "$oid": "68808cc7c4b448614dbf184d"
   },
   "country_uid": "mwi",
   "country_iso2": "MW",
@@ -28075,7 +28113,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76957b"
+    "$oid": "68808cc7c4b448614dbf184e"
   },
   "country_uid": "mys",
   "country_iso2": "MY",
@@ -28182,7 +28220,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76957c"
+    "$oid": "68808cc7c4b448614dbf184f"
   },
   "country_uid": "mdv",
   "country_iso2": "MV",
@@ -28289,7 +28327,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76957d"
+    "$oid": "68808cc7c4b448614dbf1850"
   },
   "country_uid": "mli",
   "country_iso2": "ML",
@@ -28511,7 +28549,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76957e"
+    "$oid": "68808cc7c4b448614dbf1851"
   },
   "country_uid": "mlt",
   "country_iso2": "MT",
@@ -28618,7 +28656,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76957f"
+    "$oid": "68808cc7c4b448614dbf1852"
   },
   "country_uid": "mrt",
   "country_iso2": "MR",
@@ -28801,7 +28839,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769580"
+    "$oid": "68808cc7c4b448614dbf1853"
   },
   "country_uid": "mus",
   "country_iso2": "MU",
@@ -28910,7 +28948,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769581"
+    "$oid": "68808cc7c4b448614dbf1854"
   },
   "country_uid": "myt",
   "country_iso2": "YT",
@@ -28976,7 +29014,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769582"
+    "$oid": "68808cc7c4b448614dbf1855"
   },
   "country_uid": "mex",
   "country_iso2": "MX",
@@ -29085,7 +29123,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769583"
+    "$oid": "68808cc7c4b448614dbf1856"
   },
   "country_uid": "mda",
   "country_iso2": "MD",
@@ -29250,7 +29288,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769584"
+    "$oid": "68808cc7c4b448614dbf1857"
   },
   "country_uid": "mng",
   "country_iso2": "MN",
@@ -29377,7 +29415,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769585"
+    "$oid": "68808cc7c4b448614dbf1858"
   },
   "country_uid": "mne",
   "country_iso2": "ME",
@@ -29522,7 +29560,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769586"
+    "$oid": "68808cc7c4b448614dbf1859"
   },
   "country_uid": "mar",
   "country_iso2": "MA",
@@ -29669,7 +29707,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769587"
+    "$oid": "68808cc7c4b448614dbf185a"
   },
   "country_uid": "moz",
   "country_iso2": "MZ",
@@ -29683,46 +29721,65 @@
   "country_openstreetmap_xy": "https://www.openstreetmap.org/#map=5/-18.25/35&layers=T",
   "country_xy": "-18.25,35",
   "country_summary": "Le Mozambique est un État situé sur la côte orientale du continent africain. Il est entouré par l'Afrique du Sud, l'Eswatini, Madagascar, le Zimbabwe, la Zambie, le Malawi et la Tanzanie. C'est une ancienne colonie portugaise, le deuxième pays lusophone d'Afrique, derrière l'Angola, par sa population et par sa superficie.",
-  "country_languages_summary": "La langue officielle est le portugais.\nIl y a 14 langues recensés parlées par les différentes ethnies ; les plus importantes sont le makwa et le tsonga, toutes deux des langues bantou.",
+  "country_languages_summary": "La langue officielle est le portugais.\nIl y a 14 langues recensés parlées par les différentes ethnies ; les plus importantes sont le makwa et le tsonga, toutes deux des langues bantou.\nPortugais : Langue officielle, utilisée dans l’administration et l’éducation, mais moins courante comme langue maternelle.\nMakua : Langue bantoue majoritaire dans le nord, parlée nativement.\nAnglais : Langue seconde, utilisée dans l’éducation et le commerce, sans locuteurs natifs.\nSwahili : Parlée dans le nord, influencée par la proximité avec la Tanzanie.",
   "country_mapicon": "https://github.com/djaiss/mapsicon/blob/master/all/mz/256.png",
   "country_languages": [
     {
       "country_uid": "moz",
       "country_name_fr": "Mozambique",
-      "language_uid": "mua",
-      "language_name_fr": "Macua",
-      "language_name_en": "Makua",
-      "popularity": "26.00%",
-      "popularity_as_float": "0.26",
-      "speakers": "3,291,916",
+      "language_uid": "vmw",
+      "language_name_fr": "Makwa",
+      "language_name_en": "Makhuwa",
+      "popularity": "20.00%",
+      "popularity_as_float": "0.2",
+      "speakers": "7,300,000.00",
       "is_official": "FALSE",
-      "language_name_native": "Makwa",
-      "language_wals_code": "mua",
-      "xy_coordinates": "#REF!",
-      "vk_region_name": "",
-      "vk_coordinates": "",
-      "regional_status": "",
-      "geo_json": "",
-      "map_config": ""
+      "language_name_native": "Emakhuwa",
+      "language_wals_code": "",
+      "xy_coordinates": "",
+      "vk_region_name": "['Nampula', 'Zambezia']\t",
+      "vk_coordinates": "[39.26, -15.03]\t",
+      "regional_status": "Langue bantoue parlée dans le nord, principalement à Nampula et Zambezia. Centre représentatif : Nampula.\t",
+      "geo_json": "mozambiqueLow",
+      "map_config": "{ homeGeoPoint: { longitude: 35, latitude: -18.5 }, homeZoomLevel: 5 }\t"
     },
     {
       "country_uid": "moz",
       "country_name_fr": "Mozambique",
-      "language_uid": "tsn",
-      "language_name_fr": "Tsonga",
-      "language_name_en": "Tsonga",
-      "popularity": "12.00%",
-      "popularity_as_float": "0.12",
-      "speakers": "1,423,327",
+      "language_uid": "eng",
+      "language_name_fr": "Anglais",
+      "language_name_en": "English",
+      "popularity": "10.00%",
+      "popularity_as_float": "0.1",
+      "speakers": "3,600,000.00",
       "is_official": "FALSE",
-      "language_name_native": "Xitsonga",
-      "language_wals_code": "tsn",
-      "xy_coordinates": "#REF!",
+      "language_name_native": "English",
+      "language_wals_code": "eng",
+      "xy_coordinates": "",
       "vk_region_name": "",
       "vk_coordinates": "",
-      "regional_status": "",
-      "geo_json": "",
-      "map_config": ""
+      "regional_status": "Langue seconde, utilisée dans l’éducation, le commerce et le tourisme.\t",
+      "geo_json": "mozambiqueLow",
+      "map_config": "{ homeGeoPoint: { longitude: 35, latitude: -18.5 }, homeZoomLevel: 5 }\t"
+    },
+    {
+      "country_uid": "moz",
+      "country_name_fr": "Mozambique",
+      "language_uid": "swa",
+      "language_name_fr": "Swahili",
+      "language_name_en": "Swahili",
+      "popularity": "4.00%",
+      "popularity_as_float": "0.04",
+      "speakers": "1,500,000.00",
+      "is_official": "FALSE",
+      "language_name_native": "Kiswahili",
+      "language_wals_code": "swa",
+      "xy_coordinates": "",
+      "vk_region_name": "['Cabo Delgado']\t",
+      "vk_coordinates": "[39.65, -11.74]\t",
+      "regional_status": "Langue bantoue parlée dans le nord, près de la frontière tanzanienne. Centre représentatif : Pemba.\t",
+      "geo_json": "mozambiqueLow",
+      "map_config": "{ homeGeoPoint: { longitude: 35, latitude: -18.5 }, homeZoomLevel: 5 }\t"
     },
     {
       "country_uid": "moz",
@@ -29730,18 +29787,18 @@
       "language_uid": "por",
       "language_name_fr": "Portugais",
       "language_name_en": "Portuguese",
-      "popularity": "70.00%",
-      "popularity_as_float": "0.7",
-      "speakers": "20,000,000",
+      "popularity": "50.00%",
+      "popularity_as_float": "0.5",
+      "speakers": "18,200,000.00",
       "is_official": "TRUE",
       "language_name_native": "Português",
       "language_wals_code": "por",
-      "xy_coordinates": "#REF!",
+      "xy_coordinates": "",
       "vk_region_name": "",
       "vk_coordinates": "",
-      "regional_status": "",
-      "geo_json": "",
-      "map_config": ""
+      "regional_status": "Langue romane officielle, parlée dans tout le pays, principalement comme langue seconde.\t",
+      "geo_json": "mozambiqueLow",
+      "map_config": "{ homeGeoPoint: { longitude: 35, latitude: -18.5 }, homeZoomLevel: 5 }\t"
     }
   ],
   "country_facts": [],
@@ -29802,8 +29859,8 @@
   "country_wfb_location_fr": "Afrique du Sud-Est, bordant le canal du Mozambique, entre l'Afrique du Sud et la Tanzanie",
   "country_wfb_ethnic_groups": "African 99% (Makhuwa, Tsonga, Lomwe, Sena, and others), Mestizo 0.8%, other (includes European, Indian, Pakistani, Chinese) .2% (2017 est.)",
   "country_wfb_ethnic_groups_fr": "Africains 99 % (Makhuwa, Tsonga, Lomwe, Sena et autres), Métis 0,8 %, autres (comprend les Européens, les Indiens, les Pakistanais et les Chinois) 0,2 % (est. 2017)",
-  "country_wfb_population": "30,888,034 (July 2021 est.)",
-  "country_wfb_population_fr": "30,888,034 (July 2021 est.)",
+  "country_wfb_population": "Basée sur une estimation de 36,3 millions d’habitants pour 2025.",
+  "country_wfb_population_fr": "Basée sur une estimation de 36,3 millions d’habitants pour 2025.",
   "country_wfb_area": "799,380 sq km",
   "country_wfb_languages": "Makhuwa 26.1%, Portuguese (official) 16.6%, Tsonga 8.6%, Nyanja 8.1, Sena 7.1%, Lomwe 7.1%, Chuwabo 4.7%, Ndau 3.8%, Tswa 3.8%, other Mozambican languages 11.8%, other 0.5%, unspecified 1.8% (2017 est.)",
   "country_wfb_languages_fr": "Makhuwa 26,1%, portugais (officiel) 16,6%, Tsonga 8,6%, Nyanja 8,1, Sena 7,1%, Lomwe 7,1%, Chuwabo 4,7%, Ndau 3,8%, Tswa 3,8%, autres langues mozambicaines 11,8%, autres 0,5%, non précisé 1,8 % (2017 HNE.)",
@@ -29815,7 +29872,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769588"
+    "$oid": "68808cc7c4b448614dbf185b"
   },
   "country_uid": "mmr",
   "country_iso2": "MM",
@@ -30269,7 +30326,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769589"
+    "$oid": "68808cc7c4b448614dbf185c"
   },
   "country_uid": "nam",
   "country_iso2": "NA",
@@ -30377,7 +30434,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76958a"
+    "$oid": "68808cc7c4b448614dbf185d"
   },
   "country_uid": "npl",
   "country_iso2": "NP",
@@ -30480,7 +30537,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76958b"
+    "$oid": "68808cc7c4b448614dbf185e"
   },
   "country_uid": "nld",
   "country_iso2": "NL",
@@ -30664,7 +30721,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76958c"
+    "$oid": "68808cc7c4b448614dbf185f"
   },
   "country_uid": "nzl",
   "country_iso2": "NZ",
@@ -30769,7 +30826,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76958d"
+    "$oid": "68808cc7c4b448614dbf1860"
   },
   "country_uid": "nic",
   "country_iso2": "NI",
@@ -30877,7 +30934,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76958e"
+    "$oid": "68808cc7c4b448614dbf1861"
   },
   "country_uid": "ner",
   "country_iso2": "NE",
@@ -31044,7 +31101,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76958f"
+    "$oid": "68808cc7c4b448614dbf1862"
   },
   "country_uid": "nga",
   "country_iso2": "NG",
@@ -31206,7 +31263,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769590"
+    "$oid": "68808cc7c4b448614dbf1863"
   },
   "country_uid": "mkd",
   "country_iso2": "MK",
@@ -31312,7 +31369,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769591"
+    "$oid": "68808cc7c4b448614dbf1864"
   },
   "country_uid": "nor",
   "country_iso2": "NO",
@@ -31420,7 +31477,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769592"
+    "$oid": "68808cc7c4b448614dbf1865"
   },
   "country_uid": "omn",
   "country_iso2": "OM",
@@ -31546,7 +31603,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769593"
+    "$oid": "68808cc7c4b448614dbf1866"
   },
   "country_uid": "pak",
   "country_iso2": "PK",
@@ -31749,7 +31806,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769594"
+    "$oid": "68808cc7c4b448614dbf1867"
   },
   "country_uid": "pan",
   "country_iso2": "PA",
@@ -31857,7 +31914,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769595"
+    "$oid": "68808cc7c4b448614dbf1868"
   },
   "country_uid": "pry",
   "country_iso2": "PY",
@@ -31966,7 +32023,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769596"
+    "$oid": "68808cc7c4b448614dbf1869"
   },
   "country_uid": "per",
   "country_iso2": "PE",
@@ -32075,7 +32132,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769597"
+    "$oid": "68808cc7c4b448614dbf186a"
   },
   "country_uid": "phl",
   "country_iso2": "PH",
@@ -32182,7 +32239,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769598"
+    "$oid": "68808cc7c4b448614dbf186b"
   },
   "country_uid": "pol",
   "country_iso2": "PL",
@@ -32366,7 +32423,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e769599"
+    "$oid": "68808cc7c4b448614dbf186c"
   },
   "country_uid": "prt",
   "country_iso2": "PT",
@@ -32475,7 +32532,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76959a"
+    "$oid": "68808cc7c4b448614dbf186d"
   },
   "country_uid": "pri",
   "country_iso2": "PR",
@@ -32579,7 +32636,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76959b"
+    "$oid": "68808cc7c4b448614dbf186e"
   },
   "country_uid": "qat",
   "country_iso2": "QA",
@@ -32712,7 +32769,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76959c"
+    "$oid": "68808cc7c4b448614dbf186f"
   },
   "country_uid": "rou",
   "country_iso2": "RO",
@@ -32866,7 +32923,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76959d"
+    "$oid": "68808cc7c4b448614dbf1870"
   },
   "country_uid": "rus",
   "country_iso2": "RU",
@@ -33040,7 +33097,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76959e"
+    "$oid": "68808cc7c4b448614dbf1871"
   },
   "country_uid": "rwa",
   "country_iso2": "RW",
@@ -33155,7 +33212,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e76959f"
+    "$oid": "68808cc7c4b448614dbf1872"
   },
   "country_uid": "stp",
   "country_iso2": "ST",
@@ -33266,7 +33323,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695a0"
+    "$oid": "68808cc7c4b448614dbf1873"
   },
   "country_uid": "sau",
   "country_iso2": "SA",
@@ -33417,7 +33474,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695a1"
+    "$oid": "68808cc7c4b448614dbf1874"
   },
   "country_uid": "sen",
   "country_iso2": "SN",
@@ -33589,7 +33646,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695a2"
+    "$oid": "68808cc7c4b448614dbf1875"
   },
   "country_uid": "srb",
   "country_iso2": "RS",
@@ -33602,47 +33659,85 @@
   "country_region_fr": "Europe",
   "country_openstreetmap_xy": "https://www.openstreetmap.org/#map=5/44/21&layers=T",
   "country_xy": "44,21",
-  "country_summary": "",
-  "country_languages_summary": "",
+  "country_summary": "La Serbie est un pays d'Europe qui abrite 6 641 000 habitants. Il abrite également 9 langues indigènes vivantes. L'un d'entre eux, le serbe, est la langue officielle du pays. D'autres - le bulgare, le Gheg albanais et le hongrois - sont des langues officielles dans certaines parties du pays. En outre, 13 langues non indigènes vivantes sont établies dans le pays. Dans l'éducation formelle, 5 langues autochtones sont utilisées comme langues d'enseignement.",
+  "country_languages_summary": "Serbe : Langue officielle, dominante dans tout le pays.\nAnglais : Langue seconde, apprise dans les écoles, sans locuteurs natifs.\nHongrois : Parlée par la minorité hongroise, concentrée en Vojvodina.\nAlbanais : Parlée par la minorité albanaise, surtout dans le sud (Preševo).",
   "country_mapicon": "https://github.com/djaiss/mapsicon/blob/master/all/rs/256.png",
   "country_languages": [
     {
       "country_uid": "srb",
       "country_name_fr": "Serbie",
-      "language_uid": "alb",
+      "language_uid": "sqi",
       "language_name_fr": "Albanais",
       "language_name_en": "Albanian",
-      "popularity": "",
-      "popularity_as_float": "0",
-      "speakers": "",
+      "popularity": "1.10%",
+      "popularity_as_float": "0.011",
+      "speakers": "70,000.00",
       "is_official": "FALSE",
       "language_name_native": "Shqip",
       "language_wals_code": "alb",
-      "xy_coordinates": "#REF!",
-      "vk_region_name": "",
-      "vk_coordinates": "",
-      "regional_status": "",
-      "geo_json": "",
-      "map_config": ""
+      "xy_coordinates": "",
+      "vk_region_name": "['Kosovski okrug', 'Prizrenski okrug', 'Kosovo-Pomoravlje', 'Pećki okrug', 'Kosovsko-Mitrovački okrug']        ",
+      "vk_coordinates": "[20.62, 42.66]\t",
+      "regional_status": "Langue indo-européenne parlée par la minorité albanaise, surtout dans le sud. Centre représentatif : Preševo.\t",
+      "geo_json": "serbiaLow",
+      "map_config": "{ homeGeoPoint: { longitude: 20.5, latitude: 44.8 }, homeZoomLevel: 6 }\t"
     },
     {
       "country_uid": "srb",
       "country_name_fr": "Serbie",
-      "language_uid": "scr",
-      "language_name_fr": "Serbo-croate",
-      "language_name_en": "Serbian-Croatian",
-      "popularity": "100.00%",
-      "popularity_as_float": "1",
-      "speakers": "",
+      "language_uid": "srp",
+      "language_name_fr": "Serbe",
+      "language_name_en": "Serbian",
+      "popularity": "95.00%",
+      "popularity_as_float": "0.95",
+      "speakers": "6,300,000.00",
       "is_official": "TRUE",
-      "language_name_native": "SrpskoHrvatski",
-      "language_wals_code": "scr",
-      "xy_coordinates": "#REF!",
+      "language_name_native": "српски‎",
+      "language_wals_code": "",
+      "xy_coordinates": "",
       "vk_region_name": "",
       "vk_coordinates": "",
-      "regional_status": "",
-      "geo_json": "",
-      "map_config": ""
+      "regional_status": "Langue slave officielle, parlée dans tout le pays comme langue maternelle ou seconde.\t",
+      "geo_json": "serbiaLow",
+      "map_config": "{ homeGeoPoint: { longitude: 20.5, latitude: 44.8 }, homeZoomLevel: 6 }\t"
+    },
+    {
+      "country_uid": "srb",
+      "country_name_fr": "Serbie",
+      "language_uid": "eng",
+      "language_name_fr": "Anglais",
+      "language_name_en": "English",
+      "popularity": "20.00%",
+      "popularity_as_float": "0.2",
+      "speakers": "1,300,000.00",
+      "is_official": "FALSE",
+      "language_name_native": "English",
+      "language_wals_code": "eng",
+      "xy_coordinates": "",
+      "vk_region_name": "",
+      "vk_coordinates": "",
+      "regional_status": "Langue seconde, enseignée dans les écoles et utilisée dans le tourisme et les affaires.\t",
+      "geo_json": "serbiaLow",
+      "map_config": "{ homeGeoPoint: { longitude: 20.5, latitude: 44.8 }, homeZoomLevel: 6 }\t"
+    },
+    {
+      "country_uid": "srb",
+      "country_name_fr": "Serbie",
+      "language_uid": "hun",
+      "language_name_fr": "Hongrois",
+      "language_name_en": "Hungarian",
+      "popularity": "3.80%",
+      "popularity_as_float": "0.038",
+      "speakers": "250,000.00",
+      "is_official": "FALSE",
+      "language_name_native": "Magyar",
+      "language_wals_code": "hun",
+      "xy_coordinates": "",
+      "vk_region_name": "['Zapadnobački okrug', 'Severnobački okrug', 'Severnobanatski okrug']        ",
+      "vk_coordinates": "[20.13, 46.10]\t",
+      "regional_status": "Langue ouralienne parlée par la minorité hongroise, principalement en Vojvodina. Centre représentatif : Subotica.\t",
+      "geo_json": "serbiaLow",
+      "map_config": "{ homeGeoPoint: { longitude: 20.5, latitude: 44.8 }, homeZoomLevel: 6 }\t"
     }
   ],
   "country_facts": [],
@@ -33711,8 +33806,8 @@
   "country_wfb_location_fr": "Europe du Sud-Est, entre la Macédoine et la Hongrie",
   "country_wfb_ethnic_groups": "Serb 83.3%, Hungarian 3.5%, Romani 2.1%, Bosniak 2%, other 5.7%, undeclared or unknown 3.4% (2011 est.)",
   "country_wfb_ethnic_groups_fr": "Serbes 83,3 %, Hongrois 3,5 %, Roms 2,1 %, Bosniaques 2 %, autres 5,7 %, non déclarés ou inconnus 3,4 % (estimation 2011).",
-  "country_wfb_population": "6,974,289 (July 2021 est.)",
-  "country_wfb_population_fr": "6,974,289 (July 2021 est.)",
+  "country_wfb_population": "Basée sur une estimation de 6,6 millions d’habitants pour 2025.",
+  "country_wfb_population_fr": "Basée sur une estimation de 6,6 millions d’habitants pour 2025.",
   "country_wfb_area": "77,474 sq km",
   "country_wfb_languages": "Serbian (official) 88.1%, Hungarian 3.4%, Bosnian 1.9%, Romani 1.4%, other 3.4%, undeclared or unknown 1.8%; note - Serbian, Hungarian, Slovak, Romanian, Croatian, and Ruthenian (Rusyn) are official in the Autonomous Province of Vojvodina; most ethnic Albanians boycotted the 2011 census (2011 est.)",
   "country_wfb_languages_fr": "Serbe (officiel) 88,1 %, hongrois 3,4 %, bosniaque 1,9 %, romani 1,4 %, autre 3,4 %, non déclaré ou inconnu 1,8 % ; note : le serbe, le hongrois, le slovaque, le roumain, le croate et le ruthène (Rusyn) sont officiels dans la province autonome de Voïvodine ; la plupart des Albanais de souche ont boycotté le recensement de 2011 (estimation de 2011).",
@@ -33724,7 +33819,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695a3"
+    "$oid": "68808cc7c4b448614dbf1876"
   },
   "country_uid": "sle",
   "country_iso2": "SL",
@@ -33837,7 +33932,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695a4"
+    "$oid": "68808cc7c4b448614dbf1877"
   },
   "country_uid": "sgp",
   "country_iso2": "SG",
@@ -33948,7 +34043,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695a5"
+    "$oid": "68808cc7c4b448614dbf1878"
   },
   "country_uid": "svk",
   "country_iso2": "SK",
@@ -34063,7 +34158,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695a6"
+    "$oid": "68808cc7c4b448614dbf1879"
   },
   "country_uid": "svn",
   "country_iso2": "SI",
@@ -34235,7 +34330,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695a7"
+    "$oid": "68808cc7c4b448614dbf187a"
   },
   "country_uid": "som",
   "country_iso2": "SO",
@@ -34387,7 +34482,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695a8"
+    "$oid": "68808cc7c4b448614dbf187b"
   },
   "country_uid": "zaf",
   "country_iso2": "ZA",
@@ -34692,7 +34787,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695a9"
+    "$oid": "68808cc7c4b448614dbf187c"
   },
   "country_uid": "ssd",
   "country_iso2": "SS",
@@ -34859,7 +34954,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695aa"
+    "$oid": "68808cc7c4b448614dbf187d"
   },
   "country_uid": "esp",
   "country_iso2": "ES",
@@ -34977,7 +35072,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695ab"
+    "$oid": "68808cc7c4b448614dbf187e"
   },
   "country_uid": "lka",
   "country_iso2": "LK",
@@ -35147,7 +35242,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695ac"
+    "$oid": "68808cc7c4b448614dbf187f"
   },
   "country_uid": "sdn",
   "country_iso2": "SD",
@@ -35377,7 +35472,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695ad"
+    "$oid": "68808cc7c4b448614dbf1880"
   },
   "country_uid": "sur",
   "country_iso2": "SR",
@@ -35491,7 +35586,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695ae"
+    "$oid": "68808cc7c4b448614dbf1881"
   },
   "country_uid": "swe",
   "country_iso2": "SE",
@@ -35624,7 +35719,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695af"
+    "$oid": "68808cc7c4b448614dbf1882"
   },
   "country_uid": "che",
   "country_iso2": "CH",
@@ -35835,7 +35930,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695b0"
+    "$oid": "68808cc7c4b448614dbf1883"
   },
   "country_uid": "syr",
   "country_iso2": "SY",
@@ -36009,7 +36104,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695b1"
+    "$oid": "68808cc7c4b448614dbf1884"
   },
   "country_uid": "twn",
   "country_iso2": "TW",
@@ -36142,7 +36237,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695b2"
+    "$oid": "68808cc7c4b448614dbf1885"
   },
   "country_uid": "tjk",
   "country_iso2": "TJ",
@@ -36295,7 +36390,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695b3"
+    "$oid": "68808cc7c4b448614dbf1886"
   },
   "country_uid": "tza",
   "country_iso2": "TZ",
@@ -36363,7 +36458,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695b4"
+    "$oid": "68808cc7c4b448614dbf1887"
   },
   "country_uid": "tha",
   "country_iso2": "TH",
@@ -36479,7 +36574,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695b5"
+    "$oid": "68808cc7c4b448614dbf1888"
   },
   "country_uid": "tls",
   "country_iso2": "TL",
@@ -36592,7 +36687,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695b6"
+    "$oid": "68808cc7c4b448614dbf1889"
   },
   "country_uid": "tgo",
   "country_iso2": "TG",
@@ -36706,7 +36801,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695b7"
+    "$oid": "68808cc7c4b448614dbf188a"
   },
   "country_uid": "tto",
   "country_iso2": "TT",
@@ -36817,7 +36912,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695b8"
+    "$oid": "68808cc7c4b448614dbf188b"
   },
   "country_uid": "tun",
   "country_iso2": "TN",
@@ -36968,7 +37063,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695b9"
+    "$oid": "68808cc7c4b448614dbf188c"
   },
   "country_uid": "tur",
   "country_iso2": "TR",
@@ -37139,7 +37234,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695ba"
+    "$oid": "68808cc7c4b448614dbf188d"
   },
   "country_uid": "tkm",
   "country_iso2": "TM",
@@ -37292,7 +37387,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695bb"
+    "$oid": "68808cc7c4b448614dbf188e"
   },
   "country_uid": "uga",
   "country_iso2": "UG",
@@ -37441,7 +37536,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695bc"
+    "$oid": "68808cc7c4b448614dbf188f"
   },
   "country_uid": "ukr",
   "country_iso2": "UA",
@@ -37578,7 +37673,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695bd"
+    "$oid": "68808cc7c4b448614dbf1890"
   },
   "country_uid": "are",
   "country_iso2": "AE",
@@ -37693,7 +37788,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695be"
+    "$oid": "68808cc7c4b448614dbf1891"
   },
   "country_uid": "gbr",
   "country_iso2": "GB",
@@ -37847,7 +37942,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695bf"
+    "$oid": "68808cc7c4b448614dbf1892"
   },
   "country_uid": "usa",
   "country_iso2": "US",
@@ -38003,7 +38098,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695c0"
+    "$oid": "68808cc7c4b448614dbf1893"
   },
   "country_uid": "ury",
   "country_iso2": "UY",
@@ -38118,7 +38213,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695c1"
+    "$oid": "68808cc7c4b448614dbf1894"
   },
   "country_uid": "uzb",
   "country_iso2": "UZ",
@@ -38232,7 +38327,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695c2"
+    "$oid": "68808cc7c4b448614dbf1895"
   },
   "country_uid": "ven",
   "country_iso2": "VE",
@@ -38347,7 +38442,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695c3"
+    "$oid": "68808cc7c4b448614dbf1896"
   },
   "country_uid": "vnm",
   "country_iso2": "VN",
@@ -38462,7 +38557,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695c4"
+    "$oid": "68808cc7c4b448614dbf1897"
   },
   "country_uid": "esh",
   "country_iso2": "EH",
@@ -38566,7 +38661,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695c5"
+    "$oid": "68808cc7c4b448614dbf1898"
   },
   "country_uid": "yem",
   "country_iso2": "YE",
@@ -38738,7 +38833,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695c6"
+    "$oid": "68808cc7c4b448614dbf1899"
   },
   "country_uid": "zmb",
   "country_iso2": "ZM",
@@ -38851,7 +38946,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695c7"
+    "$oid": "68808cc7c4b448614dbf189a"
   },
   "country_uid": "zwe",
   "country_iso2": "ZW",
@@ -38983,7 +39078,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695c8"
+    "$oid": "68808cc7c4b448614dbf189b"
   },
   "country_uid": "fro",
   "country_iso2": "FO",
@@ -39113,7 +39208,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0ad916fe0582e7695c9"
+    "$oid": "68808cc7c4b448614dbf189c"
   },
   "country_uid": "xxk",
   "country_iso2": "XK",

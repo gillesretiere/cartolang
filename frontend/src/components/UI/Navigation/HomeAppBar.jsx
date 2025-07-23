@@ -223,7 +223,7 @@ const HomeAppBar = () => {
                       </>
                     ))}
                   <hr />
-                  <ListItemButton key="about" component="a" href={`/about`} to={`/about`} >
+                  <ListItemButton key="about" component={Link} href={`/about`} to={`/about`} >
                     <ListItemIcon>
                       <InfoIcon sx={{ color: "primary.contrastText" }} />
                     </ListItemIcon>

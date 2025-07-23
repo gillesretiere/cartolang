@@ -32,7 +32,7 @@ root.render(
           <CssBaseline />
           <Routes>
             <Route path="/" element={<CyLandingPage />} />
-            <Route path="cartolang" element={<CyLandingPage />} />
+            <Route path="/cartolang" element={<CyLandingPage />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="ct_search_page/:id" element={<CtSearchPage />} />
             <Route path="cy_search_page/:id" element={<CySearchPage />} />

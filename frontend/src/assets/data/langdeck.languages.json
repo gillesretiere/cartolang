@@ -1,44 +1,18 @@
 [{
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695cb"
+    "$oid": "68808ce3c4b448614dbf189e"
   },
-  "language_uid": "alb",
-  "language_iso2": "sq",
+  "language_uid": "sqi",
+  "language_iso2": "",
   "language_iso2_google": "sq",
   "language_wals_code": "alb",
   "language_name_fr": "Albanais",
-  "language_name_native": "Shqiptare",
+  "language_name_native": "Shqip",
   "language_name_en": "Albanian",
-  "language_alpha3": "alb",
+  "language_alpha3": "sqi",
   "tts_available": "TRUE",
-  "language_summary": "",
+  "language_summary": "L’albanais est une langue d’origine indo-européenne, rattachée au groupe thraco-illyrien. Certains auteurs ont soutenu que l'albanais permettrait de déchiffrer la langue étrusque. L'albanais est langue officielle en Albanie, au Kosovo et en Macédoine du Nord. En Italie, la langue et la culture albanaises sont protégées (statut de minorité linguistique).\nIl est parlé par presque 5,9 millions de personnes1 et comprend les variétés de l'arbërech, de l'arvanitika, du guègue et du tosque.\nDe nombreux albanophones vivent par ailleurs en dehors de ses frontières : dans les Balkans, l'albanais compte 7 millions de locuteurs ; des minorités albanaises autochtones existant dans les pays voisins ; d'autres communautés issues d'une émigration récente existent en Europe occidentale et aux États-Unis.\nDes populations albanophones ont historiquement été présentes en Albanie, au Kosovo, en Macédoine du Nord (régions de l'Ouest), au Monténégro (Ulcinj), dans le Sud de la Serbie centrale (vallée de Preševo, Medveđa) et en Grèce (Chameria).\n\n",
   "language_countries": [
-    {
-      "country_uid": "alb",
-      "country_iso2": "AL",
-      "country_iso3": "ALB",
-      "country_name_fr": "Albanie",
-      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/al.png",
-      "xy_coordinates": "41,20",
-      "official": "",
-      "popularity": "98.00%",
-      "popularity_as_float": "0.98",
-      "speakers": "5,877,100",
-      "is_official": "TRUE"
-    },
-    {
-      "country_uid": "mne",
-      "country_iso2": "ME",
-      "country_iso3": "MNE",
-      "country_name_fr": "Montenegro",
-      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/me.png",
-      "xy_coordinates": "42,19",
-      "official": "",
-      "popularity": "5.00%",
-      "popularity_as_float": "0.05",
-      "speakers": "",
-      "is_official": "FALSE"
-    },
     {
       "country_uid": "srb",
       "country_iso2": "RS",
@@ -47,27 +21,82 @@
       "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/rs.png",
       "xy_coordinates": "44,21",
       "official": "",
-      "popularity": "",
-      "popularity_as_float": "0",
-      "speakers": "",
-      "is_official": "FALSE"
-    },
-    {
-      "country_uid": "xxk",
-      "country_iso2": "XK",
-      "country_iso3": "XXK",
-      "country_name_fr": "Kosovo",
-      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/xk.png",
-      "xy_coordinates": "42.567963,20.290546",
-      "official": "",
-      "popularity": "",
-      "popularity_as_float": "0",
-      "speakers": "",
+      "popularity": "1.10%",
+      "popularity_as_float": "0.011",
+      "speakers": "70,000.00",
       "is_official": "FALSE"
     }
   ],
-  "language_vocable": [],
-  "is_vocabulary": "FALSE",
+  "language_vocable": [
+    {
+      "language_uid": "sqi",
+      "proposition": "Bonjour, parlez-vous albanais ?",
+      "proposition_tr": "Përshëndetje, A flisni shqiptare?",
+      "niveau": "Proposition",
+      "vk_options": [
+        "cd1a0a65-a535-3d5b-7d46-b73d873c305a",
+        "de3cbd29-f9aa-f2a8-b273-98de877aa468"
+      ],
+      "pkid": "845a7f82-002b-b715-3c48-1f7a8b8dcc18"
+    },
+    {
+      "language_uid": "sqi",
+      "proposition": "Oui",
+      "proposition_tr": "Po",
+      "niveau": "Option",
+      "vk_options": [],
+      "pkid": "cd1a0a65-a535-3d5b-7d46-b73d873c305a"
+    },
+    {
+      "language_uid": "sqi",
+      "proposition": "Non",
+      "proposition_tr": "Jo",
+      "niveau": "Option",
+      "vk_options": [],
+      "pkid": "de3cbd29-f9aa-f2a8-b273-98de877aa468"
+    },
+    {
+      "language_uid": "sqi",
+      "proposition": "Où avez-vous mal ? (montrez avec votre main)",
+      "proposition_tr": "Ku dhemb? (Trego me dorën tënde)",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "92c915ae-fd01-2a1f-2d2f-2a396806247e"
+    },
+    {
+      "language_uid": "sqi",
+      "proposition": "Pouvez-vous me montrer votre passeport ou une pièce d'identité ?",
+      "proposition_tr": "A mund të më tregoni pasaportën tuaj ose një dokument identiteti?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "12ea4bfb-b2e8-5fc3-cea3-6a22f86b209d"
+    },
+    {
+      "language_uid": "sqi",
+      "proposition": "Avez-vous un document officiel relatif à votre demande ?",
+      "proposition_tr": "A keni një dokument zyrtar në lidhje me kërkesën tuaj?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "9b2b4790-163f-0948-c079-956282a490ee"
+    },
+    {
+      "language_uid": "sqi",
+      "proposition": "Quel est votre motif de consultation ?",
+      "proposition_tr": "Cila është arsyeja juaj për konsultim?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "498d2d7c-f26f-ed07-4c30-24521e3e74a7"
+    },
+    {
+      "language_uid": "sqi",
+      "proposition": "Avez-vous de la température ?",
+      "proposition_tr": "A keni temperaturë?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "cf567940-f19b-326c-b5e8-4c9e61220626"
+    }
+  ],
+  "is_vocabulary": "TRUE",
   "geo_point": {
     "homeGeoPoint": {
       "longitude": 37,
@@ -78,7 +107,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695cc"
+    "$oid": "68808ce3c4b448614dbf189f"
   },
   "language_uid": "amh",
   "language_iso2": "am",
@@ -117,7 +146,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695cd"
+    "$oid": "68808ce3c4b448614dbf18a0"
   },
   "language_uid": "ams",
   "language_iso2": "ar",
@@ -575,7 +604,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695ce"
+    "$oid": "68808ce3c4b448614dbf18a1"
   },
   "language_uid": "arm",
   "language_iso2": "hy",
@@ -614,7 +643,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695cf"
+    "$oid": "68808ce3c4b448614dbf18a2"
   },
   "language_uid": "aze",
   "language_iso2": "az",
@@ -679,7 +708,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695d0"
+    "$oid": "68808ce3c4b448614dbf18a3"
   },
   "language_uid": "ben",
   "language_iso2": "bn",
@@ -731,7 +760,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695d1"
+    "$oid": "68808ce3c4b448614dbf18a4"
   },
   "language_uid": "bul",
   "language_iso2": "bg",
@@ -770,7 +799,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695d2"
+    "$oid": "68808ce3c4b448614dbf18a5"
   },
   "language_uid": "dan",
   "language_iso2": "",
@@ -916,7 +945,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695d3"
+    "$oid": "68808ce3c4b448614dbf18a6"
   },
   "language_uid": "prs",
   "language_iso2": "",
@@ -955,7 +984,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695d4"
+    "$oid": "68808ce3c4b448614dbf18a7"
   },
   "language_uid": "nld",
   "language_iso2": "",
@@ -1075,7 +1104,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695d5"
+    "$oid": "68808ce3c4b448614dbf18a8"
   },
   "language_uid": "eng",
   "language_iso2": "en",
@@ -1125,6 +1154,19 @@
       "popularity": "100.00%",
       "popularity_as_float": "1",
       "speakers": "25,000,000",
+      "is_official": "FALSE"
+    },
+    {
+      "country_uid": "aut",
+      "country_iso2": "AT",
+      "country_iso3": "AUT",
+      "country_name_fr": "Autriche",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/at.png",
+      "xy_coordinates": "47.3333,13.3333",
+      "official": "",
+      "popularity": "60.00%",
+      "popularity_as_float": "0.6",
+      "speakers": "5500000",
       "is_official": "FALSE"
     },
     {
@@ -1213,9 +1255,9 @@
       "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/cz.png",
       "xy_coordinates": "49.75,15.5",
       "official": "",
-      "popularity": "27.00%",
-      "popularity_as_float": "0.27",
-      "speakers": "2,970,000",
+      "popularity": "30.00%",
+      "popularity_as_float": "0.3",
+      "speakers": "3,200,000.00",
       "is_official": "FALSE"
     },
     {
@@ -1401,6 +1443,19 @@
       "is_official": "FALSE"
     },
     {
+      "country_uid": "moz",
+      "country_iso2": "MZ",
+      "country_iso3": "MOZ",
+      "country_name_fr": "Mozambique",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/mz.png",
+      "xy_coordinates": "-18.25,35",
+      "official": "",
+      "popularity": "10.00%",
+      "popularity_as_float": "0.1",
+      "speakers": "3,600,000.00",
+      "is_official": "FALSE"
+    },
+    {
       "country_uid": "nld",
       "country_iso2": "NL",
       "country_iso3": "NLD",
@@ -1489,6 +1544,19 @@
       "popularity": "10%",
       "popularity_as_float": "0.1",
       "speakers": "1000000",
+      "is_official": "FALSE"
+    },
+    {
+      "country_uid": "srb",
+      "country_iso2": "RS",
+      "country_iso3": "SRB",
+      "country_name_fr": "Serbie",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/rs.png",
+      "xy_coordinates": "44,21",
+      "official": "",
+      "popularity": "20.00%",
+      "popularity_as_float": "0.2",
+      "speakers": "1,300,000.00",
       "is_official": "FALSE"
     },
     {
@@ -1702,7 +1770,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695d6"
+    "$oid": "68808ce3c4b448614dbf18a9"
   },
   "language_uid": "est",
   "language_iso2": "et",
@@ -1741,7 +1809,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695d7"
+    "$oid": "68808ce3c4b448614dbf18aa"
   },
   "language_uid": "fre",
   "language_iso2": "fr",
@@ -2154,7 +2222,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695d8"
+    "$oid": "68808ce3c4b448614dbf18ab"
   },
   "language_uid": "geo",
   "language_iso2": "ka",
@@ -2193,7 +2261,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695d9"
+    "$oid": "68808ce3c4b448614dbf18ac"
   },
   "language_uid": "ger",
   "language_iso2": "",
@@ -2227,9 +2295,9 @@
       "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/at.png",
       "xy_coordinates": "47.3333,13.3333",
       "official": "",
-      "popularity": "100.00%",
-      "popularity_as_float": "1",
-      "speakers": "8,000,000",
+      "popularity": "98.00%",
+      "popularity_as_float": "0.98",
+      "speakers": "8900000",
       "is_official": "TRUE"
     },
     {
@@ -2253,9 +2321,9 @@
       "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/cz.png",
       "xy_coordinates": "49.75,15.5",
       "official": "",
-      "popularity": "15.00%",
-      "popularity_as_float": "0.15",
-      "speakers": "1,650,000",
+      "popularity": "2.90%",
+      "popularity_as_float": "0.029",
+      "speakers": "300,000.00",
       "is_official": "FALSE"
     },
     {
@@ -2456,7 +2524,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695da"
+    "$oid": "68808ce3c4b448614dbf18ad"
   },
   "language_uid": "hin",
   "language_iso2": "hi",
@@ -2495,7 +2563,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695db"
+    "$oid": "68808ce3c4b448614dbf18ae"
   },
   "language_uid": "hun",
   "language_iso2": "hu",
@@ -2532,6 +2600,19 @@
       "popularity": "6%",
       "popularity_as_float": "0.06",
       "speakers": "1200000",
+      "is_official": "FALSE"
+    },
+    {
+      "country_uid": "srb",
+      "country_iso2": "RS",
+      "country_iso3": "SRB",
+      "country_name_fr": "Serbie",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/rs.png",
+      "xy_coordinates": "44,21",
+      "official": "",
+      "popularity": "3.80%",
+      "popularity_as_float": "0.038",
+      "speakers": "250,000.00",
       "is_official": "FALSE"
     }
   ],
@@ -2615,7 +2696,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695dc"
+    "$oid": "68808ce3c4b448614dbf18af"
   },
   "language_uid": "ita",
   "language_iso2": "it",
@@ -2693,7 +2774,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695dd"
+    "$oid": "68808ce3c4b448614dbf18b0"
   },
   "language_uid": "kin",
   "language_iso2": "rw",
@@ -2732,7 +2813,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695de"
+    "$oid": "68808ce3c4b448614dbf18b1"
   },
   "language_uid": "pol",
   "language_iso2": "",
@@ -2865,18 +2946,18 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695df"
+    "$oid": "68808ce3c4b448614dbf18b2"
   },
   "language_uid": "por",
-  "language_iso2": "pt",
+  "language_iso2": "",
   "language_iso2_google": "pt",
   "language_wals_code": "por",
-  "language_name_fr": "Portuguais",
+  "language_name_fr": "Portugais",
   "language_name_native": "Português",
   "language_name_en": "Portuguese",
   "language_alpha3": "por",
   "tts_available": "TRUE",
-  "language_summary": "",
+  "language_summary": "Le portugais est la huitième langue la plus parlée au monde, avec plus de 160 millions de locuteurs, dont 140 au Brésil et 10 au Portugal. \nOutre le Portugal et le Brésil, le portugais est langue nationale de cinq états issus de l’empire colonial du Portugal : l’Angola, le Mozambique, la Guinée-Bissau, les îles du Cap-Vert et la république de Sao-Tomé et Principe.\nOn trouve encore quelques lusophones à Timor, maintenant rattachée à l’Indonésie, et à Macao, qui a en Chine une position semblable à son voisin Hong-Kong. Il subsiste également une poche de lusophones à Goa (Inde).",
   "language_countries": [
     {
       "country_uid": "ago",
@@ -2964,9 +3045,9 @@
       "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/mz.png",
       "xy_coordinates": "-18.25,35",
       "official": "",
-      "popularity": "70.00%",
-      "popularity_as_float": "0.7",
-      "speakers": "20,000,000",
+      "popularity": "50.00%",
+      "popularity_as_float": "0.5",
+      "speakers": "18,200,000.00",
       "is_official": "TRUE"
     },
     {
@@ -2996,19 +3077,87 @@
       "is_official": "TRUE"
     }
   ],
-  "language_vocable": [],
-  "is_vocabulary": "FALSE",
+  "language_vocable": [
+    {
+      "language_uid": "por",
+      "proposition": "Bonjour, parlez-vous portuguais ?",
+      "proposition_tr": "Olá, você fala português?",
+      "niveau": "Proposition",
+      "vk_options": [
+        "2d3aef54-3a0e-14e9-aa32-2c5ccb589029",
+        "43cfc803-ac3c-7622-8925-6804eff399d1"
+      ],
+      "pkid": "6fe3e698-41cf-3516-c836-57bd8395e5a7"
+    },
+    {
+      "language_uid": "por",
+      "proposition": "Oui",
+      "proposition_tr": "Sim",
+      "niveau": "Option",
+      "vk_options": [],
+      "pkid": "2d3aef54-3a0e-14e9-aa32-2c5ccb589029"
+    },
+    {
+      "language_uid": "por",
+      "proposition": "Non",
+      "proposition_tr": "Não",
+      "niveau": "Option",
+      "vk_options": [],
+      "pkid": "43cfc803-ac3c-7622-8925-6804eff399d1"
+    },
+    {
+      "language_uid": "por",
+      "proposition": "Où avez-vous mal ? (montrez avec votre main)",
+      "proposition_tr": "Onde dói ? (Mostre com sua mão)",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "bfd6b0b7-58c3-fba8-84cf-58d646b745b4"
+    },
+    {
+      "language_uid": "por",
+      "proposition": "Pouvez-vous me montrer votre passeport ou une pièce d'identité ?",
+      "proposition_tr": "Você pode me mostrar seu passaporte ou documento de identidade?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "a3dc2781-6f44-17b5-4cd9-1623567af030"
+    },
+    {
+      "language_uid": "por",
+      "proposition": "Avez-vous un document officiel relatif à votre demande ?",
+      "proposition_tr": "Você tem um documento oficial relacionado ao seu pedido?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "2420d604-1308-e97a-c200-0eb002e00996"
+    },
+    {
+      "language_uid": "por",
+      "proposition": "Quel est votre motif de consultation ?",
+      "proposition_tr": "Qual é o seu motivo de consulta?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "308d0a7c-77b9-8fd8-e471-128d30e67e96"
+    },
+    {
+      "language_uid": "por",
+      "proposition": "Avez-vous de la température ?",
+      "proposition_tr": "Você tem temperatura?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "b712882a-fced-68bc-a122-028584773516"
+    }
+  ],
+  "is_vocabulary": "TRUE",
   "geo_point": {
     "homeGeoPoint": {
-      "longitude": 37,
-      "latitude": 55
+      "longitude": 19,
+      "latitude": 52
     },
-    "homeZoomLevel": 4
+    "homeZoomLevel": 6
   }
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695e0"
+    "$oid": "68808ce3c4b448614dbf18b3"
   },
   "language_uid": "pes",
   "language_iso2": "fa",
@@ -3047,7 +3196,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695e1"
+    "$oid": "68808ce3c4b448614dbf18b4"
   },
   "language_uid": "pus",
   "language_iso2": "",
@@ -3099,7 +3248,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695e2"
+    "$oid": "68808ce3c4b448614dbf18b5"
   },
   "language_uid": "rlo",
   "language_iso2": "",
@@ -3200,7 +3349,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695e3"
+    "$oid": "68808ce3c4b448614dbf18b6"
   },
   "language_uid": "rom",
   "language_iso2": "ro",
@@ -3239,7 +3388,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695e4"
+    "$oid": "68808ce3c4b448614dbf18b7"
   },
   "language_uid": "som",
   "language_iso2": "so",
@@ -3291,7 +3440,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695e5"
+    "$oid": "68808ce3c4b448614dbf18b8"
   },
   "language_uid": "spa",
   "language_iso2": "es",
@@ -3746,7 +3895,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695e6"
+    "$oid": "68808ce3c4b448614dbf18b9"
   },
   "language_uid": "swe",
   "language_iso2": "sv",
@@ -3811,7 +3960,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695e7"
+    "$oid": "68808ce3c4b448614dbf18ba"
   },
   "language_uid": "tig",
   "language_iso2": "",
@@ -3863,7 +4012,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695e8"
+    "$oid": "68808ce3c4b448614dbf18bb"
   },
   "language_uid": "tur",
   "language_iso2": "",
@@ -3876,6 +4025,19 @@
   "tts_available": "TRUE",
   "language_summary": "Le turc appartient à la famille altaïque, groupe turc, et est parlé par près de 60 millions de personnes, dans tous les pays. C'est également une langue d'immigration importante en Allemagne. À des degrés divers, le turc est intelligible avec d'autres langues majeures d'Asie centrale, comme le turkmène, l'ouzbek, le kirghize, le kazakh et en particulier l'azéri, car toutes appartiennent à la famille «turque». Le turc est le membre le plus important du groupe des langues turques. Il a été écrit à l'origine dans l'écriture arabe qui était en usage depuis la conversion des Turcs à l'Islam. En 1928, le président Mustafa Kemal Ataturk décréta l'introduction d'une version légèrement modifiée de l'alphabet romain. Les mots anglais «caviar», «yogurt» et «shish kebab» sont d'origine turque. Le mot «tulipe» vient d'un mot turc pour «turban», car on pensait que sa fleur ressemblait à un turban.",
   "language_countries": [
+    {
+      "country_uid": "aut",
+      "country_iso2": "AT",
+      "country_iso3": "AUT",
+      "country_name_fr": "Autriche",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/at.png",
+      "xy_coordinates": "47.3333,13.3333",
+      "official": "",
+      "popularity": "2.20%",
+      "popularity_as_float": "0.022",
+      "speakers": "200000",
+      "is_official": "FALSE"
+    },
     {
       "country_uid": "bgr",
       "country_iso2": "BG",
@@ -4009,7 +4171,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695e9"
+    "$oid": "68808ce3c4b448614dbf18bc"
   },
   "language_uid": "ukr",
   "language_iso2": "uk",
@@ -4061,7 +4223,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695ea"
+    "$oid": "68808ce3c4b448614dbf18bd"
   },
   "language_uid": "urd",
   "language_iso2": "ur",
@@ -4126,7 +4288,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695eb"
+    "$oid": "68808ce3c4b448614dbf18be"
   },
   "language_uid": "cmn",
   "language_iso2": "",
@@ -4233,7 +4395,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695ec"
+    "$oid": "68808ce3c4b448614dbf18bf"
   },
   "language_uid": "yue",
   "language_iso2": "",
@@ -4272,7 +4434,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695ed"
+    "$oid": "68808ce3c4b448614dbf18c0"
   },
   "language_uid": "mcd",
   "language_iso2": "",
@@ -4324,7 +4486,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695ee"
+    "$oid": "68808ce3c4b448614dbf18c1"
   },
   "language_uid": "bal",
   "language_iso2": "",
@@ -4389,7 +4551,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695ef"
+    "$oid": "68808ce3c4b448614dbf18c2"
   },
   "language_uid": "grk",
   "language_iso2": "el",
@@ -4441,7 +4603,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695f0"
+    "$oid": "68808ce3c4b448614dbf18c3"
   },
   "language_uid": "dyu",
   "language_iso2": "",
@@ -4529,7 +4691,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695f1"
+    "$oid": "68808ce3c4b448614dbf18c4"
   },
   "language_uid": "mzn",
   "language_iso2": "",
@@ -4568,7 +4730,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695f2"
+    "$oid": "68808ce3c4b448614dbf18c5"
   },
   "language_uid": "tuk",
   "language_iso2": "",
@@ -4620,7 +4782,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695f3"
+    "$oid": "68808ce3c4b448614dbf18c6"
   },
   "language_uid": "bej",
   "language_iso2": "",
@@ -4659,7 +4821,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695f4"
+    "$oid": "68808ce3c4b448614dbf18c7"
   },
   "language_uid": "zag",
   "language_iso2": "",
@@ -4711,7 +4873,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695f5"
+    "$oid": "68808ce3c4b448614dbf18c8"
   },
   "language_uid": "sra",
   "language_iso2": "",
@@ -4750,7 +4912,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695f6"
+    "$oid": "68808ce3c4b448614dbf18c9"
   },
   "language_uid": "kbl",
   "language_iso2": "",
@@ -4789,7 +4951,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695f7"
+    "$oid": "68808ce3c4b448614dbf18ca"
   },
   "language_uid": "mls",
   "language_iso2": "",
@@ -4841,7 +5003,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695f8"
+    "$oid": "68808ce3c4b448614dbf18cb"
   },
   "language_uid": "lez",
   "language_iso2": "",
@@ -4880,7 +5042,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695f9"
+    "$oid": "68808ce3c4b448614dbf18cc"
   },
   "language_uid": "tly",
   "language_iso2": "",
@@ -4919,7 +5081,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695fa"
+    "$oid": "68808ce3c4b448614dbf18cd"
   },
   "language_uid": "aar",
   "language_iso2": "aa",
@@ -4958,7 +5120,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695fb"
+    "$oid": "68808ce3c4b448614dbf18ce"
   },
   "language_uid": "ssy",
   "language_iso2": "",
@@ -4997,7 +5159,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695fc"
+    "$oid": "68808ce3c4b448614dbf18cf"
   },
   "language_uid": "mos",
   "language_iso2": "",
@@ -5036,7 +5198,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695fd"
+    "$oid": "68808ce3c4b448614dbf18d0"
   },
   "language_uid": "ful",
   "language_iso2": "",
@@ -5150,7 +5312,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695fe"
+    "$oid": "68808ce3c4b448614dbf18d1"
   },
   "language_uid": "son",
   "language_iso2": "",
@@ -5189,7 +5351,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e7695ff"
+    "$oid": "68808ce3c4b448614dbf18d2"
   },
   "language_uid": "snn",
   "language_iso2": "",
@@ -5267,7 +5429,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769600"
+    "$oid": "68808ce3c4b448614dbf18d3"
   },
   "language_uid": "mdk",
   "language_iso2": "",
@@ -5319,7 +5481,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769601"
+    "$oid": "68808ce3c4b448614dbf18d4"
   },
   "language_uid": "bam",
   "language_iso2": "",
@@ -5358,7 +5520,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769602"
+    "$oid": "68808ce3c4b448614dbf18d5"
   },
   "language_uid": "tmh",
   "language_iso2": "",
@@ -5410,7 +5572,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769603"
+    "$oid": "68808ce3c4b448614dbf18d6"
   },
   "language_uid": "hau",
   "language_iso2": "",
@@ -5530,7 +5692,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769604"
+    "$oid": "68808ce3c4b448614dbf18d7"
   },
   "language_uid": "dje",
   "language_iso2": "",
@@ -5569,7 +5731,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769605"
+    "$oid": "68808ce3c4b448614dbf18d8"
   },
   "language_uid": "ymm",
   "language_iso2": "",
@@ -5608,7 +5770,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769606"
+    "$oid": "68808ce3c4b448614dbf18d9"
   },
   "language_uid": "pan",
   "language_iso2": "",
@@ -5647,7 +5809,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769607"
+    "$oid": "68808ce3c4b448614dbf18da"
   },
   "language_uid": "snd",
   "language_iso2": "",
@@ -5686,7 +5848,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769608"
+    "$oid": "68808ce3c4b448614dbf18db"
   },
   "language_uid": "bnd",
   "language_iso2": "",
@@ -5725,7 +5887,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769609"
+    "$oid": "68808ce3c4b448614dbf18dc"
   },
   "language_uid": "gba",
   "language_iso2": "",
@@ -5764,7 +5926,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e76960a"
+    "$oid": "68808ce3c4b448614dbf18dd"
   },
   "language_uid": "sag",
   "language_iso2": "",
@@ -5803,7 +5965,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e76960b"
+    "$oid": "68808ce3c4b448614dbf18de"
   },
   "language_uid": "mol",
   "language_iso2": "",
@@ -5842,7 +6004,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e76960c"
+    "$oid": "68808ce3c4b448614dbf18df"
   },
   "language_uid": "gag",
   "language_iso2": "",
@@ -5881,7 +6043,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e76960d"
+    "$oid": "68808ce3c4b448614dbf18e0"
   },
   "language_uid": "snn",
   "language_iso2": "",
@@ -5959,7 +6121,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e76960e"
+    "$oid": "68808ce3c4b448614dbf18e1"
   },
   "language_uid": "wol",
   "language_iso2": "",
@@ -6060,7 +6222,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e76960f"
+    "$oid": "68808ce3c4b448614dbf18e2"
   },
   "language_uid": "bci",
   "language_iso2": "",
@@ -6135,7 +6297,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769610"
+    "$oid": "68808ce3c4b448614dbf18e3"
   },
   "language_uid": "bet",
   "language_iso2": "",
@@ -6210,7 +6372,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769611"
+    "$oid": "68808ce3c4b448614dbf18e4"
   },
   "language_uid": "zza",
   "language_iso2": "",
@@ -6285,7 +6447,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769612"
+    "$oid": "68808ce3c4b448614dbf18e5"
   },
   "language_uid": "din",
   "language_iso2": "",
@@ -6360,7 +6522,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769613"
+    "$oid": "68808ce3c4b448614dbf18e6"
   },
   "language_uid": "nus",
   "language_iso2": "",
@@ -6435,7 +6597,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769614"
+    "$oid": "68808ce3c4b448614dbf18e7"
   },
   "language_uid": "kur",
   "language_iso2": "",
@@ -6536,7 +6698,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769615"
+    "$oid": "68808ce3c4b448614dbf18e8"
   },
   "language_uid": "rus",
   "language_iso2": "ru",
@@ -6586,19 +6748,6 @@
       "popularity": "70.00%",
       "popularity_as_float": "0.7",
       "speakers": "6,600,000",
-      "is_official": "FALSE"
-    },
-    {
-      "country_uid": "cze",
-      "country_iso2": "CZ",
-      "country_iso3": "CZE",
-      "country_name_fr": "Tchéquie",
-      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/cz.png",
-      "xy_coordinates": "49.75,15.5",
-      "official": "",
-      "popularity": "13.00%",
-      "popularity_as_float": "0.13",
-      "speakers": "1,430,000",
       "is_official": "FALSE"
     },
     {
@@ -6825,7 +6974,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769616"
+    "$oid": "68808ce3c4b448614dbf18e9"
   },
   "language_uid": "tat",
   "language_iso2": "tat",
@@ -6864,7 +7013,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769617"
+    "$oid": "68808ce3c4b448614dbf18ea"
   },
   "language_uid": "che",
   "language_iso2": "",
@@ -6903,7 +7052,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769618"
+    "$oid": "68808ce3c4b448614dbf18eb"
   },
   "language_uid": "lav",
   "language_iso2": "",
@@ -7010,7 +7159,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e769619"
+    "$oid": "68808ce3c4b448614dbf18ec"
   },
   "language_uid": "yor",
   "language_iso2": "",
@@ -7085,7 +7234,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e76961a"
+    "$oid": "68808ce3c4b448614dbf18ed"
   },
   "language_uid": "ibo",
   "language_iso2": "",
@@ -7160,7 +7309,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e76961b"
+    "$oid": "68808ce3c4b448614dbf18ee"
   },
   "language_uid": "jpn",
   "language_iso2": "",
@@ -7267,7 +7416,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e76961c"
+    "$oid": "68808ce3c4b448614dbf18ef"
   },
   "language_uid": "tgk",
   "language_iso2": "",
@@ -7306,7 +7455,7 @@
 },
 {
   "_id": {
-    "$oid": "6874d0c5916fe0582e76961d"
+    "$oid": "68808ce3c4b448614dbf18f0"
   },
   "language_uid": "uzb",
   "language_iso2": "",
@@ -7393,5 +7542,443 @@
       "latitude": 38.5
     },
     "homeZoomLevel": 6
+  }
+},
+{
+  "_id": {
+    "$oid": "68808ce3c4b448614dbf18f1"
+  },
+  "language_uid": "srp",
+  "language_iso2": "",
+  "language_iso2_google": "sr",
+  "language_wals_code": "",
+  "language_name_fr": "Serbe",
+  "language_name_native": "српски‎",
+  "language_name_en": "Serbian",
+  "language_alpha3": "srp",
+  "tts_available": "TRUE",
+  "language_summary": "Le serbe est la langue nationale officielle de la Serbie. Il appartient à la famille des langues indo-européennes et fait partie de la macrolangue serbo-croate. Il est utilisé comme langue d'enseignement dans l'éducation.",
+  "language_countries": [
+    {
+      "country_uid": "aut",
+      "country_iso2": "AT",
+      "country_iso3": "AUT",
+      "country_name_fr": "Autriche",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/at.png",
+      "xy_coordinates": "47.3333,13.3333",
+      "official": "",
+      "popularity": "1.60%",
+      "popularity_as_float": "0.016",
+      "speakers": "150000",
+      "is_official": "FALSE"
+    },
+    {
+      "country_uid": "srb",
+      "country_iso2": "RS",
+      "country_iso3": "SRB",
+      "country_name_fr": "Serbie",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/rs.png",
+      "xy_coordinates": "44,21",
+      "official": "",
+      "popularity": "95.00%",
+      "popularity_as_float": "0.95",
+      "speakers": "6,300,000.00",
+      "is_official": "TRUE"
+    }
+  ],
+  "language_vocable": [
+    {
+      "language_uid": "srp",
+      "proposition": "Bonjour, parlez-vous serbe ?",
+      "proposition_tr": "Здраво, да ли говорите српски?",
+      "niveau": "Proposition",
+      "vk_options": [
+        "d3597b91-97bc-4854-03dd-acfe68f95819",
+        "9be04fd9-32c0-a096-ecb6-11141bac2af4"
+      ],
+      "pkid": "db36b56e-d1ab-68a3-e18b-8ee4d627ca60"
+    },
+    {
+      "language_uid": "srp",
+      "proposition": "Oui",
+      "proposition_tr": "Да",
+      "niveau": "Option",
+      "vk_options": [],
+      "pkid": "d3597b91-97bc-4854-03dd-acfe68f95819"
+    },
+    {
+      "language_uid": "srp",
+      "proposition": "Non",
+      "proposition_tr": "Не",
+      "niveau": "Option",
+      "vk_options": [],
+      "pkid": "9be04fd9-32c0-a096-ecb6-11141bac2af4"
+    },
+    {
+      "language_uid": "srp",
+      "proposition": "Où avez-vous mal ? (montrez avec votre main)",
+      "proposition_tr": "Где боли? (Прикажи руком)",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "1667ae16-3407-cd4c-fd39-84449930f30d"
+    },
+    {
+      "language_uid": "srp",
+      "proposition": "Pouvez-vous me montrer votre passeport ou une pièce d'identité ?",
+      "proposition_tr": "Можете ли ми показати свој пасош или документ о идентитету?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "737765ce-dd0d-90c4-b8d5-53335fc906ae"
+    },
+    {
+      "language_uid": "srp",
+      "proposition": "Avez-vous un document officiel relatif à votre demande ?",
+      "proposition_tr": "Имате ли службени документ који се односи на ваш захтев?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "eac1cea6-6cb3-1fbd-6606-7e631df5307e"
+    },
+    {
+      "language_uid": "srp",
+      "proposition": "Quel est votre motif de consultation ?",
+      "proposition_tr": "Који је ваш разлог за консултације?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "fe35d463-972c-182d-acf0-7287c55739ec"
+    },
+    {
+      "language_uid": "srp",
+      "proposition": "Avez-vous de la température ?",
+      "proposition_tr": "Имате ли температуру?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "c6e0bf6b-6f42-7e49-2602-cf6fd2324f45"
+    }
+  ],
+  "is_vocabulary": "TRUE",
+  "geo_point": {
+    "homeGeoPoint": {
+      "longitude": 20.5,
+      "latitude": 44.8
+    },
+    "homeZoomLevel": 6
+  }
+},
+{
+  "_id": {
+    "$oid": "68808ce3c4b448614dbf18f2"
+  },
+  "language_uid": "ces",
+  "language_iso2": "",
+  "language_iso2_google": "cs",
+  "language_wals_code": "cze",
+  "language_name_fr": "Tchèque",
+  "language_name_native": "Český jazyk, čeština",
+  "language_name_en": "Czech",
+  "language_alpha3": "ces",
+  "tts_available": "TRUE",
+  "language_summary": "Le tchèque (en tchèque : čeština /ˈtʃɛʃcɪna/ ) fait partie des langues slaves occidentales, avec le kachoube, le polonais, le slovaque et le sorabe, branche de la famille des langues indo-européennes. Il est principalement parlé en Tchéquie, ce qui représente environ onze millions de locuteurs.\nLe tchèque est très proche du slovaque et, à un moindre degré, du polonais et du ruthène. La plupart des adultes tchèques et slovaques sont capables de se comprendre mutuellement sans difficulté. En effet, ils ont été, à l'époque de la Tchécoslovaquie, en contact permanent avec les deux langues par l'intermédiaire de la radio et de la télévision nationale. Les écoles également proposaient aux enfants des contes dans la seconde langue pour les familiariser. Chacun était bilingue jusqu'à la partition de la Tchécoslovaquie le 1er janvier 1993. Aujourd'hui encore, Tchèques et Slovaques ont des programmes de télévision communs. Malgré cela, les plus jeunes qui n'ont pas connu l'époque de la Tchécoslovaquie peuvent éprouver des difficultés de compréhension lors de l'emploi de certains mots très différents, ou d'une expression orale trop rapide. Cependant, le tchèque pouvait [réf. nécessaire] encore s'employer dans une communication officielle avec les autorités slovaques et tous les documents de la Tchéquie doivent être acceptés grâce à la loi 270/1995 et la loi additionnelle 318/2009.\nEn raison de sa complexité, le tchèque est considéré comme difficile à apprendre. Cette complexité provient principalement d'une grande variété dans la morphologie et dans la syntaxe. Comme dans toutes les langues slaves (à l'exception du bulgare moderne et du macédonien moderne), les mots (les noms, pronoms et adjectifs) se déclinent selon leur rôle dans la phrase. Sous cet aspect, la grammaire du tchèque et des langues slaves est plus proche des origines indo-européennes que les autres langues indo-européennes, dans lesquelles les déclinaisons se sont appauvries (comme en allemand), ou même ont pratiquement disparu (comme en français).",
+  "language_countries": [
+    {
+      "country_uid": "cze",
+      "country_iso2": "CZ",
+      "country_iso3": "CZE",
+      "country_name_fr": "Tchéquie",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/cz.png",
+      "xy_coordinates": "49.75,15.5",
+      "official": "",
+      "popularity": "97.00%",
+      "popularity_as_float": "0.97",
+      "speakers": "10,200,000.00",
+      "is_official": "TRUE"
+    }
+  ],
+  "language_vocable": [
+    {
+      "language_uid": "ces",
+      "proposition": "Bonjour, parlez-vous tchèque ?",
+      "proposition_tr": "Dobrý den, mluvíš česky?",
+      "niveau": "Proposition",
+      "vk_options": [
+        "646dc02f-07e9-cae0-4a7b-622f9e8c5572",
+        "38d36ba2-1b94-85b6-68b0-f6e6fd908337"
+      ],
+      "pkid": "91d3a075-a834-97e7-2acd-1657c553f85a"
+    },
+    {
+      "language_uid": "ces",
+      "proposition": "Oui",
+      "proposition_tr": "Ano",
+      "niveau": "Option",
+      "vk_options": [],
+      "pkid": "646dc02f-07e9-cae0-4a7b-622f9e8c5572"
+    },
+    {
+      "language_uid": "ces",
+      "proposition": "Non",
+      "proposition_tr": "Žádný",
+      "niveau": "Option",
+      "vk_options": [],
+      "pkid": "38d36ba2-1b94-85b6-68b0-f6e6fd908337"
+    },
+    {
+      "language_uid": "ces",
+      "proposition": "Où avez-vous mal ? (montrez avec votre main)",
+      "proposition_tr": "Kde to bolí? (Ukažte rukou)",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "fb23cc15-bdf8-95f9-bd75-32c31e745881"
+    },
+    {
+      "language_uid": "ces",
+      "proposition": "Pouvez-vous me montrer votre passeport ou une pièce d'identité ?",
+      "proposition_tr": "Můžete mi ukázat svůj pas nebo dokument identity?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "a758a87a-1799-eec2-70ae-e1cfb9574044"
+    },
+    {
+      "language_uid": "ces",
+      "proposition": "Avez-vous un document officiel relatif à votre demande ?",
+      "proposition_tr": "Máte oficiální dokument týkající se vaší žádosti?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "bebcee35-fd3b-72a1-d599-93e8aa2e6a6e"
+    },
+    {
+      "language_uid": "ces",
+      "proposition": "Quel est votre motif de consultation ?",
+      "proposition_tr": "Jaký je váš důvod pro konzultaci?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "2addd5fb-fb20-63f7-65d1-a5057fcde14d"
+    },
+    {
+      "language_uid": "ces",
+      "proposition": "Avez-vous de la température ?",
+      "proposition_tr": "Máte teplotu?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "67b7ca10-6b4a-6838-bf0c-037c16cf7c02"
+    }
+  ],
+  "is_vocabulary": "TRUE",
+  "geo_point": {
+    "homeGeoPoint": {
+      "longitude": 15.5,
+      "latitude": 49.8
+    },
+    "homeZoomLevel": 6
+  }
+},
+{
+  "_id": {
+    "$oid": "68808ce3c4b448614dbf18f3"
+  },
+  "language_uid": "slk",
+  "language_iso2": "",
+  "language_iso2_google": "sk",
+  "language_wals_code": "svk",
+  "language_name_fr": "Slovaque",
+  "language_name_native": "slovenčina",
+  "language_name_en": "Slovak",
+  "language_alpha3": "slk",
+  "tts_available": "TRUE",
+  "language_summary": "Le slovaque (slovenčina, slovenský jazyk) est une langue appartenant au groupe slave occidental de la famille des langues indo-européennes parlée essentiellement en Slovaquie, dont il est la langue officielle. Des minorités slovaques existent en Tchéquie, en Voïvodine, en Hongrie, en Ukraine (région de Ruthénie subcarpathique, tchécoslovaque de 1918 à 1938), en Autriche, en Pologne, en Roumanie et des communautés immigrées gardent l’usage de leur langue, notamment au Canada, aux États-Unis et en Australie.",
+  "language_countries": [
+    {
+      "country_uid": "cze",
+      "country_iso2": "CZ",
+      "country_iso3": "CZE",
+      "country_name_fr": "Tchéquie",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/cz.png",
+      "xy_coordinates": "49.75,15.5",
+      "official": "",
+      "popularity": "4.80%",
+      "popularity_as_float": "0.048",
+      "speakers": "500,000.00",
+      "is_official": "FALSE"
+    }
+  ],
+  "language_vocable": [
+    {
+      "language_uid": "slk",
+      "proposition": "Bonjour, parlez-vous slovaque ?",
+      "proposition_tr": "Dobrý deň, hovoríš Sloven?",
+      "niveau": "Proposition",
+      "vk_options": [
+        "a43ecd64-135c-2b9f-33e8-bbde7d4544c4",
+        "9fc4ec4c-ba1c-8c4d-dfb2-20125eb55a00"
+      ],
+      "pkid": "e2a8bd62-c01f-eeed-cd64-e6752ae35d08"
+    },
+    {
+      "language_uid": "slk",
+      "proposition": "Oui",
+      "proposition_tr": "Áno",
+      "niveau": "Option",
+      "vk_options": [],
+      "pkid": "a43ecd64-135c-2b9f-33e8-bbde7d4544c4"
+    },
+    {
+      "language_uid": "slk",
+      "proposition": "Non",
+      "proposition_tr": "Nie",
+      "niveau": "Option",
+      "vk_options": [],
+      "pkid": "9fc4ec4c-ba1c-8c4d-dfb2-20125eb55a00"
+    },
+    {
+      "language_uid": "slk",
+      "proposition": "Où avez-vous mal ? (montrez avec votre main)",
+      "proposition_tr": "Kde to bolí? (Zobraziť rukou)",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "2d8affba-1394-7b2a-bf31-a29d16595ef5"
+    },
+    {
+      "language_uid": "slk",
+      "proposition": "Pouvez-vous me montrer votre passeport ou une pièce d'identité ?",
+      "proposition_tr": "Môžete mi ukázať váš pas alebo dokument identity?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "260b069e-3f62-7bdd-2208-edfd07f8b177"
+    },
+    {
+      "language_uid": "slk",
+      "proposition": "Avez-vous un document officiel relatif à votre demande ?",
+      "proposition_tr": "Máte oficiálny dokument týkajúci sa vašej žiadosti?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "7d50f9fb-8c8b-599c-5e12-e9e24b88e322"
+    },
+    {
+      "language_uid": "slk",
+      "proposition": "Quel est votre motif de consultation ?",
+      "proposition_tr": "Aký je váš dôvod na konzultáciu?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "606af33e-e1d1-c09c-ad54-f4cc23a7144b"
+    },
+    {
+      "language_uid": "slk",
+      "proposition": "Avez-vous de la température ?",
+      "proposition_tr": "Máte teplotu?",
+      "niveau": "Proposition",
+      "vk_options": [],
+      "pkid": "f657e078-f731-81fb-ddf1-8b8818139be9"
+    }
+  ],
+  "is_vocabulary": "TRUE",
+  "geo_point": {
+    "homeGeoPoint": {
+      "longitude": 15.5,
+      "latitude": 49.8
+    },
+    "homeZoomLevel": 6
+  }
+},
+{
+  "_id": {
+    "$oid": "68808ce3c4b448614dbf18f4"
+  },
+  "language_uid": "vmw",
+  "language_iso2": "",
+  "language_iso2_google": "",
+  "language_wals_code": "",
+  "language_name_fr": "Makwa",
+  "language_name_native": "Emakhuwa",
+  "language_name_en": "Makhuwa",
+  "language_alpha3": "vmw",
+  "tts_available": "FALSE",
+  "language_summary": "Le Makhuwa est une langue indigène stable du Mozambique. Il appartient à la famille des langues Niger-Congo. Les preuves directes font défaut, mais on pense que la langue est utilisée comme première langue par tous les membres de la communauté ethnique. On ne sait pas s'il est enseigné dans les écoles.",
+  "language_countries": [
+    {
+      "country_uid": "moz",
+      "country_iso2": "MZ",
+      "country_iso3": "MOZ",
+      "country_name_fr": "Mozambique",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/mz.png",
+      "xy_coordinates": "-18.25,35",
+      "official": "",
+      "popularity": "20.00%",
+      "popularity_as_float": "0.2",
+      "speakers": "7,300,000.00",
+      "is_official": "FALSE"
+    }
+  ],
+  "language_vocable": [],
+  "is_vocabulary": "FALSE",
+  "geo_point": {
+    "homeGeoPoint": {
+      "longitude": 35,
+      "latitude": -18.5
+    },
+    "homeZoomLevel": 5
+  }
+},
+{
+  "_id": {
+    "$oid": "68808ce3c4b448614dbf18f5"
+  },
+  "language_uid": "swa",
+  "language_iso2": "",
+  "language_iso2_google": "sw",
+  "language_wals_code": "swa",
+  "language_name_fr": "Swahili",
+  "language_name_native": "Kiswahili",
+  "language_name_en": "Swahili",
+  "language_alpha3": "swa",
+  "tts_available": "TRUE",
+  "language_summary": "Les langues swahilies, ou parfois souahélies, sont un groupe de langues bantoues de l'Afrique de l'Est. Elles possèdent des caractéristiques communes et surtout un vocabulaire commun qui permet à un de leurs locuteurs de se faire plus ou moins comprendre des divers locuteurs de ce groupement de langues. Cependant, on ne peut pas parler d'intercompréhension pour toutes ces formes tant la variété linguistique est grande.\nParmi ces langues, la plus parlée d'Afrique subsaharienne est le kiswahili qui sert de langue véhiculaire dans une vaste région d'Afrique de l'Est ; elle a été adoptée comme langue nationale au Kenya au Congo Kinshasa et en Ouganda, et comme langue officielle de facto en Tanzanie. Comparé aux langues vernaculaires du groupe swahili, le kiswahili présente des traces de créolisation, ainsi que de nombreux emprunts, notamment à la langue arabe.",
+  "language_countries": [
+    {
+      "country_uid": "moz",
+      "country_iso2": "MZ",
+      "country_iso3": "MOZ",
+      "country_name_fr": "Mozambique",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/mz.png",
+      "xy_coordinates": "-18.25,35",
+      "official": "",
+      "popularity": "4.00%",
+      "popularity_as_float": "0.04",
+      "speakers": "1,500,000.00",
+      "is_official": "FALSE"
+    },
+    {
+      "country_uid": "tza",
+      "country_iso2": "TZ",
+      "country_iso3": "TZA",
+      "country_name_fr": "Tanzanie",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/tz.png",
+      "xy_coordinates": "-6,35",
+      "official": "",
+      "popularity": "",
+      "popularity_as_float": "0",
+      "speakers": "",
+      "is_official": "FALSE"
+    },
+    {
+      "country_uid": "uga",
+      "country_iso2": "UG",
+      "country_iso3": "UGA",
+      "country_name_fr": "Ouganda",
+      "national_flag": "https://res.cloudinary.com/dhc7ovnwk/image/upload/v1670497510/langdeck/assets/flags_100px/ug.png",
+      "xy_coordinates": "1,32",
+      "official": "",
+      "popularity": "",
+      "popularity_as_float": "0",
+      "speakers": "",
+      "is_official": "TRUE"
+    }
+  ],
+  "language_vocable": [],
+  "is_vocabulary": "FALSE",
+  "geo_point": {
+    "homeGeoPoint": {
+      "longitude": 35,
+      "latitude": -18.5
+    },
+    "homeZoomLevel": 5
   }
 }]

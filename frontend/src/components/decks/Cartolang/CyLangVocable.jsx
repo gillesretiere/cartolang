@@ -20,7 +20,7 @@ const CyLangVocable = ({ language, langDeck, callbackModal, }) => {
 
     const [vocable, setVocable] = useState([]);
     const [selected, setSelected] = useState(null);
-    const domainUrl = 'https://hammer-marteau.com/assets/cartolang/';
+    const domainUrl = 'https://hammer-marteau.fr/assets/cartolang/';
 
     const playAudio = (audioUrl) => {
         const audio = new Audio(audioUrl);

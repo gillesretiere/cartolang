@@ -374,7 +374,7 @@ const DrillDownMap8 = ({ onCountrySelect, countries }) => {
       {selectedCountry && (
         <>
           <p className="font-articulat_cf text-center mt-2 text-xl font-base text-blue-500">
-            Pays sélectionné : {selectedCountryNameFr}  <CheckCircleOutlineIcon />
+            Pays sélectionné : {selectedCountryNameFr} <CheckCircleOutlineIcon /> (OK pour valider) 
           </p>
         </>
       )}

@@ -162,7 +162,7 @@ export const CylgSearchPage = ({ regions, countries, languages, }) => {
                                     id="combo-box-demo"
                                     value={selectedCountryName}
                                     options={options.map((option) => option.label)}
-                                    renderInput={(params) => <TextField {...params} label="Selon votre choix, entrez le nom d'un pays, d'une langue, ou cliquez sur la carte" />}
+                                    renderInput={(params) => <TextField {...params} label="Entrez le nom d'un pays, d'une langue, ou cliquez sur la carte interactive" />}
                                     onChange={handleChange}
                                 />
                                 {uid ?
